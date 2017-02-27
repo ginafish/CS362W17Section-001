@@ -52,6 +52,10 @@ public class RandomDominionTest {
 		    	  player = new Player(state, "player-" + (i + 2));
 		    	  state.addPlayer(player);
 		      }
+		      if(state.players.size() != (2+additionalPlayers)){
+		    	  System.out.println("Addition of players failed!!!");//assertion to detect failures
+		      }
+		      
 		      state.initializeGame();
 		      
 		      System.out.println("Initialization DominionBoard:\n " + state.toString());
