@@ -18,3 +18,5 @@ this should create a program that can be run.
 src/main/java$ java org.cs362.dominion.PlayDominion
 
 My code prints alot of stuff, but it has always run to the end.
+
+Note that all tests are in the src/test directory and my cobertura reports are in imp2acobertura and imp2bcobertura
