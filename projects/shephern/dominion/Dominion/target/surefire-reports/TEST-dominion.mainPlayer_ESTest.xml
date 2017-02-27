@@ -60,6 +60,6 @@
     <property name="project.build.outputDirectory" value="/Users/Nathan/Desktop/cs362/CS362W17Section-001/projects/shephern/dominion/Dominion/target/generated-classes/cobertura"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="test0" classname="dominion.mainPlayer_ESTest" time="0.004"/>
-  <testcase name="test1" classname="dominion.mainPlayer_ESTest" time="0.003"/>
+  <testcase name="test0" classname="dominion.mainPlayer_ESTest" time="0.003"/>
+  <testcase name="test1" classname="dominion.mainPlayer_ESTest" time="0.004"/>
 </testsuite>
