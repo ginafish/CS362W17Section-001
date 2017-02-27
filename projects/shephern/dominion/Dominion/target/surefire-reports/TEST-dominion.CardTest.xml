@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="dominion.CardTest" time="0.043" tests="21" errors="0" skipped="0" failures="0">
+<testsuite name="dominion.CardTest" time="0.022" tests="21" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib"/>
@@ -60,25 +60,25 @@
     <property name="project.build.outputDirectory" value="/Users/Nathan/Desktop/cs362/CS362W17Section-001/projects/shephern/dominion/Dominion/target/generated-classes/cobertura"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="testEmbargo" classname="dominion.CardTest" time="0.008"/>
-  <testcase name="testEstateValues" classname="dominion.CardTest" time="0.002"/>
-  <testcase name="testGreathall" classname="dominion.CardTest" time="0.001"/>
+  <testcase name="testEmbargo" classname="dominion.CardTest" time="0.001"/>
+  <testcase name="testEstateValues" classname="dominion.CardTest" time="0"/>
+  <testcase name="testGreathall" classname="dominion.CardTest" time="0.003"/>
   <testcase name="testCopperValues" classname="dominion.CardTest" time="0"/>
   <testcase name="testBaron" classname="dominion.CardTest" time="0"/>
   <testcase name="testFeast" classname="dominion.CardTest" time="0.001"/>
-  <testcase name="testMine" classname="dominion.CardTest" time="0.001"/>
-  <testcase name="testToString" classname="dominion.CardTest" time="0"/>
-  <testcase name="testDuchyValues" classname="dominion.CardTest" time="0"/>
-  <testcase name="testAdventurer" classname="dominion.CardTest" time="0.001"/>
-  <testcase name="testGardens" classname="dominion.CardTest" time="0.001"/>
-  <testcase name="testCouncilRoom" classname="dominion.CardTest" time="0.005"/>
-  <testcase name="testVillage" classname="dominion.CardTest" time="0.003"/>
-  <testcase name="testAmbassador" classname="dominion.CardTest" time="0.005"/>
+  <testcase name="testMine" classname="dominion.CardTest" time="0.004"/>
+  <testcase name="testToString" classname="dominion.CardTest" time="0.005"/>
+  <testcase name="testDuchyValues" classname="dominion.CardTest" time="0.001"/>
+  <testcase name="testAdventurer" classname="dominion.CardTest" time="0"/>
+  <testcase name="testGardens" classname="dominion.CardTest" time="0"/>
+  <testcase name="testCouncilRoom" classname="dominion.CardTest" time="0.002"/>
+  <testcase name="testVillage" classname="dominion.CardTest" time="0"/>
+  <testcase name="testAmbassador" classname="dominion.CardTest" time="0"/>
   <testcase name="testCurseValues" classname="dominion.CardTest" time="0.002"/>
-  <testcase name="testProvinceValues" classname="dominion.CardTest" time="0.001"/>
-  <testcase name="testSilverValues" classname="dominion.CardTest" time="0.001"/>
-  <testcase name="testCutpurse" classname="dominion.CardTest" time="0.003"/>
-  <testcase name="testSeaHag" classname="dominion.CardTest" time="0.001"/>
-  <testcase name="testSmithy" classname="dominion.CardTest" time="0.006"/>
+  <testcase name="testProvinceValues" classname="dominion.CardTest" time="0"/>
+  <testcase name="testSilverValues" classname="dominion.CardTest" time="0"/>
+  <testcase name="testCutpurse" classname="dominion.CardTest" time="0.001"/>
+  <testcase name="testSeaHag" classname="dominion.CardTest" time="0"/>
+  <testcase name="testSmithy" classname="dominion.CardTest" time="0.001"/>
   <testcase name="testGoldValues" classname="dominion.CardTest" time="0.001"/>
 </testsuite>
