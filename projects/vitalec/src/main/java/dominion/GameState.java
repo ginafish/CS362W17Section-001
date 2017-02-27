@@ -31,10 +31,11 @@ public class GameState {
 
     public final ArrayList<Player> players = new ArrayList <Player> ();
     public HashMap<Card, Integer> supply = new HashMap<>();
+    public List<Card> availCards;
 
 
     public GameState(List<Card> kingdomCardSet) {
-        List<Card> availCards = Card.createCards();
+        availCards = Card.createCards();
         // Set Treasure Cards
         this.supply.put(Card.getCard(availCards, Card.CardName.COPPER), 60);
         this.supply.put(Card.getCard(availCards, Card.CardName.SILVER), 40);

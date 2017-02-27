@@ -67,9 +67,11 @@ public class Player {
     }
 
     public void gainCardFromSupply(Card card) {
-        int currentCards = this.gameState.supply.get(card);
-        this.discard.add(card);
-        this.gameState.supply.put(card, currentCards - 1);
+        if(this.gameState.supply.containsKey(card)) {
+            int currentCards = this.gameState.supply.get(card);
+            this.discard.add(card);
+            this.gameState.supply.put(card, currentCards - 1);
+        }
     }
 
     //Discard hand
@@ -92,7 +94,14 @@ public class Player {
             System.out.println("Player.actionPhase Card:" + c.toString());
             numActions -= 1;
 
-            c.play(this, gameState, null, null);
+            c.play(this, gameState, null);
+        }
+    }
+
+    public void trashFromHand(Card card) {
+        if(this.hand.contains(card)) {
+            this.hand.remove(card);
+            this.trash.add(card);
         }
     }
 
@@ -130,6 +139,11 @@ public class Player {
         System.out.println(" --- --------------------------- --- ");
         System.out.println("TO-DO endTurn ");
         System.out.println(" --- --------------------------- --- ");
+    }
+
+    public void showHand() {
+        System.out.println(this.player_username + " revealing hand!");
+        this.hand.forEach(card -> System.out.println(card.getCardName()));
     }
 
 
