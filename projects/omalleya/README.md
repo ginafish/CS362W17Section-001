@@ -12,6 +12,10 @@ Create README.md for Aidan O'Malley
 ***The generated tests were created with evosuite and can be found either in the .evosuite/best-tests/com/omalleya/app/***
 ***Or in the tempTest folder***
 
+-to run RandomDominionTest.java
+
+"mvn -Dtest=RandomDominionTest test"
+
 ***to test the dominion implementation run the following commands***
 ***Be sure to be in the same directory as the pom.xml file***
 
