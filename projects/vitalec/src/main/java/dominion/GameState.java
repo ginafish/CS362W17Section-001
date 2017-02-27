@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
 import java.util.TreeMap;
+import java.util.stream.Collectors;
 
 //struct gameState {
 //	  int numPlayers; //number of players
@@ -78,19 +79,36 @@ public class GameState {
                 player.playKingdomCard();
 
                 System.out.println("BUY PHASE:");
+                player.buyCard();
 
                 System.out.println("CLEAN-UP PHASE:");
-                player.playTreasureCard();
                 player.endTurn();
             }
-            if (turn == 3) {
-                break;
-            }
+//            if (turn == 10) {
+//                break;
+//            }
         }
         return this.getWinners();
     }
 
     public boolean isGameOver() {
+        // Any three supply piles are empty
+        int emptyPiles = supply.entrySet().stream()
+                .filter(map -> map.getValue() <= 0)
+                .map(map -> map.getKey())
+                .collect(Collectors.toList()).size();
+
+        if(emptyPiles >= 3) {
+            return true;
+        }
+
+        // Province supply pile is empty
+        int provinceCards = supply.get(Card.getCard(availCards, Card.CardName.PROVINCE));
+
+        if(provinceCards <= 0) {
+            return true;
+        }
+
         return false;
     }
 

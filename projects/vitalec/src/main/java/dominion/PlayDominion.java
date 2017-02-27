@@ -56,20 +56,17 @@ public class PlayDominion {
             Player player = new Player(state, "Player " + playerID);
 
             // Set up player deck and hand
-            System.out.println(player.player_username + " drawing cards...");
+            System.out.println(player.player_username + " initializing deck...");
 
-            // Draw 7 Copper from Supply
+            // Add 7 Copper from Supply to Deck
             for(int i = 0; i < 7; i++) {
                 player.gainCardFromSupply(Card.getCard(availableCards, Card.CardName.COPPER));
             }
 
-            // Draw 3 Estates from Supply
+            // Add 3 Estates from Supply to Deck
             for(int i = 0; i < 3; i++) {
                 player.gainCardFromSupply(Card.getCard(availableCards, Card.CardName.ESTATE));
             }
-
-            System.out.println(player.player_username + " hand:");
-            System.out.println(gson.toJson(player.hand));
 
             // Add Player to GameState
             state.addPlayer(player);

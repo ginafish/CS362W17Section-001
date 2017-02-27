@@ -181,19 +181,28 @@ public final class Card implements Comparable<Card>{
 	    return matchingCards;
     }
 	
-	public void play(Player player, GameState state, List<Card> cards) {
+	public void play(Player player, GameState state) {
+	    // Move card to in-play area to prevent discarding self
+        player.cardsInPlay.add(player.hand.remove(player.hand.indexOf(this)));
 		
 		switch(this.cardName) {
             case CELLAR:
                 player.numActions++;
-                cards.forEach(card -> {
-                    player.hand.remove(card);
+                int numberToDiscard = Randomness.nextRandomInt(player.hand.size());
+                for(int i = 0; i < numberToDiscard; i++) {
+                    player.discard(Randomness.randomMember(player.hand));
+                }
+
+                for(int j = 0; j < numberToDiscard; j++) {
                     player.drawCard();
-                });
+                }
                 break;
 
             case CHAPEL:
-                cards.forEach(card -> player.hand.remove(card));
+                int numberToTrash = Randomness.nextRandomInt(player.hand.size());
+                for(int i = 0; i < numberToTrash; i++) {
+                    player.trashFromHand(Randomness.randomMember(player.hand));
+                }
                 break;
 
             // TODO: Implement Moat Card
@@ -224,7 +233,7 @@ public final class Card implements Comparable<Card>{
                 if(card.getType() == Type.ACTION) {
                     int play = Randomness.nextRandomInt(1);
                     if(play == 1) {
-                        card.play(player, state, cards);
+                        card.play(player, state);
                     }
                 }
                 player.discard(card);
@@ -236,9 +245,12 @@ public final class Card implements Comparable<Card>{
                 break;
 
             case WORKSHOP:
-                if(cards.size() == 1 && cards.get(0).cost <= 4) {
-                    player.hand.add(cards.get(0));
-                }
+                List<Card> cards = state.supply.entrySet().stream()
+                        .filter(map -> map.getKey().getCost() <= 4)
+                        .map(map -> map.getKey())
+                        .collect(Collectors.toList());
+
+                player.gainCardFromSupply(Randomness.randomMember(cards));
                 break;
 
             case BUREAUCRAT:
@@ -393,6 +405,9 @@ public final class Card implements Comparable<Card>{
 			default:
 				break;
 		}
+
+		// Move card from in-play area back to hand prior to discard
+		player.hand.add(player.cardsInPlay.remove(player.cardsInPlay.indexOf(this)));
 
 		player.discard(this);
 	}
