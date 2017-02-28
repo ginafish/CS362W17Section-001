@@ -36,11 +36,15 @@ public class RandomTest {
     }
 
     public static void main(String[] arguments) {
-        new RandomTest().play();
+        for (int i = 0; i < 1000; i++) {
+            System.out.printf("-------- Beginning game %d --------\n", i);
+            new RandomTest().play(i);
+            System.out.printf("-------- End of game %d --------\n", i);
+        }
     }
 
-    public void play() {
-        rng.setSeed(10);
+    public void play(int seed) {
+        rng.setSeed(seed);
 
         // Select 10 random kingdom cards
         ArrayList<Card> allkc = new ArrayList<Card>(this.allkc);
@@ -51,7 +55,6 @@ public class RandomTest {
             kc.add(allkc.get(i));
         }
 
-        int seed = 1;
         int numPlayers = 2 + rng.nextInt(3);
         Game game = new Game(numPlayers, kc, seed);
 
@@ -62,45 +65,65 @@ public class RandomTest {
 
         System.out.println("Starting game.");
 
+        int turn = 0;
         while (!game.isGameOver()) {
-            printCards(game);
+            //printCards(game);
 
             while (game.getActions() > 0) {
-                // Select a random card
-                int pos = rng.nextInt(game.numHandCards());
-                // If not an action, abort
-                if (!game.handCard(pos).isAction()) {
+                // Get action cards
+                List<Integer> actions = new ArrayList<Integer>();
+                for (int i = 0; i < game.numHandCards(); i++) {
+                    if (game.handCard(i).isAction()) {
+                        actions.add(i);
+                    }
+                }
+
+                // Select a random action to play
+                // or nothing
+                int n = rng.nextInt(actions.size()+1)-1;
+                if (n == -1) {
                     break;
                 }
+
+                // Play the card
+                int pos = actions.get(n);
 
                 System.out.printf("player %d: playing %s\n", game.getCurrentPlayer(), game.handCard(pos));
                 playAction(game, pos);
             }
 
-            
-            int money = playTreasures(game);
+            // Buy phase
+            // play all our treasure cards
+            playTreasures(game);
+
             while (game.getBuys() > 0 && game.getCoins() > 0) {
-                // Select a random card to buy
-                int cardx = rng.nextInt(supply.size());
-                Card card = supply.get(cardx);
+                // Select a random card to buy, or nothing
+                int n = rng.nextInt(supply.size()+1)-1;
+                if (n == -1) {
+                    break;
+                }
+
+                // Can we buy it?
+                Card card = supply.get(n);
                 if (card.cost() > game.getCoins()) {
-                    // If it is too expensive, buy a Copper instead
-                    card = Card.Copper;
+                    // If it is too expensive, roll again
+                    continue;
                 }
                 if (game.supplyCount(card) <= 0) {
-                    if (card == Card.Copper) {
-                        break; // uh-oh
-                    }
                     // if the card isn't available,
                     // delete it and try again
                     supply.remove(card);
                     continue;
                 }
+
+                // Buy the card
                 System.out.printf("player %d: buying %s\n", game.getCurrentPlayer(), card);
                 game.buyCard(card);
             }
             game.endTurn();
+            turn++;
         }
+        System.out.printf(" Game ended after %d turns\n", turn);
     }
 
     public void playAction(Game game, int pos) {
@@ -119,6 +142,37 @@ public class RandomTest {
             // Choose a random card from the supply
             int n = rng.nextInt(this.supply.size());
             game.playAction(pos, this.supply.get(n));
+        } else if (card == Card.Feast) {
+            // Choose a random card to gain from the supply
+            Card x = this.supply.get(rng.nextInt(this.supply.size()));
+            while (x.cost() > 4 || game.supplyCount(x) <= 0) {
+                this.supply.remove(x);
+                x = this.supply.get(rng.nextInt(this.supply.size()));
+            }
+            game.playAction(pos, x);
+        } else if (card == Card.Mine) {
+            // Select a random treasure card to trash
+            List<Integer> treasures = new ArrayList<Integer>();
+            for (int i = 0; i < game.numHandCards(); i++) {
+                if (game.handCard(i).isTreasure()) {
+                    treasures.add(i);
+                }
+            }
+            if (treasures.size() < 1) {
+                return; // :(
+            }
+            int n = treasures.get(rng.nextInt(treasures.size()));
+            // select a treasure card to gain
+            Card gain = Card.Copper;
+            if (game.handCard(n).cost()+3 >= 6) {
+                gain = Card.Gold;
+            } else if (game.handCard(n).cost()+3 >= 3) {
+                gain = Card.Silver;
+            }
+            if (n >= pos) {
+                n--;
+            }
+            game.playAction(pos, n, gain);
         } else {
             game.playAction(pos);
         }
