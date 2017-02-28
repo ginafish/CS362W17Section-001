@@ -7,7 +7,7 @@ Path to EvoSuite generated reports: Dominion -> target -> surefire-reports
 
 Test code generated using search based testing tool: EvoSuite
 
-Sources used when creating pom.xml file and configuring EvoSuite:
+Sources used for creating pom.xml file and configuring EvoSuite:
 
 http://www.evosuite.org/documentation/tutorial-part-2/
 https://piazza.com/class/ixh12gm0sow2i9
