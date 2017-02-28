@@ -1,25 +1,10 @@
-#########
-Compiling and running without code coverage:
-- mvn compile
-- mvn test-compile
-- mvn package
+### ASSIGNMENT 2 ###
 
-Testing (no code coverage tool):
--- mvn test -Dtest=CardTest
--- mvn test -Dtest=PlayerTest
+The Randoop code report has been pregenerated and can be found in the Randoop_Cobertura_Report folder.
 
-##########
-
-Compiling and running WITH code coverage tool:
-- chmod +x run.sh
-- ./run.sh test
-
-OR
-
-- mvn test-compile
+Running the random testing apparatus WITH randoop RegressionTests:
+- mvn clean
 - mvn cobertura:cobertura
 
+Testing the random tester by itself will require the RegressionTests to be deleted from the src/test/java/cs362/dominion folder before running “mvn clean” described above. Running cobertura will test and generate the code coverage report in one go.
 
-##########
-CODE COVERAGE HTML is located in CODE_COVERAGE_REPORT, open index.html.
-This code coverage HTML was generated with Cobertura.
