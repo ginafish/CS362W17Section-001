@@ -13,7 +13,7 @@ public class Player {
 	private int nbAction;
 	private int nbAchat;
 	private Board gameBoard;
-	private int id;
+	public int id;
 	// private Scanner sc = new Scanner(System.in);
 	private Random rand = new Random();
 

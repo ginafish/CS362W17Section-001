@@ -259,9 +259,13 @@ public class TestGame {
         game.endTurn();
 
         // What if coinPos > pos?
-        pos = game.takeForTesting(0, Card.Mine);
-        coinPos = game.takeForTesting(0, Card.Silver);
-        game.playAction(pos, coinPos, Card.Gold);
+            pos = game.takeForTesting(0, Card.Mine);
+            coinPos = game.takeForTesting(0, Card.Silver);
+        try {
+            game.playAction(pos, coinPos, Card.Gold);
+        } catch (GameError e) {
+            fail("caught GameError");
+        }
     }
 
     @Test

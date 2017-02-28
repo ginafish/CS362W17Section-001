@@ -1,7 +1,7 @@
 package cs362.dominion;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -46,8 +46,8 @@ public class Game {
 
         this.kingdomCards = new ArrayList<>(kingdomCards);
         this.numPlayers = numPlayers;
-        this.supply = new HashMap<Card,Integer>();
-        this.embargoTokens = new HashMap<Card,Integer>();
+        this.supply = new LinkedHashMap<Card,Integer>();
+        this.embargoTokens = new LinkedHashMap<Card,Integer>();
         this.currentPlayer = 0;
         this.phase = 0;
         this.actions = 0;
@@ -560,10 +560,19 @@ public class Game {
                 garden++;
             }
         }
-        // Gardens: Worth 1 Victory for every 10 cards in your deck (rounded down). 
+        // Gardens: Worth 1 Victory for every 10 cards in your deck (rounded down).
         int gardenScore = deckCount / 10;
         score += garden * gardenScore;
         return score;
+    }
+
+    // Get a list of cards in the supply
+    ArrayList<Card> getSupplyCards() {
+        ArrayList<Card> supply = new ArrayList<Card>();
+        for (Card x : this.supply.keySet()) {
+            supply.add(x);
+        }
+        return supply;
     }
 
     /* Accessors */
@@ -575,7 +584,7 @@ public class Game {
     public int getCurrentPlayer() { return this.currentPlayer; }
     public int getPhase() { return this.phase; }
 
-    /* convenience functions */    
+    /* convenience functions */
     static ArrayList<Card> standardCards() {
         return Card.list(
             Card.Adventurer,
