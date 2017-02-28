@@ -4,6 +4,7 @@ Path to Dominion Game: Dominion -> src -> main -> java -> org -> cs362 -> domini
 Path to test code: Dominion -> src -> test -> java -> org -> cs362 -> dominion
 Path to Cobertura report: Dominion -> target -> site -> cobertura -> index
 Path to EvoSuite generated reports: Dominion -> target -> surefire-reports
+Path to Random Tester: Dominion -> src -> test -> java -> org -> cs362 -> dominion -> RandomTestDominionTest.java
 
 Test code generated using search based testing tool: EvoSuite
 

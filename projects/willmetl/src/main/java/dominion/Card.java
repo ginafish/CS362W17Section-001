@@ -250,7 +250,6 @@ public enum Card{
   }
 
   public Card play(Player p){
-    if(DEBUGGING) System.out.println(p+" played a "+cardName);
     if(givesMoney>0) p.addMoney(givesMoney);
     if(givesActions>0) p.addActions(givesActions);
     return this;
@@ -260,7 +259,6 @@ public enum Card{
     return this.givesVictoryPoints;
   }
   public int getVictoryPoints(Player p){
-    System.out.println(this);
     return this.givesVictoryPoints;
   }
 
