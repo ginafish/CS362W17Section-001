@@ -7,3 +7,15 @@ To generate a coverage report:
     mvn clean site
 
 The generated report will be in the target/site/cobertura directory.
+
+
+
+To generate evosuite tests:
+    
+    mvn evosuite:generate
+    mvn evosuite:export
+
+
+You must have Maven 3.1 or greater.
+
+
