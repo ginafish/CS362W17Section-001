@@ -1,31 +1,11 @@
 Project folder for William Buffum, CS362 Winter 2017
 
-Project folder for William Buffum, CS362 Winter 2017
+For EvoSuite tests, go to: ./Dominion/Assignment-2/EvoSuite\ Dominion/
+    
+    README.md in this location has instructions to run EvoSuite tests
 
-Compile -> Run without code coverage: Must be in the same directory as the pom.xml
+For RandomTestDominion.java: ./Dominion/Assignment-2/RandomTestDominion\ Dominion/
 
-	1. Type the following
-		
-			mvn compile
+    README.md in this location has instructions to run my tests which include RandomTestDominion.java
 
-	2. Then type
-
-			mvn package
-
-	3. Then type
-
-			mvn test
-
-Compile -> with code coverage: Must be in the same directory as the pom.xml
-
-	1. Type the following
-		
-			mvn compile
-
-	2. Then type
-
-			mvn package
-
-	3. Then type
-
-			mvn cobertura:cobertura
+For Assignment 1 materials: ./Dominion/Assignment-1
