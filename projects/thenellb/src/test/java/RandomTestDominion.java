@@ -11,10 +11,9 @@ import java.util.List;
 import java.util.Collections;
 
 
-public class TestGameBoard {
+public class RandomTestDominion {
    @Test
-
-    public void testGameBoard(){
-       GameBoard myGameBoard = new GameBoard();
+    public void  RandomTestDominion(){
+       GameBoard myGameBoard = new GameBoard();//plays new game with random inputs
    }
 }
