@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.cs362.dominion.boardTest" time="0.001" tests="6" errors="0" skipped="0" failures="0">
+<testsuite name="org.cs362.dominion.boardTest" time="0.002" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
@@ -61,8 +61,8 @@
   </properties>
   <testcase name="testEstateOperations" classname="org.cs362.dominion.boardTest" time="0"/>
   <testcase name="testGoldOperations" classname="org.cs362.dominion.boardTest" time="0"/>
-  <testcase name="testCopperOperations" classname="org.cs362.dominion.boardTest" time="0"/>
+  <testcase name="testCopperOperations" classname="org.cs362.dominion.boardTest" time="0.001"/>
   <testcase name="testSilverOperations" classname="org.cs362.dominion.boardTest" time="0"/>
-  <testcase name="testProvidenceOperations" classname="org.cs362.dominion.boardTest" time="0"/>
-  <testcase name="testDuchyOperations" classname="org.cs362.dominion.boardTest" time="0.001"/>
+  <testcase name="testProvidenceOperations" classname="org.cs362.dominion.boardTest" time="0.001"/>
+  <testcase name="testDuchyOperations" classname="org.cs362.dominion.boardTest" time="0"/>
 </testsuite>
