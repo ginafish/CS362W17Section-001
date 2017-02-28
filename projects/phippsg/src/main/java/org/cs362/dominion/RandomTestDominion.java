@@ -1,6 +1,6 @@
 package org.cs362.dominion;
 
-public class PlayDominion {
+public class RandomTestDominion {
 
 	public static void main( String[] args ) {
 		
