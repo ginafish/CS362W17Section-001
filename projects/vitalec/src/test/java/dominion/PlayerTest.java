@@ -67,7 +67,10 @@ public class PlayerTest {
 
     @Test
     public void testPlayerCanDrawCard() {
-        assertTrue(player.drawCard() != null);
+        int startingHandSize = player.hand.size();
+        player.drawCard();
+
+        assertTrue(startingHandSize < player.hand.size());
     }
 
     @Test

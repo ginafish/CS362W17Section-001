@@ -30,7 +30,7 @@ public class Player {
         this.gameState = gameState;
     }
 
-    final Card drawCard() {
+    final void drawCard() {
         if (deck.isEmpty()) {// Deck is empty
             // Step 1 Shuffle the discard pile back into a deck
             System.out.println("reshuffle the deck of the player "
@@ -41,14 +41,16 @@ public class Player {
                 deck.add(discard.remove(ndx));
             }
         }
-        System.out.println(deck.size());
+
+        if(deck.isEmpty()) {
+            return;
+        }
 
         Card toDraw = deck.poll();
         hand.add(toDraw);// Add card to hand and hand count automatically will
         // be incremented since we use List
         System.out.println("draw " + toDraw);
         Collections.sort(hand);
-        return toDraw;
     }
 
     final void initializePlayerTurn() {

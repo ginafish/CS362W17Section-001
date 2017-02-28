@@ -227,16 +227,17 @@ public final class Card implements Comparable<Card>{
                 // TODO: "The first time you play a Silver this turn, +1 coin"
                 break;
 
+            // TODO: Implement Vassal Card
             case VASSAL:
-                player.coins += 2;
-                Card card = player.deck.pop();
-                if(card.getType() == Type.ACTION) {
-                    int play = Randomness.nextRandomInt(1);
-                    if(play == 1) {
-                        card.play(player, state);
-                    }
-                }
-                player.discard(card);
+//                player.coins += 2;
+//                Card card = player.deck.pop();
+//                player.discard.add(card);
+//                if(card.getType() == Type.ACTION) {
+//                    int play = Randomness.nextRandomInt(1);
+//                    if(play == 1) {
+//                        card.play(player, state);
+//                    }
+//                }
                 break;
 
             case VILLAGE:
@@ -320,28 +321,29 @@ public final class Card implements Comparable<Card>{
             case THRONE_ROOM:
                 break;
 
+            // TODO: Implement Bandit Card
             case BANDIT:
-                player.gainCardFromSupply(Card.getCard(state.availCards, Card.CardName.GOLD));
-
-                state.players.forEach(plyr -> {
-                    if(!player.player_username.equals(plyr.player_username)) {
-                        boolean trashed = false;
-                        Card crd = plyr.deck.pop();
-                        if(crd.getType() == Type.TREASURE && crd.cardName != CardName.COPPER) {
-                            plyr.trash.add(crd);
-                            trashed = true;
-                        } else {
-                            plyr.discard.add(crd);
-                        }
-
-                        crd = plyr.deck.pop();
-                        if(!trashed && crd.getType() == Type.TREASURE && crd.cardName != CardName.COPPER) {
-                            plyr.trash.add(crd);
-                        } else {
-                            plyr.discard.add(crd);
-                        }
-                    }
-                });
+//                player.gainCardFromSupply(Card.getCard(state.availCards, Card.CardName.GOLD));
+//
+//                state.players.forEach(plyr -> {
+//                    if(!player.player_username.equals(plyr.player_username)) {
+//                        boolean trashed = false;
+//                        Card crd = plyr.deck.poll();
+//                        if(crd.getType() == Type.TREASURE && crd.cardName != CardName.COPPER) {
+//                            plyr.trash.add(crd);
+//                            trashed = true;
+//                        } else {
+//                            plyr.discard.add(crd);
+//                        }
+//
+//                        crd = plyr.deck.pop();
+//                        if(!trashed && crd.getType() == Type.TREASURE && crd.cardName != CardName.COPPER) {
+//                            plyr.trash.add(crd);
+//                        } else {
+//                            plyr.discard.add(crd);
+//                        }
+//                    }
+//                });
                 break;
 
             case COUNCIL_ROOM:

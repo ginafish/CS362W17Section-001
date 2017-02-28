@@ -23,6 +23,11 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.junit.vintage</groupId>
+			<artifactId>junit-vintage-engine</artifactId>
+			<version>RELEASE</version>
+		</dependency>
+		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
 			<version>2.3.1</version>
@@ -111,6 +116,9 @@
 					<goals> <goal> prepare </goal> </goals>
 					<phase> process-test-classes </phase>
 				</execution></executions>
+				<configuration>
+					<extraArgs> -Duse_separate_classloader=false</extraArgs>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
