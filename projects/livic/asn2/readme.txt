@@ -1,6 +1,7 @@
 ### ASSIGNMENT 2 ###
 
-The Randoop code report has been pregenerated and can be found in the Randoop_Cobertura_Report folder.
+The Randoop test suite report has been pregenerated and can be found in the Randoop_Cobertura_Report folder.
+The random tester test suite code report has been pregenerated and can be found in the Random_Test_Report folder.
 
 Running the random testing apparatus WITH randoop RegressionTests:
 - mvn clean
