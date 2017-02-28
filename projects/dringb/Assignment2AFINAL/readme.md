@@ -1,5 +1,6 @@
 ## If you have any troubles please email me at dringb@oregonstate.edu everything is working fine on my machine, and school server,I would hate to lose points for something so silly
 
+### I have attached results of custom assert tests to main game look for ```Times passed custom asserts:``` When running the game
 ### Before you clean everything take a look at the cobertura report
 
 ### Clean maven files 
