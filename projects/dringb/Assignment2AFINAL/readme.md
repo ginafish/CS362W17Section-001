@@ -1,0 +1,18 @@
+## If you have any troubles please email me at dringb@oregonstate.edu everything is working fine on my machine, and school server,I would hate to lose points for something so silly
+
+### Before you clean everything take a look at the cobertura report
+
+### Clean maven files 
+#### ```mvn clean```
+
+### Compile all maven files 
+#### ```mvn compile```
+
+### Test my Junit tests && EvoSuite tests
+#### ```mvn tests```
+
+### Generate new Code report 
+#### ``` mvn cobertura:cobertura```
+
+### Play game 
+#### ```cd src/main/java && java dominion/playDominion```
