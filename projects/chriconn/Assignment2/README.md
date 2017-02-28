@@ -2,12 +2,14 @@
 
 ###About
 The purpose of this assignment was to:  
+
     * Generate some code using a testing suite  
     * Compare that to the testing suite we wrote in Assignment 1  
     * Write a *RandomTestDominion.java* to randomly test our dominion game  
 
 ###File structure
 The assignment is organized as follows:  
+
     * assignment1  
         1. screen shots of assignment 1 cobertura output included on the writeup  
         2. dominion folder containing all the code from assignment 1  
