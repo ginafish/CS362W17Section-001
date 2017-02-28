@@ -4,7 +4,7 @@
 //File: Player.java
 //Class: CS362
 //*************************
-package main.org.cs362.dominion;
+package org.cs362.dominion;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -290,7 +290,7 @@ public class Player implements Cloneable{
 			   }
 			}
 	   }
-	     
+
 
 	   final void endTurn() {
 		   System.out.println("Clean Up:");
@@ -334,10 +334,10 @@ public class Player implements Cloneable{
        	 sb.append("\nDiscard: " + this.discard);
        	 sb.append("\nDeck: " + this.deck);
        	 sb.append("\nPlayed Cards: " + this.playedCards);
-       	 sb.append("\nTrashed Cards: " + this.trashedCards);
        	 sb.append("\nnumActions: " + this.numActions);
        	 sb.append("\ncoins: " + this.coins);
        	 sb.append("\nnumBuys: " + this.numBuys);
+       	 sb.append("\nTrashed Cards: " + this.trashedCards);
        	 sb.append("\n");     
 
 		     return sb.toString();
@@ -346,6 +346,7 @@ public class Player implements Cloneable{
 	   
 	    protected Player clone() throws CloneNotSupportedException {
 	    	Player clonePlayer=(Player) super.clone();
+			clonePlayer.trashedCards = new ArrayList<Card>(trashedCards);
 	    	clonePlayer.hand = new ArrayList<Card>(hand);// int hand[MAX_PLAYERS][MAX_HAND];
 			clonePlayer.deck = new LinkedList<Card>(deck);// int deck[MAX_PLAYERS][MAX_DECK];
 			clonePlayer.discard = new ArrayList<Card>(discard); // int discard[MAX_PLAYERS][MAX_DECK];
