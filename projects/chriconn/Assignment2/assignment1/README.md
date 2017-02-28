@@ -1,30 +1,30 @@
 ##Structure for assignment1 folder
 .
-├── Dominion
-│   ├── pom.xml
-│   └── src
-│       ├── main
-│       │   └── java
-│       │       └── org
-│       │           └── cs362
-│       │               └── dominion
-│       │                   ├── Card.java
-│       │                   ├── Deck.java
-│       │                   ├── Game.java
-│       │                   └── Player.java
-│       └── test
-│           └── java
-│               └── org
-│                   └── cs362
-│                       └── dominion
-│                           ├── CardTest.java
-│                           ├── DeckTest.java
-│                           ├── GameTest.java
-│                           └── PlayerTest.java
-├── README.md
-└── ScreenShots
-    ├── OriginalCard.png
-    ├── OriginalDeck.png
-    ├── OriginalGame.png
-    ├── OriginalOverall.png
-    └── OriginalPlayer.png
+|-- ./ScreenShots
+|   |-- ./ScreenShots/OriginalOverall.png
+|   |-- ./ScreenShots/OriginalCard.png
+|   |-- ./ScreenShots/OriginalDeck.png
+|   |-- ./ScreenShots/OriginalGame.png
+|   `-- ./ScreenShots/OriginalPlayer.png
+|-- ./Dominion
+|   |-- ./Dominion/pom.xml
+|   `-- ./Dominion/src
+|       |-- ./Dominion/src/test
+|       |   `-- ./Dominion/src/test/java
+|       |       `-- ./Dominion/src/test/java/org
+|       |           `-- ./Dominion/src/test/java/org/cs362
+|       |               `-- ./Dominion/src/test/java/org/cs362/dominion
+|       |                   |-- ./Dominion/src/test/java/org/cs362/dominion/DeckTest.java
+|       |                   |-- ./Dominion/src/test/java/org/cs362/dominion/PlayerTest.java
+|       |                   |-- ./Dominion/src/test/java/org/cs362/dominion/CardTest.java
+|       |                   `-- ./Dominion/src/test/java/org/cs362/dominion/GameTest.java
+|       `-- ./Dominion/src/main
+|           `-- ./Dominion/src/main/java
+|               `-- ./Dominion/src/main/java/org
+|                   `-- ./Dominion/src/main/java/org/cs362
+|                       `-- ./Dominion/src/main/java/org/cs362/dominion
+|                           |-- ./Dominion/src/main/java/org/cs362/dominion/Card.java
+|                           |-- ./Dominion/src/main/java/org/cs362/dominion/Player.java
+|                           |-- ./Dominion/src/main/java/org/cs362/dominion/Deck.java
+|                           `-- ./Dominion/src/main/java/org/cs362/dominion/Game.java
+`-- ./README.md
