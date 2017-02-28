@@ -40,7 +40,7 @@ public class PlayerTest {
     public void testDrawCard() {
         List<Card> cards = new ArrayList<Card>(Card.createCards());
         GameState state = new GameState(cards);
-        Randomness.reset(10);
+        //Randomness.reset(10);
         Player instance = new Player(state, "player-1");
         state.addPlayer(instance);
         instance = new Player(state, "player-2");
@@ -64,7 +64,7 @@ public class PlayerTest {
     public void testGain() {
         List<Card> cards = new ArrayList<Card>(Card.createCards());
         GameState state = new GameState(cards);
-        Randomness.reset(10);
+       // Randomness.reset(10);
         Player instance = new Player(state, "player-1");
         state.addPlayer(instance);
         instance = new Player(state, "player-2");
@@ -89,7 +89,7 @@ public class PlayerTest {
     public void testDiscard() {
         List<Card> cards = new ArrayList<Card>(Card.createCards());
         GameState state = new GameState(cards);
-        Randomness.reset(10);
+       // Randomness.reset(10);
         Player instance = new Player(state, "player-1");
         state.addPlayer(instance);
         instance = new Player(state, "player-2");
@@ -117,7 +117,7 @@ public class PlayerTest {
     public void testDiscardType() {
         List<Card> cards = new ArrayList<Card>(Card.createCards());
         GameState state = new GameState(cards);
-        Randomness.reset(10);
+       // Randomness.reset(10);
         Player instance = new Player(state, "player-1");
         state.addPlayer(instance);
         instance = new Player(state, "player-2");
@@ -146,7 +146,7 @@ public class PlayerTest {
     public void testTrash() {
         List<Card> cards = new ArrayList<Card>(Card.createCards());
         GameState state = new GameState(cards);
-        Randomness.reset(10);
+       // Randomness.reset(10);
         Player instance = new Player(state, "player-1");
         state.addPlayer(instance);
         instance = new Player(state, "player-2");
@@ -175,7 +175,7 @@ public class PlayerTest {
     public void testPlayTreasureCard(){
         List<Card> cards = new ArrayList<Card>(Card.createCards());
         GameState state = new GameState(cards);
-        Randomness.reset(10);
+       // Randomness.reset(10);
         Player instance = new Player(state, "player-1");
         state.addPlayer(instance);
         instance = new Player(state, "player-2");
