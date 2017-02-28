@@ -1,4 +1,6 @@
-## If you have any troubles please email me at dringb@oregonstate.edu everything is working fine on my machine, and school server,I would hate to lose points for something so silly
+## If you have any troubles please email me at dringb@oregonstate.edu or call at 541-510-5034 everything is working fine on my machine, and school server,I would hate to lose points for something so silly
+
+### To look at produced EvoSuite Files type ```cd src/test/java/dominion``` then look for EST files
 
 ### Before you clean everything take a look at the cobertura report
 
