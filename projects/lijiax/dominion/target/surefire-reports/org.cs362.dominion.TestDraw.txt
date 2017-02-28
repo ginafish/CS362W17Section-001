@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: org.cs362.dominion.TestDraw
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.061 sec <<< FAILURE! - in org.cs362.dominion.TestDraw
+testDraw(org.cs362.dominion.TestDraw)  Time elapsed: 0.021 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at java.util.ComparableTimSort.countRunAndMakeAscending(ComparableTimSort.java:325)
+	at java.util.ComparableTimSort.sort(ComparableTimSort.java:188)
+	at java.util.Arrays.sort(Arrays.java:1312)
+	at java.util.Arrays.sort(Arrays.java:1506)
+	at java.util.ArrayList.sort(ArrayList.java:1454)
+	at java.util.Collections.sort(Collections.java:141)
+	at org.cs362.dominion.Player.drawCard(Player.java:46)
+	at org.cs362.dominion.TestDraw.testDraw(TestDraw.java:31)
+
