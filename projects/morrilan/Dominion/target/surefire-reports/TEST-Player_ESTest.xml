@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="PlayerTest" time="0.015" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Player_ESTest" time="1.202" tests="47" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_111\jre\bin"/>
@@ -62,5 +62,51 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="test" classname="PlayerTest" time="0.015"/>
+  <testcase name="test40" classname="Player_ESTest" time="0.006"/>
+  <testcase name="test41" classname="Player_ESTest" time="0.006"/>
+  <testcase name="test04" classname="Player_ESTest" time="0.011"/>
+  <testcase name="test26" classname="Player_ESTest" time="0"/>
+  <testcase name="test05" classname="Player_ESTest" time="0.002"/>
+  <testcase name="test27" classname="Player_ESTest" time="0.016"/>
+  <testcase name="test02" classname="Player_ESTest" time="0.017"/>
+  <testcase name="test24" classname="Player_ESTest" time="0.004"/>
+  <testcase name="test46" classname="Player_ESTest" time="0.017"/>
+  <testcase name="test03" classname="Player_ESTest" time="0.018"/>
+  <testcase name="test25" classname="Player_ESTest" time="0.015"/>
+  <testcase name="test00" classname="Player_ESTest" time="0.004"/>
+  <testcase name="test22" classname="Player_ESTest" time="0.907"/>
+  <testcase name="test44" classname="Player_ESTest" time="0.009"/>
+  <testcase name="test01" classname="Player_ESTest" time="0.002"/>
+  <testcase name="test23" classname="Player_ESTest" time="0.002"/>
+  <testcase name="test45" classname="Player_ESTest" time="0.004"/>
+  <testcase name="test20" classname="Player_ESTest" time="0.009"/>
+  <testcase name="test42" classname="Player_ESTest" time="0.002"/>
+  <testcase name="test21" classname="Player_ESTest" time="0.002"/>
+  <testcase name="test43" classname="Player_ESTest" time="0.003"/>
+  <testcase name="test08" classname="Player_ESTest" time="0.01"/>
+  <testcase name="test09" classname="Player_ESTest" time="0"/>
+  <testcase name="test06" classname="Player_ESTest" time="0.002"/>
+  <testcase name="test28" classname="Player_ESTest" time="0.003"/>
+  <testcase name="test07" classname="Player_ESTest" time="0.013"/>
+  <testcase name="test29" classname="Player_ESTest" time="0.002"/>
+  <testcase name="test30" classname="Player_ESTest" time="0.003"/>
+  <testcase name="test15" classname="Player_ESTest" time="0.002"/>
+  <testcase name="test37" classname="Player_ESTest" time="0.016"/>
+  <testcase name="test16" classname="Player_ESTest" time="0.001"/>
+  <testcase name="test38" classname="Player_ESTest" time="0.002"/>
+  <testcase name="test13" classname="Player_ESTest" time="0.001"/>
+  <testcase name="test35" classname="Player_ESTest" time="0.019"/>
+  <testcase name="test14" classname="Player_ESTest" time="0.003"/>
+  <testcase name="test36" classname="Player_ESTest" time="0.001"/>
+  <testcase name="test11" classname="Player_ESTest" time="0.001"/>
+  <testcase name="test33" classname="Player_ESTest" time="0.003"/>
+  <testcase name="test12" classname="Player_ESTest" time="0.012"/>
+  <testcase name="test34" classname="Player_ESTest" time="0.002"/>
+  <testcase name="test31" classname="Player_ESTest" time="0.001"/>
+  <testcase name="test10" classname="Player_ESTest" time="0.002"/>
+  <testcase name="test32" classname="Player_ESTest" time="0.002"/>
+  <testcase name="test19" classname="Player_ESTest" time="0.01"/>
+  <testcase name="test17" classname="Player_ESTest" time="0.002"/>
+  <testcase name="test39" classname="Player_ESTest" time="0.004"/>
+  <testcase name="test18" classname="Player_ESTest" time="0.009"/>
 </testsuite>
