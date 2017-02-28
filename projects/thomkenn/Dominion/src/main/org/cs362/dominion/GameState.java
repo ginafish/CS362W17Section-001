@@ -4,7 +4,7 @@
 //File: GameState.java
 //Class: CS362
 //*************************
-package main.org.cs362.dominion;
+package org.cs362.dominion;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -45,7 +45,7 @@ are in fact (different) kingdom cards, and that numPlayers is valid.
 			      return ;
 			    }
 				  int selectedKindom=0;
-				   int Kingdom_Cards_Selected=13;
+				   int Kingdom_Cards_Selected=10;
 		      while (selectedKindom < Kingdom_Cards_Selected) {
 			         int random = (int)  Randomness.random.nextInt(cards.size());//
 			         Card tmp = cards.get(random);

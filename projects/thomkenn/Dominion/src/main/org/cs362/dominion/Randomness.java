@@ -4,7 +4,7 @@
 //File: Randomness.java
 //Class: CS362
 //*************************
-package main.org.cs362.dominion;
+package org.cs362.dominion;
 
 import java.util.List;
 import java.util.Random;
