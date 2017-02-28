@@ -70,36 +70,53 @@ public class RandomTest {
             //printCards(game);
 
             while (game.getActions() > 0) {
-                // Select a random card
-                int pos = rng.nextInt(game.numHandCards());
-                // If not an action, abort
-                if (!game.handCard(pos).isAction()) {
+                // Get action cards
+                List<Integer> actions = new ArrayList<Integer>();
+                for (int i = 0; i < game.numHandCards(); i++) {
+                    if (game.handCard(i).isAction()) {
+                        actions.add(i);
+                    }
+                }
+
+                // Select a random action to play
+                // or nothing
+                int n = rng.nextInt(actions.size()+1)-1;
+                if (n == -1) {
                     break;
                 }
+
+                // Play the card
+                int pos = actions.get(n);
 
                 System.out.printf("player %d: playing %s\n", game.getCurrentPlayer(), game.handCard(pos));
                 playAction(game, pos);
             }
 
-            
-            int money = playTreasures(game);
+            // Buy phase
+            // play all our treasure cards
+            playTreasures(game);
+
             while (game.getBuys() > 0 && game.getCoins() > 0) {
-                // Select a random card to buy
-                int cardx = rng.nextInt(supply.size());
-                Card card = supply.get(cardx);
+                // Select a random card to buy, or nothing
+                int n = rng.nextInt(supply.size()+1)-1;
+                if (n == -1) {
+                    break;
+                }
+
+                // Can we buy it?
+                Card card = supply.get(n);
                 if (card.cost() > game.getCoins()) {
-                    // If it is too expensive, buy a Copper instead
-                    card = Card.Copper;
+                    // If it is too expensive, roll again
+                    continue;
                 }
                 if (game.supplyCount(card) <= 0) {
-                    if (card == Card.Copper) {
-                        break; // uh-oh
-                    }
                     // if the card isn't available,
                     // delete it and try again
                     supply.remove(card);
                     continue;
                 }
+
+                // Buy the card
                 System.out.printf("player %d: buying %s\n", game.getCurrentPlayer(), card);
                 game.buyCard(card);
             }
