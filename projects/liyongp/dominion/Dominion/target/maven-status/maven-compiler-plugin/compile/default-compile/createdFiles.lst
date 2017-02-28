@@ -8,4 +8,5 @@ PlayDominion.class
 Player.class
 GameState.class
 Card.class
+RandomTesterDominion.class
 Card$CardName.class
