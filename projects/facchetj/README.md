@@ -6,6 +6,8 @@ DO NOT REMOVE ANY FOLDER
 DO NOT REMOVE ANY FOLDER
 DO NOT REMOVE ANY FOLDER
 
+To create the coverage report, just use the following commands, the report will be open with the default browser in linux, if you dont use linux, it will be in target/site/cobertura/index.html
+
 To clean use "make clean"
 
 To build use "make build"
