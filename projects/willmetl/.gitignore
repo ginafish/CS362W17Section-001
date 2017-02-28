@@ -1,6 +1,5 @@
 # Ignore .class files created by java
 *.class
-/target/*
 
 # Ignore temp files created by evosuite
 .*
