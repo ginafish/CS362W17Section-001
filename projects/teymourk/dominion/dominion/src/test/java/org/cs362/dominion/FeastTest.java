@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -27,12 +28,34 @@ public class FeastTest {
         Card feast = Card.getCard(cards,Card.CardName.Feast);
         int feastPrice = feast.getCost();
 
+        Random random = new Random();
+        int playersNum = random.nextInt(4);
+
+        cards = new ArrayList<Card>(Card.createCards());
+        state = new GameState(cards);
+
         Player player = new Player(state, "player-1");
         player.hand.add(feast);
-
         state.addPlayer(player);
+
         player = new Player(state, "player-2");
         state.addPlayer(player);
+
+        if (playersNum == 3) {
+
+            player = new Player(state, "player-3");
+            state.addPlayer(player);
+
+        } else if (playersNum == 4) {
+
+            player = new Player(state, "player-3");
+            state.addPlayer(player);
+
+            player = new Player(state, "player-4");
+            state.addPlayer(player);
+        }
+
+        System.out.println("Number Of Players is " + state.players.size());
 
         state.initializeGame();
 

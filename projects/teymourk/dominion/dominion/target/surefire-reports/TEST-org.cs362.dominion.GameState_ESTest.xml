@@ -61,24 +61,24 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="test09" classname="org.cs362.dominion.GameState_ESTest" time="0.007"/>
-  <testcase name="test08" classname="org.cs362.dominion.GameState_ESTest" time="0.003"/>
-  <testcase name="test19" classname="org.cs362.dominion.GameState_ESTest" time="0.01"/>
+  <testcase name="test09" classname="org.cs362.dominion.GameState_ESTest" time="0.005"/>
+  <testcase name="test08" classname="org.cs362.dominion.GameState_ESTest" time="0.002"/>
+  <testcase name="test19" classname="org.cs362.dominion.GameState_ESTest" time="0.012"/>
   <testcase name="test07" classname="org.cs362.dominion.GameState_ESTest" time="0.003"/>
   <testcase name="test18" classname="org.cs362.dominion.GameState_ESTest" time="0.003"/>
-  <testcase name="test06" classname="org.cs362.dominion.GameState_ESTest" time="0.003"/>
-  <testcase name="test17" classname="org.cs362.dominion.GameState_ESTest" time="0.005"/>
+  <testcase name="test06" classname="org.cs362.dominion.GameState_ESTest" time="0.004"/>
+  <testcase name="test17" classname="org.cs362.dominion.GameState_ESTest" time="0.003"/>
   <testcase name="test05" classname="org.cs362.dominion.GameState_ESTest" time="0.003"/>
   <testcase name="test16" classname="org.cs362.dominion.GameState_ESTest" time="0.003"/>
   <testcase name="test04" classname="org.cs362.dominion.GameState_ESTest" time="0.002"/>
-  <testcase name="test15" classname="org.cs362.dominion.GameState_ESTest" time="0.003"/>
-  <testcase name="test03" classname="org.cs362.dominion.GameState_ESTest" time="0.002"/>
-  <testcase name="test14" classname="org.cs362.dominion.GameState_ESTest" time="0.001"/>
-  <testcase name="test02" classname="org.cs362.dominion.GameState_ESTest" time="0.001"/>
-  <testcase name="test13" classname="org.cs362.dominion.GameState_ESTest" time="0.004"/>
-  <testcase name="test01" classname="org.cs362.dominion.GameState_ESTest" time="0.006"/>
+  <testcase name="test15" classname="org.cs362.dominion.GameState_ESTest" time="0.002"/>
+  <testcase name="test03" classname="org.cs362.dominion.GameState_ESTest" time="0.004"/>
+  <testcase name="test14" classname="org.cs362.dominion.GameState_ESTest" time="0.002"/>
+  <testcase name="test02" classname="org.cs362.dominion.GameState_ESTest" time="0.002"/>
+  <testcase name="test13" classname="org.cs362.dominion.GameState_ESTest" time="0.002"/>
+  <testcase name="test01" classname="org.cs362.dominion.GameState_ESTest" time="0.007"/>
   <testcase name="test12" classname="org.cs362.dominion.GameState_ESTest" time="0.002"/>
-  <testcase name="test00" classname="org.cs362.dominion.GameState_ESTest" time="0.002"/>
+  <testcase name="test00" classname="org.cs362.dominion.GameState_ESTest" time="0.003"/>
   <testcase name="test11" classname="org.cs362.dominion.GameState_ESTest" time="0.001"/>
-  <testcase name="test10" classname="org.cs362.dominion.GameState_ESTest" time="0.002"/>
+  <testcase name="test10" classname="org.cs362.dominion.GameState_ESTest" time="0.001"/>
 </testsuite>

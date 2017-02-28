@@ -1,11 +1,8 @@
 package org.cs362.dominion;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
+import org.apache.bcel.generic.SWITCH;
 
-import java.util.Collections;
+import java.util.*;
 
 
 public class PlayDominion {
@@ -20,11 +17,11 @@ public class PlayDominion {
 			cards = new ArrayList<Card>(Card.createCards());
 			state = new GameState(cards);
 
-			Player player = new Player(state, "Kiarash Teymoury");
-		   	state.addPlayer(player);
+		   Player player = new Player(state, "Player-1");
+		   state.addPlayer(player);
 
-		   	player = new Player(state, "Ryan Rodriguez");
-		   	state.addPlayer(player);
+		   player = new Player(state, "Player-2");
+		   state.addPlayer(player);
 
 		   	//state.initializeGame();
 

@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import static org.junit.Assert.*;
 
@@ -15,6 +16,8 @@ public class PlayerTest {
 
     private Player player1;
     private Player player2;
+    private Player player3;
+    private Player player4;
     private List<Card> cards;
     private GameState state;
 
@@ -29,6 +32,34 @@ public class PlayerTest {
 
         player2 = new Player(state, "player-2");
         state.addPlayer(player2);
+
+        Random random = new Random();
+        int playersNum = random.nextInt(4);
+
+        cards = new ArrayList<Card>(Card.createCards());
+        state = new GameState(cards);
+
+        player1 = new Player(state, "player-1");
+        state.addPlayer(player1);
+
+        player2 = new Player(state, "player-2");
+        state.addPlayer(player2);
+
+        if (playersNum == 3) {
+
+            player3 = new Player(state, "player-3");
+            state.addPlayer(player3);
+
+        } else if (playersNum == 4) {
+
+            player3 = new Player(state, "player-3");
+            state.addPlayer(player3);
+
+            player4 = new Player(state, "player-4");
+            state.addPlayer(player4);
+        }
+
+        System.out.println("Players Playing" + state.players.size());
 
         state.initializeGame();
     }

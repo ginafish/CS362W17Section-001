@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 import static org.junit.Assert.assertEquals;
 
@@ -16,6 +17,8 @@ public class AdventureTest {
 
     private Player player1;
     private Player player2;
+    private Player player3;
+    private Player player4;
     private List<Card> cards;
     private GameState state, testState;
 
@@ -23,6 +26,9 @@ public class AdventureTest {
     public void initGame() throws CloneNotSupportedException {
 
         Randomness.reset(10);
+
+        Random random = new Random();
+        int playersNum = random.nextInt(4);
 
         cards = new ArrayList<Card>(Card.createCards());
         state = new GameState(cards);
@@ -33,6 +39,22 @@ public class AdventureTest {
 
         player2 = new Player(state, "player-2");
         state.addPlayer(player2);
+
+        if (playersNum == 3) {
+
+            player3 = new Player(state, "player-3");
+            state.addPlayer(player3);
+
+        } else if (playersNum == 4) {
+
+            player3 = new Player(state, "player-3");
+            state.addPlayer(player3);
+
+            player4 = new Player(state, "player-4");
+            state.addPlayer(player4);
+        }
+
+        System.out.println("Number Of Players is " + state.players.size());
 
         state.initializeGame();
 
@@ -59,7 +81,6 @@ public class AdventureTest {
 
         System.out.println("\n-------Player 1 HAND-------\n");
         System.out.println("Actual: " + state.players.get(0).hand.size() + " Expected : " + (handSize -= handSize - treasureReavead));
-
 
         System.out.println("\n-------Player 1 UPDATED HAND-------\n");
         System.out.println("Actual: " + state.players.get(0).hand);
