@@ -3,7 +3,7 @@
 ### To look at produced EvoSuite Files type ```cd src/test/java/dominion``` then look for EST files
 
 ### Before you clean everything take a look at the cobertura report
-
+## Make sure all commands are ran from where pom.xml is
 ### Clean maven files 
 #### ```mvn clean```
 
