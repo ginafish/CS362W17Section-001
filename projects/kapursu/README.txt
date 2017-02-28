@@ -17,4 +17,4 @@ The tests genereted by the tool can be viewed at Dominion_with_randoop/src/test/
 
 RANDOM TESTER: 
 the test can be run from Dominion_random_tester with: mvn test
-Code coverage for the three classes (Card, GameState, Player) can be found under cobertura_
+Code coverage for the three classes (Card, GameState, Player) can be found under cobertura_report_for_RandomTester
