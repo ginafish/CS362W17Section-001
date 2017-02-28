@@ -16,5 +16,5 @@
 ### Generate new Code report 
 #### ``` mvn cobertura:cobertura```
 
-### Play game 
+### Play game if it goes into an infinite loop please retry, crazy bug I can't find
 #### ```cd src/main/java && java dominion/playDominion```
