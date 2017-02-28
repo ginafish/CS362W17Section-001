@@ -3,6 +3,7 @@ package org.cs362.dominion;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -118,10 +119,10 @@ public class cardsTest {
 		      System.out.println("hand count = " + state.players.get(0).hand.size() + ", expected = "+ ( state.players.get(0).hand.size() + result ) );
 		      //assertEquals(state.players.get(0).hand.size(), 10);
 		      if(state.players.get(0).hand.size() == (state.players.get(0).hand.size()+result)){
-		    	  System.out.println("SUCCEED")
+		    	  System.out.println("SUCCEED");
 		      }
 		      else{
-		    	  System.out.println("FAILED")
+		    	  System.out.println("FAILED");
 		      }
 	  }
 	  
@@ -172,16 +173,16 @@ public class cardsTest {
 		      //assertEquals(state.players.get(0).hand.size(), 10);
 		      //assertEquals(state.players.get(0).numActions, 1);
 		      if(state.players.get(0).hand.size() == (state.players.get(0).hand.size()+result1)){
-		    	  System.out.println("SUCCEED")
+		    	  System.out.println("SUCCEED");
 		      }
 		      else{
-		    	  System.out.println("FAILED")
+		    	  System.out.println("FAILED");
 		      }
 		      if(state.players.get(0).hand.size() == (state.players.get(0).numActions-result2)){
-		    	  System.out.println("SUCCEED")
+		    	  System.out.println("SUCCEED");
 		      }
 		      else{
-		    	  System.out.println("FAILED")
+		    	  System.out.println("FAILED");
 		      }
 	  }
 	  
@@ -228,10 +229,10 @@ public class cardsTest {
 		      System.out.println("hand count = " + state.players.get(0).hand.size() + ", expected = "+ ( state.players.get(0).hand.size() + result1 ) );
 		      //assertEquals(state.players.get(0).hand.size(), 10);
 		      if(state.players.get(0).hand.size() == (state.players.get(0).hand.size()+result1)){
-		    	  System.out.println("SUCCEED")
+		    	  System.out.println("SUCCEED");
 		      }
 		      else{
-		    	  System.out.println("FAILED")
+		    	  System.out.println("FAILED");
 		      }
 	  }
 	  
@@ -278,10 +279,10 @@ public class cardsTest {
 		      System.out.println("hand count = " + state.players.get(0).hand.size() + ", expected = "+ ( state.players.get(0).hand.size() + result1 ) );
 		      //assertEquals(state.players.get(0).hand.size(), 10);
 		      if(state.players.get(0).hand.size() == (state.players.get(0).hand.size()+result1)){
-		    	  System.out.println("SUCCEED")
+		    	  System.out.println("SUCCEED");
 		      }
 		      else{
-		    	  System.out.println("FAILED")
+		    	  System.out.println("FAILED");
 		      }
 	  }
 	  
@@ -328,10 +329,10 @@ public class cardsTest {
 		      System.out.println("hand count = " + state.players.get(0).hand.size() + ", expected = "+ ( state.players.get(0).hand.size() + result1 ) );
 		      //assertEquals(state.players.get(0).hand.size(), 10);
 		      if(state.players.get(0).hand.size() == (state.players.get(0).hand.size()+result1)){
-		    	  System.out.println("SUCCEED")
+		    	  System.out.println("SUCCEED");
 		      }
 		      else{
-		    	  System.out.println("FAILED")
+		    	  System.out.println("FAILED");
 		      }
 	  }
 	
