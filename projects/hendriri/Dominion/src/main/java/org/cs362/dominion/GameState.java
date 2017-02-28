@@ -20,7 +20,7 @@ public class GameState {
 	   //gets a list that will be of players and cards.
 	   public final List<Player> players = new ArrayList<Player>();
 	   public final List<Card> cards;
-	   //i think this is a table that contains and integer and card in a hashmap
+
 	   public HashMap<Card, Integer> gameBoard = new HashMap<Card, Integer>();
 
 	   //the embargo token for the embargo card
@@ -159,25 +159,5 @@ public class GameState {
 
 		      return playerScore;
 		   }
-	   
-	  /* @Override
-	public String toString() {
-
-		StringBuilder sb = new StringBuilder();
-		if (gameBoard.isEmpty())
-			sb.append("The board game is embty you need to intialize the game!!!!");
-		else {
-			for (Player player : players)
-				sb.append(" --- " + player.toString() + "\n");
-			sb.append(" --- gameBoard --- \n");
-			sb.append("Cards on the table: \n");
-			sb.append("Card Name \t\t NumberCards: \n");
-			Map<Card, Integer> treeMap = new TreeMap<Card, Integer>(gameBoard);
-			for (Card card : treeMap.keySet())
-				sb.append("\t " + card.getCardName() + "\t\t "
-						+ treeMap.get(card) + "\n");
-		}
-		return sb.toString();
-	}   */
 	   
 }

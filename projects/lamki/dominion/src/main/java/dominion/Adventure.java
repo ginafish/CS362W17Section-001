@@ -20,37 +20,51 @@ public class Adventure extends Card
         @Override
 	public void play(int card, Random rand1, int hand, Player p, Game g)
 	{
-		Random rand = ThreadLocalRandom.current();
+		//Random rand = ThreadLocalRandom.current();
 		int rnd_c;
 		switch(card)
 		{
 			case 6: //name = "Cellar";
-				if (p.hand.length < 0)
+				if (p.hand.length > 0)
 				{
-					rnd_c = rand.nextInt(p.hand.length - 1);
+					if(p.hand.length - 1 > 0)
+					{
+						rnd_c = rand1.nextInt(p.hand.length - 1);
+					}
+					else
+					{
+						rnd_c = rand1.nextInt(1);;
+					}
 					System.out.println("\t\t+1 Action");
 					System.out.println("\t\tDiscards and draws " +rnd_c+" cards");
 					p.action_turns+=1;
 
 					for(int i = 0; i < rnd_c; i++)
 					{
-						p.to_deck(rand.nextInt(p.hand.length - 1));
-						p.shuffle(rand);
+						p.to_deck(rand1.nextInt(p.hand.length - 1));
+						p.shuffle(rand1);
 						p.draw(1);
 					}
 				}
 			break;
 
 			case 7: //name = "Chapel";
-				if (p.hand.length < 0)
+				if (p.hand.length > 0)
 				{
-					rnd_c = rand.nextInt(p.hand.length - 1);
+					if(p.hand.length - 1 > 0)
+					{
+						rnd_c = rand1.nextInt(p.hand.length - 1);
+					}
+					else
+					{
+						rnd_c = rand1.nextInt(1);;
+					}
 					System.out.println("\t\tDiscards " +rnd_c+" cards");
 					//p.debug_print();
 					for(int i = 0; i < rnd_c; i++)
 					{
 						//System.out.println(rnd_c);
-						p.discard(rand.nextInt(p.hand.length - 1));
+						p.discard(rand1.nextInt(p.hand.length - 1));
 					}
 				}
 			break;
@@ -76,7 +90,7 @@ public class Adventure extends Card
 				p.action_turns+=2;
 				p.buy_turns++;
 				p.draw(1);
-				p.shuffle(rand);
+				p.shuffle(rand1);
 			break;
 
 			case 11: //name = "Laboratory";
