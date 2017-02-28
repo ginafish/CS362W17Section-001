@@ -26,4 +26,24 @@ This folder is split into several sections:
     
     Copy all of the files from the src/test folder inside the Assignment Two folder into the test\java folder
     of the Dominion project, such as Dominion\src\test\java\
+    
+    You should now be able to use Command Prompt to navigate to the Project folder (the one with the pom.xml inside it)
+    and type "mvn compile" and then "mvn test", or "mvn cobertura:cobertura" if you wish to generate a code 
+    coverage report. The report would be located inside the \target\site\cobertura folder as index.html
+    
+ In order to test the RandomTestDominion:
+    Create a Maven Project for Dominion using the instructions from 9th Powerpoint (on Java Unit Testing Tools).
+    
+    Replace the pom.xml in your project with the pom.xml from the Assignment Two\Non-Evo folder, you may need to change 
+    some of the pom.xml to have the correct name/groupId/ArtifactID etc for your project.
+    
+    Copy all of the files from the src/main folder inside the Assignment Two\Non-Evo folder into the default package
+    of the Dominion project, such as Dominion\src\main\java\org\cs362\dominion
+    
+    Copy all of the files from the src/test folder inside the Assignment Two\Non-Evo folder into the test\java folder
+    of the Dominion project, such as Dominion\src\test\java\
+    
+    You should now be able to use Command Prompt to navigate to the Project folder (the one with the pom.xml inside it)
+    and type "mvn compile" and then "mvn test", or "mvn cobertura:cobertura" if you wish to generate a code 
+    coverage report. The report would be located inside the \target\site\cobertura folder as index.html
 
