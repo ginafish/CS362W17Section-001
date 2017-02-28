@@ -2,7 +2,7 @@
 
 ### I have attached results of custom assert tests to main game look for ```Times passed custom asserts:``` at the bottom when running the game
 ### Before you clean everything take a look at the cobertura report
-
+## Make sure all commands are ran from where pom.xml is
 ### Clean maven files 
 #### ```mvn clean```
 
@@ -15,5 +15,5 @@
 ### Generate new Code report 
 #### ``` mvn cobertura:cobertura```
 
-### Play game 
+### Play game if it goes into an infinite loop please retry, crazy bug I can't find
 #### ```cd src/main/java && java dominion/playDominion```

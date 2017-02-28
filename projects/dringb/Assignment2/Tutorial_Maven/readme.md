@@ -3,7 +3,7 @@
 ### To look at produced EvoSuite Files type ```cd src/test/java/dominion``` then look for EST files
 
 ### Before you clean everything take a look at the cobertura report
-
+## Make sure all commands are ran from where pom.xml is
 ### Clean maven files 
 #### ```mvn clean```
 
@@ -16,5 +16,5 @@
 ### Generate new Code report 
 #### ``` mvn cobertura:cobertura```
 
-### Play game 
+### Play game if it goes into an infinite loop please retry, crazy bug I can't find
 #### ```cd src/main/java && java dominion/playDominion```
