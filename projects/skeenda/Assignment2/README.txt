@@ -40,3 +40,7 @@ To run the code:
 	java -jar target/dominion_v2-3.1.1.jar
 	
 	This runs RandomTestDominion.java which runs the game at least 5 times and with anywhere from 2-4 players
+	
+To generate the site:
+
+	mvn site
