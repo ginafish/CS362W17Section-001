@@ -1,4 +1,4 @@
-Touku Cha CS 362 Assignment #1 Instructions:
+Touku Cha CS 362 Dominion Instructions:
 
 mvn clean install
 
