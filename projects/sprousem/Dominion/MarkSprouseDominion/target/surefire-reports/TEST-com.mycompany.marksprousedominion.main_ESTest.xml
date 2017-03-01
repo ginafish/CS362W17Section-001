@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="com.mycompany.marksprousedominion.PlayerTest" time="0.001" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="com.mycompany.marksprousedominion.main_ESTest" time="0.005" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.121-0.b13.el7_3.x86_64/jre/lib/amd64"/>
@@ -59,7 +59,10 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.mycompany.marksprousedominion.PlayerTest" name="testAdds" time="0"/>
-  <testcase classname="com.mycompany.marksprousedominion.PlayerTest" name="testDraw" time="0.001"/>
-  <testcase classname="com.mycompany.marksprousedominion.PlayerTest" name="testConclusion" time="0"/>
+  <testcase classname="com.mycompany.marksprousedominion.main_ESTest" name="test4" time="0.005"/>
+  <testcase classname="com.mycompany.marksprousedominion.main_ESTest" name="test5" time="0"/>
+  <testcase classname="com.mycompany.marksprousedominion.main_ESTest" name="test2" time="0"/>
+  <testcase classname="com.mycompany.marksprousedominion.main_ESTest" name="test3" time="0"/>
+  <testcase classname="com.mycompany.marksprousedominion.main_ESTest" name="test0" time="0"/>
+  <testcase classname="com.mycompany.marksprousedominion.main_ESTest" name="test1" time="0"/>
 </testsuite>
