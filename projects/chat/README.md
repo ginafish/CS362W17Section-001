@@ -14,3 +14,5 @@ Where x = amount of ram, and y = number of cores.  Specify how much resources (f
 mvn -DmemoryInMB=<x> -Dcores=<y> evosuite:generate evosuite:export test
 
 Can run coverage with the suite again with: mvn cobertura:cobertura
+
+Note: If you have Evosuite setup differently and can't run the suite please contact me: chat@oregonstate.edu
