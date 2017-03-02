@@ -1,1 +1,2 @@
-
+Compiled using mvn compile.
+Ran the tests using mvn test.
