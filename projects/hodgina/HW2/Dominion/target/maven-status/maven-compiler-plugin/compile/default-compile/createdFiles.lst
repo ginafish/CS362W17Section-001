@@ -1,4 +1,5 @@
 org\cs362\dominion\Card$1.class
+org\cs362\dominion\RandomTestDominion.class
 org\cs362\dominion\GameState.class
 org\cs362\dominion\Randomness.class
 org\cs362\dominion\Card$CardName.class
