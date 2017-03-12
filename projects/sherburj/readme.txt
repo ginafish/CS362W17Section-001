@@ -66,3 +66,34 @@ to view the HTML dub-click on index.html
 
 
 Good luck, have an awesome day!
+
+
+
+
+::::FINAL PROJECT::::
+
+
+For the final project you will need to open up your command prompt and navigate to this here folder. 
+Make sure your Maven path is set up correctly, there are directions in Maven for this, additionally:
+
+set PATH="c:\program files\apache-maven-3.x.y\bin";%PATH%
+
+  
+
+Change 3.x.y to your maven version........
+
+
+Onward to PiTest! Run these commands:
+
+mvn clean      
+mvn compile
+
+mvn test
+mvn org.pitest:pitest-maven:mutationCoverage
+
+The resulting coverage should output to CS362W17Section-001\projects\sherburj\target\pit-reports
+
+Additionally, you may veiw my two PiTests which correlate to:
+testing w/ assignement 1 parameters        and
+testing w/ evosuite + enhanced tests.
+
