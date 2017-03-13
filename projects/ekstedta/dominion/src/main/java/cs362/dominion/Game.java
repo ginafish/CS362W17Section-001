@@ -411,6 +411,11 @@ public class Game {
         return this.hand.get(this.currentPlayer).size();
     }
 
+    // How many cards does the specified player have in their hand
+    public int getPlayerHandCount(int player) {
+        return this.hand.get(player).size();
+    }
+
     // Get the card at the given position in the current player's hand
     public Card handCard(int pos) {
         List<Card> hand = this.hand.get(this.currentPlayer);
