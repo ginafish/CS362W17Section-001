@@ -54,9 +54,11 @@ public class CardTest{
   @Test
   public void testPlayAdventurer(){
     assertEquals(a.getHandSize(), 5);
+    for(int i=0; i<5; i++) a.discardFromHand();
+    assertEquals(a.getHandSize(), 0);
     assertEquals(a.countAllCards(), 10);
     assertEquals(Card.ADVENTURER.play(a), Card.ADVENTURER);
-    assertEquals(a.getHandSize(), 7);
+    assertEquals(a.getHandSize(), 2);
     assertEquals(a.countAllCards(), 10);
   }
 
