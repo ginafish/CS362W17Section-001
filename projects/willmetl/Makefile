@@ -10,6 +10,7 @@ coverage: clean
 	mvn cobertura:cobertura
 run:
 	java -jar target/willmetl-1.0-SNAPSHOT.jar
-a2:
-	mvn -Dtest=RandomTestDominionTest.java test
-
+pit:
+	mvn org.pitest:pitest-maven:mutationCoverage
+evosuite:
+	mvn -DmemoryInMB=2000 -Dcores=2 evosuite:generate evosuite:export  test

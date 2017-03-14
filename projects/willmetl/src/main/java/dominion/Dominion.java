@@ -16,10 +16,4 @@ public class Dominion{
     while(game.checkEndConditions())
       game.nextTurn();
   }
-
-  public static void main(String [ ] args){
-    System.out.println("Making a new Dominion game.");
-    Dominion game1 = new Dominion();
-    game1.setupGame(true, true);
-  }
 }

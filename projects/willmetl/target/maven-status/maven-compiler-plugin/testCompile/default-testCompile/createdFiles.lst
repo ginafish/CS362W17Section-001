@@ -1,4 +1,6 @@
+dominion/RandomTestDominion_ESTest_scaffolding.class
+dominion/RandomTestDominion_ESTest.class
+dominion/PlayerTest.class
 dominion/GameStateTest.class
 dominion/CardTest.class
-dominion/PlayerTest.class
 dominion/DominionTest.class

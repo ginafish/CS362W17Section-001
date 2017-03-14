@@ -22,25 +22,30 @@ public class PlayerTest{
     Player a = new Player("Amy", g);
     // addMoney
     assertEquals(0, a.getMoney());
-    a.addMoney(1);
+    assertEquals(1, a.addMoney(1));
     assertEquals(1, a.getMoney());
-    a.addMoney(-1);
+    assertEquals(0, a.addMoney(-1));
     assertEquals(0, a.getMoney());
     // addActions
     assertEquals(1, a.getActions());
-    a.addActions(1);
+    assertEquals(2, a.addActions(1));
     assertEquals(2, a.getActions());
     // addBuys
     assertEquals(1, a.getBuys());
-    a.addBuys(1);
+    assertEquals(2, a.addBuys(1));
     assertEquals(2, a.getBuys());
   }
 
   @Test
   public void testActionPhase(){
     Player a = new Player("Amy", g, true);
-    assertEquals(0, a.addActions(-1));
+    assertEquals(10, a.countAllCards());
     a.newTurn();
+    assertEquals(11, a.countAllCards());
+    for(int i=0; i<5; i++) assertTrue(a.discardFromHand());
+    assertEquals(a.putInHand(Card.VILLAGE), true);
+    assertEquals(0, a.addActions(-1));
+    assertEquals(0, a.addBuys(-1));
   }
 
   @Test
@@ -105,7 +110,7 @@ public class PlayerTest{
   @Test
   public void testTakeFreeCard(){
     Player a = new Player("Amy", g);
-    for(int i=0; i<10; i++) assertEquals(Card.CURSE, g.takeCard(Card.CURSE));
+    for(int i=0; i<10; i++) assertEquals(g.takeCard(Card.CURSE), Card.CURSE);
     assertFalse(a.takeFreeCard(Card.CURSE));
   }
 
@@ -116,5 +121,11 @@ public class PlayerTest{
     a.addActions(-1);
     assertFalse(a.playCard(Card.EMBARGO));
     a.putInHand(Card.VILLAGE);
+  }
+
+  @Test
+  public void testPutInHand(){
+    Player a = new Player("Amy", g);
+    assertEquals(a.putInHand(Card.SILVER), true);
   }
 }
