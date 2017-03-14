@@ -1,8 +1,5 @@
 package test;
 
-
-
-//Testing Equipment
 import dominion.Randomness;
 import org.junit.Before;
 import org.junit.Test;
@@ -56,7 +53,7 @@ public class RandomnessTest
         assertEquals(105, Randomness.nextRandomInt(1000));
     }
 
-
+    /*
     @Test
     public void randomMemberTest()
     {
@@ -68,6 +65,7 @@ public class RandomnessTest
         assertTrue(iList.contains(Randomness.randomMember(iList)));
 
     }
+    */
 
 
 }

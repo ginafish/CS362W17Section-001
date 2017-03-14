@@ -1,30 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test.CardTest" time="0.005" tests="20" errors="0" skipped="0" failures="0">
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="20" failures="0" name="test.CardTest" time="0.005" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2016.3.5"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_121\jre\bin"/>
     <property name="java.vm.version" value="25.121-b13"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\ahast_000\IdeaProjects\cs325a3"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\ahast_000\IdeaProjects\cs325a2 - Copy"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="idea.launcher.port" value="7536"/>
+    <property name="idea.launcher.port" value="7534"/>
     <property name="user.script" value=""/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\ahast_000\IdeaProjects\cs325a3"/>
+    <property name="user.dir" value="C:\Users\ahast_000\IdeaProjects\cs325a2 - Copy"/>
     <property name="java.runtime.version" value="1.8.0_121-b13"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_121\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.io.tmpdir" value="C:\Users\AHAST_~1\AppData\Local\Temp\"/>
-    <property name="line.separator" value="&#10;"/>
+    <property name="line.separator" value="
+"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
@@ -63,24 +64,24 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testCard0" classname="test.CardTest" time="0.003"/>
-  <testcase name="testCard1" classname="test.CardTest" time="0"/>
-  <testcase name="testCard2" classname="test.CardTest" time="0"/>
-  <testcase name="testCard3" classname="test.CardTest" time="0"/>
-  <testcase name="testCard4" classname="test.CardTest" time="0"/>
-  <testcase name="testCard5" classname="test.CardTest" time="0"/>
-  <testcase name="testCard6" classname="test.CardTest" time="0"/>
-  <testcase name="testCard7" classname="test.CardTest" time="0"/>
-  <testcase name="testCard8" classname="test.CardTest" time="0"/>
-  <testcase name="testCard9" classname="test.CardTest" time="0"/>
-  <testcase name="testGetCard" classname="test.CardTest" time="0.001"/>
-  <testcase name="testCompare" classname="test.CardTest" time="0"/>
-  <testcase name="testCard10" classname="test.CardTest" time="0"/>
-  <testcase name="testCard11" classname="test.CardTest" time="0"/>
-  <testcase name="testCard12" classname="test.CardTest" time="0"/>
-  <testcase name="testCard14" classname="test.CardTest" time="0.001"/>
-  <testcase name="testCard15" classname="test.CardTest" time="0"/>
-  <testcase name="testCard16" classname="test.CardTest" time="0"/>
-  <testcase name="testCard17" classname="test.CardTest" time="0"/>
-  <testcase name="listSizeTest" classname="test.CardTest" time="0"/>
+  <testcase classname="test.CardTest" name="testCard0" time="0.004"/>
+  <testcase classname="test.CardTest" name="testCard1" time="0"/>
+  <testcase classname="test.CardTest" name="testCard2" time="0"/>
+  <testcase classname="test.CardTest" name="testCard3" time="0"/>
+  <testcase classname="test.CardTest" name="testCard4" time="0"/>
+  <testcase classname="test.CardTest" name="testCard5" time="0"/>
+  <testcase classname="test.CardTest" name="testCard6" time="0"/>
+  <testcase classname="test.CardTest" name="testCard7" time="0"/>
+  <testcase classname="test.CardTest" name="testCard8" time="0"/>
+  <testcase classname="test.CardTest" name="testCard9" time="0"/>
+  <testcase classname="test.CardTest" name="testGetCard" time="0.001"/>
+  <testcase classname="test.CardTest" name="testCompare" time="0"/>
+  <testcase classname="test.CardTest" name="testCard10" time="0"/>
+  <testcase classname="test.CardTest" name="testCard11" time="0"/>
+  <testcase classname="test.CardTest" name="testCard12" time="0"/>
+  <testcase classname="test.CardTest" name="testCard14" time="0"/>
+  <testcase classname="test.CardTest" name="testCard15" time="0"/>
+  <testcase classname="test.CardTest" name="testCard16" time="0"/>
+  <testcase classname="test.CardTest" name="testCard17" time="0"/>
+  <testcase classname="test.CardTest" name="listSizeTest" time="0"/>
 </testsuite>

@@ -1,30 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="test.GameStateTest" time="0.004" tests="3" errors="0" skipped="0" failures="0">
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="3" failures="0" name="test.GameStateTest" time="0.007" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2016.3.5"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_121\jre\bin"/>
     <property name="java.vm.version" value="25.121-b13"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\ahast_000\IdeaProjects\cs325a3"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\ahast_000\IdeaProjects\cs325a2 - Copy"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="idea.launcher.port" value="7536"/>
+    <property name="idea.launcher.port" value="7534"/>
     <property name="user.script" value=""/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\ahast_000\IdeaProjects\cs325a3"/>
+    <property name="user.dir" value="C:\Users\ahast_000\IdeaProjects\cs325a2 - Copy"/>
     <property name="java.runtime.version" value="1.8.0_121-b13"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_121\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.io.tmpdir" value="C:\Users\AHAST_~1\AppData\Local\Temp\"/>
-    <property name="line.separator" value="&#10;"/>
+    <property name="line.separator" value="
+"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
@@ -63,7 +64,7 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="getWinnersTest" classname="test.GameStateTest" time="0"/>
-  <testcase name="isGameOver" classname="test.GameStateTest" time="0.002"/>
-  <testcase name="playTest" classname="test.GameStateTest" time="0.002"/>
+  <testcase classname="test.GameStateTest" name="getWinnersTest" time="0.001"/>
+  <testcase classname="test.GameStateTest" name="isGameOver" time="0.004"/>
+  <testcase classname="test.GameStateTest" name="playTest" time="0.002"/>
 </testsuite>

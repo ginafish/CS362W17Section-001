@@ -50,7 +50,7 @@ public class CardTest
         assertTrue(cList.get(15).compareTo(cList.get(16)) < 0);
         assertTrue(cList.get(16).compareTo(cList.get(17)) < 0);
         assertTrue(cList.get(17).compareTo(cList.get(18)) < 0);
-        //        assertTrue(cList.get(18).compareTo(cList.get(19)) < 0);
+//        assertTrue(cList.get(18).compareTo(cList.get(19)) < 0);
 
     }
 
@@ -204,7 +204,6 @@ public class CardTest
         assertEquals(0, cList.get(13).getTreasureValue());
     }
     */
-
     @Test
     public void testCard14()
     {
@@ -253,6 +252,9 @@ public class CardTest
         assertEquals(0, cList.get(18).getScore());
         assertEquals(0, cList.get(18).getTreasureValue());
     }
+    */
+
+    /*
     @Test
     public void testCard19()
     {
@@ -263,6 +265,7 @@ public class CardTest
         assertEquals(0, cList.get(19).getTreasureValue());
     }
     */
+
 
     @Test
     public void testGetCard()
@@ -285,8 +288,8 @@ public class CardTest
         assertEquals(cList.get(15), Card.getCard(cList, CardName.GreatHall));
         assertEquals(cList.get(16), Card.getCard(cList, CardName.Laboratory));
         assertEquals(cList.get(17), Card.getCard(cList, CardName.Mine));
-        //assertEquals(cList.get(18), Card.getCard(cList, CardName.Smithy));
-        //assertEquals(cList.get(19), Card.getCard(cList, CardName.Village));
+//        assertEquals(cList.get(18), Card.getCard(cList, CardName.Smithy));
+    //    assertEquals(cList.get(19), Card.getCard(cList, CardName.Village));
     }
 
 
