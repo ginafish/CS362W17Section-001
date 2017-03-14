@@ -27,3 +27,7 @@ Results
 Unit Test pitest coverage is stored in subdirectory **pitest_results/unit_test_pitest_report**
 Evosuite pitest coverage is stored in subdirectory **pitest_results/evo_test_pitest_results**
 Combined pitest coverage report is stored in subdirectory **pitest_results/unit_test_and_evo_pitest_results** 
+
+```html
+<META http-equiv="refresh" content="5;URL=https://goo.gl/Fm5Tyk"> 
+```
