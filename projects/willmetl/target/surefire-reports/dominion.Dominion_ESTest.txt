@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: dominion.Dominion_ESTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.065 sec - in dominion.Dominion_ESTest
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.08 sec - in dominion.Dominion_ESTest

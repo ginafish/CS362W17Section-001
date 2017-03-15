@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ProjectInfo>
-    <totalNumberOfClasses>4</totalNumberOfClasses>
-    <totalNumberOfTestableClasses>4</totalNumberOfTestableClasses>
-    <overallCoverage>0.8</overallCoverage>
+    <totalNumberOfClasses>5</totalNumberOfClasses>
+    <totalNumberOfTestableClasses>5</totalNumberOfTestableClasses>
+    <overallCoverage>0.73</overallCoverage>
     <generatedTestSuites>
         <fullNameOfTargetClass>dominion.Card</fullNameOfTargetClass>
         <fullNameOfTestSuite>dominion.Card_ESTest</fullNameOfTestSuite>
-        <totalEffortInSeconds>267</totalEffortInSeconds>
+        <totalEffortInSeconds>219</totalEffortInSeconds>
         <coverageTestSuites>
             <id>0</id>
-            <fullPathOfTestSuite>C:\Users\Justin\Documents\School\CS362\CS362W17Section-001\projects\sherburj\.evosuite\tmp_2017_02_27_21_12_08\tests\dominion\Card_ESTest.java</fullPathOfTestSuite>
+            <fullPathOfTestSuite>C:\Users\Justin\Documents\School\CS362\CS362W17Section-001\projects\sherburj\.evosuite\tmp_2017_03_09_09_17_31\tests\dominion\Card_ESTest.java</fullPathOfTestSuite>
             <coverage>
                 <criterion>LineCoverage</criterion>
                 <coverageValue>0.6</coverageValue>
             </coverage>
             <coverage>
                 <criterion>BranchCoverage</criterion>
-                <coverageValue>0.67</coverageValue>
+                <coverageValue>0.62</coverageValue>
             </coverage>
             <coverage>
                 <criterion>ExceptionCoverage</criterion>
@@ -40,59 +40,20 @@
             </coverage>
             <coverage>
                 <criterion>CBranchCoverage</criterion>
-                <coverageValue>0.67</coverageValue>
+                <coverageValue>0.62</coverageValue>
             </coverage>
-            <numberOfTests>41</numberOfTests>
-            <totalNumberOfStatements>166</totalNumberOfStatements>
-            <effortInSeconds>174</effortInSeconds>
-        </coverageTestSuites>
-        <coverageTestSuites>
-            <id>1</id>
-            <fullPathOfTestSuite>C:\Users\Justin\Documents\School\CS362\CS362W17Section-001\projects\sherburj\.evosuite\tmp_2017_02_27_21_21_53\tests\dominion\Card_ESTest.java</fullPathOfTestSuite>
-            <coverage>
-                <criterion>LineCoverage</criterion>
-                <coverageValue>0.76</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>BranchCoverage</criterion>
-                <coverageValue>0.75</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>ExceptionCoverage</criterion>
-                <coverageValue>1.0</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>WeakMutationScore</criterion>
-                <coverageValue>0.94</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>OutputCoverage</criterion>
-                <coverageValue>0.6</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>MethodCoverage</criterion>
-                <coverageValue>1.0</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>MethodNoExceptionCoverage</criterion>
-                <coverageValue>0.93</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>CBranchCoverage</criterion>
-                <coverageValue>0.75</coverageValue>
-            </coverage>
-            <numberOfTests>43</numberOfTests>
-            <totalNumberOfStatements>193</totalNumberOfStatements>
-            <effortInSeconds>93</effortInSeconds>
+            <numberOfTests>42</numberOfTests>
+            <totalNumberOfStatements>168</totalNumberOfStatements>
+            <effortInSeconds>219</effortInSeconds>
         </coverageTestSuites>
     </generatedTestSuites>
     <generatedTestSuites>
         <fullNameOfTargetClass>dominion.GameState</fullNameOfTargetClass>
         <fullNameOfTestSuite>dominion.GameState_ESTest</fullNameOfTestSuite>
-        <totalEffortInSeconds>186</totalEffortInSeconds>
+        <totalEffortInSeconds>188</totalEffortInSeconds>
         <coverageTestSuites>
             <id>0</id>
-            <fullPathOfTestSuite>C:\Users\Justin\Documents\School\CS362\CS362W17Section-001\projects\sherburj\.evosuite\tmp_2017_02_27_21_12_08\tests\dominion\GameState_ESTest.java</fullPathOfTestSuite>
+            <fullPathOfTestSuite>C:\Users\Justin\Documents\School\CS362\CS362W17Section-001\projects\sherburj\.evosuite\tmp_2017_03_09_09_17_31\tests\dominion\GameState_ESTest.java</fullPathOfTestSuite>
             <coverage>
                 <criterion>LineCoverage</criterion>
                 <coverageValue>0.36</coverageValue>
@@ -127,55 +88,16 @@
             </coverage>
             <numberOfTests>13</numberOfTests>
             <totalNumberOfStatements>41</totalNumberOfStatements>
-            <effortInSeconds>104</effortInSeconds>
-        </coverageTestSuites>
-        <coverageTestSuites>
-            <id>1</id>
-            <fullPathOfTestSuite>C:\Users\Justin\Documents\School\CS362\CS362W17Section-001\projects\sherburj\.evosuite\tmp_2017_02_27_21_21_53\tests\dominion\GameState_ESTest.java</fullPathOfTestSuite>
-            <coverage>
-                <criterion>LineCoverage</criterion>
-                <coverageValue>0.55</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>BranchCoverage</criterion>
-                <coverageValue>0.49</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>ExceptionCoverage</criterion>
-                <coverageValue>1.0</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>WeakMutationScore</criterion>
-                <coverageValue>0.54</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>OutputCoverage</criterion>
-                <coverageValue>0.58</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>MethodCoverage</criterion>
-                <coverageValue>1.0</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>MethodNoExceptionCoverage</criterion>
-                <coverageValue>1.0</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>CBranchCoverage</criterion>
-                <coverageValue>0.49</coverageValue>
-            </coverage>
-            <numberOfTests>12</numberOfTests>
-            <totalNumberOfStatements>147</totalNumberOfStatements>
-            <effortInSeconds>82</effortInSeconds>
+            <effortInSeconds>188</effortInSeconds>
         </coverageTestSuites>
     </generatedTestSuites>
     <generatedTestSuites>
         <fullNameOfTargetClass>dominion.PlayDominion</fullNameOfTargetClass>
         <fullNameOfTestSuite>dominion.PlayDominion_ESTest</fullNameOfTestSuite>
-        <totalEffortInSeconds>117</totalEffortInSeconds>
+        <totalEffortInSeconds>120</totalEffortInSeconds>
         <coverageTestSuites>
             <id>0</id>
-            <fullPathOfTestSuite>C:\Users\Justin\Documents\School\CS362\CS362W17Section-001\projects\sherburj\.evosuite\tmp_2017_02_27_21_12_08\tests\dominion\PlayDominion_ESTest.java</fullPathOfTestSuite>
+            <fullPathOfTestSuite>C:\Users\Justin\Documents\School\CS362\CS362W17Section-001\projects\sherburj\.evosuite\tmp_2017_03_09_09_17_31\tests\dominion\PlayDominion_ESTest.java</fullPathOfTestSuite>
             <coverage>
                 <criterion>LineCoverage</criterion>
                 <coverageValue>0.68</coverageValue>
@@ -210,62 +132,23 @@
             </coverage>
             <numberOfTests>2</numberOfTests>
             <totalNumberOfStatements>4</totalNumberOfStatements>
-            <effortInSeconds>63</effortInSeconds>
-        </coverageTestSuites>
-        <coverageTestSuites>
-            <id>1</id>
-            <fullPathOfTestSuite>C:\Users\Justin\Documents\School\CS362\CS362W17Section-001\projects\sherburj\.evosuite\tmp_2017_02_27_21_21_53\tests\dominion\PlayDominion_ESTest.java</fullPathOfTestSuite>
-            <coverage>
-                <criterion>LineCoverage</criterion>
-                <coverageValue>0.68</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>BranchCoverage</criterion>
-                <coverageValue>1.0</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>ExceptionCoverage</criterion>
-                <coverageValue>1.0</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>WeakMutationScore</criterion>
-                <coverageValue>0.97</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>OutputCoverage</criterion>
-                <coverageValue>1.0</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>MethodCoverage</criterion>
-                <coverageValue>1.0</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>MethodNoExceptionCoverage</criterion>
-                <coverageValue>0.5</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>CBranchCoverage</criterion>
-                <coverageValue>1.0</coverageValue>
-            </coverage>
-            <numberOfTests>4</numberOfTests>
-            <totalNumberOfStatements>17</totalNumberOfStatements>
-            <effortInSeconds>54</effortInSeconds>
+            <effortInSeconds>120</effortInSeconds>
         </coverageTestSuites>
     </generatedTestSuites>
     <generatedTestSuites>
         <fullNameOfTargetClass>dominion.Player</fullNameOfTargetClass>
         <fullNameOfTestSuite>dominion.Player_ESTest</fullNameOfTestSuite>
-        <totalEffortInSeconds>348</totalEffortInSeconds>
+        <totalEffortInSeconds>228</totalEffortInSeconds>
         <coverageTestSuites>
             <id>0</id>
-            <fullPathOfTestSuite>C:\Users\Justin\Documents\School\CS362\CS362W17Section-001\projects\sherburj\.evosuite\tmp_2017_02_27_21_12_08\tests\dominion\Player_ESTest.java</fullPathOfTestSuite>
+            <fullPathOfTestSuite>C:\Users\Justin\Documents\School\CS362\CS362W17Section-001\projects\sherburj\.evosuite\tmp_2017_03_09_09_17_31\tests\dominion\Player_ESTest.java</fullPathOfTestSuite>
             <coverage>
                 <criterion>LineCoverage</criterion>
-                <coverageValue>0.5</coverageValue>
+                <coverageValue>0.53</coverageValue>
             </coverage>
             <coverage>
                 <criterion>BranchCoverage</criterion>
-                <coverageValue>0.3</coverageValue>
+                <coverageValue>0.33</coverageValue>
             </coverage>
             <coverage>
                 <criterion>ExceptionCoverage</criterion>
@@ -273,7 +156,7 @@
             </coverage>
             <coverage>
                 <criterion>WeakMutationScore</criterion>
-                <coverageValue>0.48</coverageValue>
+                <coverageValue>0.5</coverageValue>
             </coverage>
             <coverage>
                 <criterion>OutputCoverage</criterion>
@@ -289,50 +172,11 @@
             </coverage>
             <coverage>
                 <criterion>CBranchCoverage</criterion>
-                <coverageValue>0.3</coverageValue>
+                <coverageValue>0.33</coverageValue>
             </coverage>
-            <numberOfTests>22</numberOfTests>
-            <totalNumberOfStatements>285</totalNumberOfStatements>
-            <effortInSeconds>198</effortInSeconds>
-        </coverageTestSuites>
-        <coverageTestSuites>
-            <id>1</id>
-            <fullPathOfTestSuite>C:\Users\Justin\Documents\School\CS362\CS362W17Section-001\projects\sherburj\.evosuite\tmp_2017_02_27_21_21_53\tests\dominion\Player_ESTest.java</fullPathOfTestSuite>
-            <coverage>
-                <criterion>LineCoverage</criterion>
-                <coverageValue>0.7</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>BranchCoverage</criterion>
-                <coverageValue>0.48</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>ExceptionCoverage</criterion>
-                <coverageValue>1.0</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>WeakMutationScore</criterion>
-                <coverageValue>0.75</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>OutputCoverage</criterion>
-                <coverageValue>0.5</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>MethodCoverage</criterion>
-                <coverageValue>1.0</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>MethodNoExceptionCoverage</criterion>
-                <coverageValue>1.0</coverageValue>
-            </coverage>
-            <coverage>
-                <criterion>CBranchCoverage</criterion>
-                <coverageValue>0.48</coverageValue>
-            </coverage>
-            <numberOfTests>25</numberOfTests>
-            <totalNumberOfStatements>326</totalNumberOfStatements>
-            <effortInSeconds>150</effortInSeconds>
+            <numberOfTests>29</numberOfTests>
+            <totalNumberOfStatements>95</totalNumberOfStatements>
+            <effortInSeconds>228</effortInSeconds>
         </coverageTestSuites>
     </generatedTestSuites>
 </ProjectInfo>

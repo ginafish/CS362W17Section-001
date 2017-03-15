@@ -1,10 +1,6 @@
-dominion/Card_ESTest_scaffolding.class
 dominion/RandomTestDominion_ESTest_scaffolding.class
-dominion/Dominion_ESTest_scaffolding.class
-dominion/GameState_ESTest.class
-dominion/RandomTestDominionTest.class
-dominion/Dominion_ESTest.class
-dominion/Player_ESTest.class
-dominion/Player_ESTest_scaffolding.class
-dominion/GameState_ESTest_scaffolding.class
-dominion/Card_ESTest.class
+dominion/RandomTestDominion_ESTest.class
+dominion/PlayerTest.class
+dominion/GameStateTest.class
+dominion/CardTest.class
+dominion/DominionTest.class

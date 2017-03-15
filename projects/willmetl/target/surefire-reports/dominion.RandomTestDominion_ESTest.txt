@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: dominion.RandomTestDominion_ESTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.284 sec - in dominion.RandomTestDominion_ESTest

@@ -179,6 +179,7 @@ public final class Card implements Comparable<Card>, Cloneable{
                             Card c = player.hand.get(0);
                             player.discard(c);
                         }
+                        assert(player.hand.isEmpty());
                     }
                 return;
                         

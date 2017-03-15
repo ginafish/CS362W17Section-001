@@ -242,6 +242,7 @@ public class Player{
   public boolean discardFromHand(){
     // This player discards a random card from their hand
     // int handsize = hand.size();
+    if(hand.size()==0) return false;
     Card c = hand.get(rand.nextInt(hand.size()));
     return discardFromHand(c);
   }

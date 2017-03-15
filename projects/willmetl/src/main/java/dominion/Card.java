@@ -164,8 +164,8 @@ public enum Card{
       if(c != null){
         GameState supply = p.gameState;
         if(c == COPPER) p.putInHand(supply.takeCard(SILVER));
-        if(c == SILVER) p.putInHand(supply.takeCard(GOLD));
-        if(c == GOLD)   p.putInHand(supply.takeCard(GOLD));
+        else if(c == SILVER) p.putInHand(supply.takeCard(GOLD));
+        else p.putInHand(supply.takeCard(GOLD));
       }
       return this; // return the Mine
     }
