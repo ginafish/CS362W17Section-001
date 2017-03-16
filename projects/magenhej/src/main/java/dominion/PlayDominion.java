@@ -17,23 +17,22 @@ public class PlayDominion {
 		    List<Card> ActionCards = new ArrayList<Card>();
 		    GameState state;
 			Randomness.reset(10);
-			int playerCount;
-			int KingdomCards = 10;
+			int playerCount = 2;
+			int kingdomCards = 10;
 			
 			switch (args.length) 
 			{
 			case 2:
 			    playerCount = Integer.valueOf(args[0]);
-			    KingdomCards = Integer.valueOf(args[1]);
-			    System.out.println("\n\tGAMESTATE: Players: "+playerCount+" | Kingdom Cards: " +KingdomCards);
+			    kingdomCards = Integer.valueOf(args[1]);
+			    System.out.println("\n\tGAMESTATE: Players: "+playerCount+" | Kingdom Cards: " +kingdomCards);
 			    break;
 			case 1:
 			    playerCount = Integer.valueOf(args[0]);
-			    System.out.println("\n\tGAMESTATE: Players: "+playerCount+" | Kingdom Cards: " +KingdomCards);
+			    System.out.println("\n\tGAMESTATE: Players: "+playerCount+" | Kingdom Cards: " +kingdomCards);
 			    break;
 			default:
 			    playerCount = 2;
-			    //System.out.println("\n\tUsage: java -jar lamki_dom.jar <playerCount> <KingdomCards>");
 			    System.out.println("\n\t(Default) GAMESTATE: Players: 2 | Kingdom Cards: 10");
 			    break;
 			}
@@ -43,7 +42,7 @@ public class PlayDominion {
 			
 			int kingdomCnt = 0;
 			for(int i = 0; i < cards.size(); i++){
-				if(kingdomCnt == KingdomCards){
+				if(kingdomCnt == kingdomCards){
 					break;
 				}
 				if(cards.get(i).getType() == Card.Type.ACTION){
@@ -54,12 +53,11 @@ public class PlayDominion {
 			
 			
 			state = new GameState(cards);
-			Player player;
-//			 System.out.println("Initialization DominionBoard:\n " + state.toString()); 
+			Player player; 
 			
 			for(int p = 1; p <= playerCount; p++){
 				player = new Player(state, "player-" + p);
-				for(int i = 0; i < KingdomCards; i++){
+				for(int i = 0; i < kingdomCards; i++){
 					int randomNum = ThreadLocalRandom.current().nextInt(0, ActionCards.size());
 					player.hand.add(cards.get(randomNum));
 				}
