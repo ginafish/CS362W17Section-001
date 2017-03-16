@@ -55,9 +55,15 @@
         <configuration>
           <mutators>
             <mutator>CONSTRUCTOR_CALLS</mutator>
-						<mutator>INCREMENTS</mutator>
-						<mutator>MATH</mutator>
-						<mutator>INVERT_NEGS</mutator>
+            <mutator>INCREMENTS</mutator>
+            <mutator>RETURN_VALS</mutator>
+            <mutator>MATH</mutator>
+            <mutator>NEGATE_CONDITIONALS</mutator>
+            <mutator>CONDITIONALS_BOUNDARY</mutator>
+            <mutator>REMOVE_CONDITIONALS</mutator>
+            <mutator>INVERT_NEGS</mutator>
+            <mutator>CONDITIONALS_BOUNDARY</mutator>
+            <mutator>INLINE_CONSTS</mutator>
           </mutators>
           <avoidCallsTo>
             <avoidCallsTo>java.lang</avoidCallsTo>

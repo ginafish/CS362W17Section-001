@@ -117,8 +117,7 @@ public enum Card{
         int availCards = p.gameState.listCards();
         System.out.format("Please enter the card number (1-%d) you want, "+
           "or 0 to cancel: ", availCards);
-        if(p.ISBOT) choice = p.rand.nextInt(20);
-        else choice = p.scan.nextInt();
+        choice = p.rand.nextInt(20);
         if( choice>0 && choice<=availCards){
           Card c = Card.values()[choice-1];
           if(c.costsMoney <= 5){

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="dominion.CardTest" time="0.027" tests="16" errors="0" skipped="0" failures="0">
+<testsuite name="dominion.CardTest" time="0.049" tests="16" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
@@ -59,20 +59,20 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="testPlaySalvager" classname="dominion.CardTest" time="0.005"/>
+  <testcase name="testPlaySalvager" classname="dominion.CardTest" time="0.017"/>
   <testcase name="testPlayMine" classname="dominion.CardTest" time="0.001"/>
-  <testcase name="testPlayGardens" classname="dominion.CardTest" time="0.001"/>
+  <testcase name="testPlayGardens" classname="dominion.CardTest" time="0.003"/>
   <testcase name="testPlayBaron" classname="dominion.CardTest" time="0"/>
-  <testcase name="testPlayCurse" classname="dominion.CardTest" time="0.001"/>
-  <testcase name="testPlayFeast" classname="dominion.CardTest" time="0.013"/>
-  <testcase name="testPlayVillage" classname="dominion.CardTest" time="0.002"/>
+  <testcase name="testPlayCurse" classname="dominion.CardTest" time="0"/>
+  <testcase name="testPlayFeast" classname="dominion.CardTest" time="0.02"/>
+  <testcase name="testPlayVillage" classname="dominion.CardTest" time="0.001"/>
   <testcase name="testPlayGreatHall" classname="dominion.CardTest" time="0"/>
-  <testcase name="testPlayAdventurer" classname="dominion.CardTest" time="0"/>
-  <testcase name="testPlayCouncilRoom" classname="dominion.CardTest" time="0.001"/>
+  <testcase name="testPlayAdventurer" classname="dominion.CardTest" time="0.002"/>
+  <testcase name="testPlayCouncilRoom" classname="dominion.CardTest" time="0.002"/>
   <testcase name="testPlayCopper" classname="dominion.CardTest" time="0"/>
   <testcase name="testPlayAmbassador" classname="dominion.CardTest" time="0"/>
-  <testcase name="testPlaySmithy" classname="dominion.CardTest" time="0.001"/>
+  <testcase name="testPlaySmithy" classname="dominion.CardTest" time="0"/>
   <testcase name="testPlayCutpurse" classname="dominion.CardTest" time="0.001"/>
-  <testcase name="testValuesCopper" classname="dominion.CardTest" time="0"/>
+  <testcase name="testValuesCopper" classname="dominion.CardTest" time="0.001"/>
   <testcase name="testPlayEmbargo" classname="dominion.CardTest" time="0.001"/>
 </testsuite>

@@ -25,7 +25,6 @@ public class Player{
   private ArrayList<Card> hand;
   public GameState gameState;
 
-  public Scanner scan = new Scanner(System.in);
   public Random rand = new Random();
 
   public Player(String pName, GameState game){
@@ -108,7 +107,7 @@ public class Player{
     }
   }
 
-  private boolean buyCard(Card c){
+  public boolean buyCard(Card c){
     // System.out.println("Attempting to buy "+c);
     if(gameState.countCard(c)<=0){
       System.out.println("There are not enough "+c+" available.");
@@ -148,10 +147,8 @@ public class Player{
       System.out.format("Please enter the card number (1-%d) you want to buy,"+
         " or 0 to cancel: ", availCards);
       int choice = 0;
-      if(ISBOT){
-        // Bots play the first card of the correct type
-        choice = rand.nextInt(20)+1;
-      }else choice = scan.nextInt();
+      // Bots play the first card of the correct type
+      choice = rand.nextInt(20)+1;
       if( choice>0 && choice<=availCards )
         buyCard(Card.values()[choice-1]);
       else if( choice==0 )
@@ -174,54 +171,19 @@ public class Player{
   }
 
   public Card chooseHand(){
-    if(ISBOT){
-      // Bots select a random card
-      Collections.shuffle(hand);
-      if(hand.size() > 0)
-        return hand.remove(rand.nextInt(hand.size()));
-      else return null;
-    }
-    for(int i=0; i<hand.size(); i++){
-      System.out.println(i+1+" - "+hand.get(i));
-    }
-    System.out.format("Please enter the card number (1-%d) you want to play,"+
-      " or 0 to cancel: ", hand.size());
-    int choice = scan.nextInt()-1;
-    if( choice>0 && choice<hand.size() ){
-      Card c = hand.remove(choice);
-      if(DEBUGGING) System.out.format("%s chose %s.\n", playerName, c);
-      return c;
-    }
-    return null;
+    // Bots select a random card
+    Collections.shuffle(hand);
+    if(hand.size() > 0)
+      return hand.remove(rand.nextInt(hand.size()));
+    else return null;
   }
 
   public Card chooseTypeOfCard(Card.Type type){
-    if(ISBOT){
-      // Bots play the first card of the correct type
-      for(int i=0; i<hand.size(); i++)
-        if(hand.get(i).getType() == type)
-          return hand.remove(i);
-      return null;
-    }
-    while(true){
-      for(int i=0; i<hand.size(); i++){
-        if(hand.get(i).getType() == type)
-          System.out.println(i+1+" - "+hand.get(i));
-      }
-      System.out.format("Please enter the a number (1-%d) or 0 to cancel: ",
-        hand.size()
-      );
-      int choice = scan.nextInt()-1;
-      if( choice>-1 &&
-        choice<hand.size() &&
-        hand.get(choice).getType() == type
-      ){
-        Card c = hand.remove(choice);
-        if(DEBUGGING) System.out.format("%s chose %s.", playerName, c);
-        return c;
-      }else if( choice==0 ) return null;
-      // Bug, cancelling may not be optional
-    }
+    // Bots play the first card of the correct type
+    for(int i=0; i<hand.size(); i++)
+      if(hand.get(i).getType() == type)
+        return hand.remove(i);
+    return null;
   }
 
   public int countAllCards(){

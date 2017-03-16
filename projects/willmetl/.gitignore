@@ -3,3 +3,6 @@
 
 # Ignore temp files created by evosuite
 .*
+
+# Ignore HTML reports
+target/*

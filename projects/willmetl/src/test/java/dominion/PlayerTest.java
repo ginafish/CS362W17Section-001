@@ -53,12 +53,10 @@ public class PlayerTest{
     Player a = new Player("Amy", g, true);
     for(int i=0; i<5; i++) assertTrue(a.discardFromHand());
     assertEquals(10, a.countAllCards());
-    // a.newTurn();
-    // assertEquals(11, a.countAllCards());
-    // assertEquals(0, a.getBuys());
-    // a.buyCard(Card.COPPER);
-    // assertEquals(11, a.countAllCards());
-    // assertEquals(0, a.getBuys());
+    assertEquals(1, a.getBuys());
+    assertEquals(a.buyCard(Card.COPPER), true);
+    assertEquals(11, a.countAllCards());
+    assertEquals(0, a.getBuys());
   }
 
   @Test
@@ -71,15 +69,52 @@ public class PlayerTest{
   }
 
   @Test
-  public void testNewPlayer(){
-    Player a = new Player("Amy", g);
-    assertEquals(a.getActions(), 1);
-    assertEquals(a.getBuys(), 1);
-    assertEquals(a.getHandSize(), 5);
-    assertEquals(a.getMoney(), 0);
-    assertEquals(a.getName(), "Amy");
+  public void testChooseTypeOfCard(){
+    Player a = new Player("Amy", g, true);
+    assertEquals(
+      a.chooseTypeOfCard(Card.Type.TREASURE), Card.COPPER
+    );
+  }
+
+  @Test
+  public void testCountAllCards(){
+    Player a = new Player("Amy", g, true);
     assertEquals(a.countAllCards(), 10);
+    a.takeFreeCard(Card.CURSE);
+    assertEquals(a.countAllCards(), 11);
+  }
+
+  @Test
+  public void testCountVictoryPoints(){
+    Player a = new Player("Amy", g, true);
     assertEquals(a.countVictoryPoints(), 3);
+    a.takeFreeCard(Card.CURSE);
+    assertEquals(a.countVictoryPoints(), 2);
+  }
+
+  @Test
+  public void testDiscard(){
+    Player a = new Player("Becky", g, true);
+    assertEquals(a.countAllCards(), 10);
+    assertTrue(a.discard(Card.SILVER));
+    assertEquals(a.countAllCards(), 11);
+  }
+
+  @Test
+  public void testDraw(){
+    Player a = new Player("Becky", g, true);
+    for(int i=0; i<5; i++) a.draw();
+    assertTrue(a.discard(Card.SILVER));
+    assertEquals(a.draw(), Card.SILVER);
+    assertTrue(a.discard(Card.GOLD));
+    assertEquals(a.draw(), Card.GOLD);
+  }
+
+  @Test
+  public void testIsCardInHand(){
+    Player a = new Player("Becky", g, true);
+    assertTrue(a.isCardInHand(Card.COPPER));
+    assertFalse(a.isCardInHand(Card.SILVER));
   }
 
   @Test
@@ -99,6 +134,18 @@ public class PlayerTest{
     assertFalse(a.discardFromHand());
     assertEquals(a.getHandSize(), 0);
     assertEquals(a.countAllCards(), 10);
+  }
+
+  @Test
+  public void testNewPlayer(){
+    Player a = new Player("Amy", g);
+    assertEquals(a.getActions(), 1);
+    assertEquals(a.getBuys(), 1);
+    assertEquals(a.getHandSize(), 5);
+    assertEquals(a.getMoney(), 0);
+    assertEquals(a.getName(), "Amy");
+    assertEquals(a.countAllCards(), 10);
+    assertEquals(a.countVictoryPoints(), 3);
   }
 
   @Test

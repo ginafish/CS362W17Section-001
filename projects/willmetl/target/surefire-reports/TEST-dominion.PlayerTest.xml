@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="dominion.PlayerTest" time="0.054" tests="10" errors="0" skipped="0" failures="0">
+<testsuite name="dominion.PlayerTest" time="0.009" tests="16" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
@@ -60,13 +60,19 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase name="testPlayCard" classname="dominion.PlayerTest" time="0"/>
+  <testcase name="testCountAllCards" classname="dominion.PlayerTest" time="0"/>
   <testcase name="testDiscardFromHand" classname="dominion.PlayerTest" time="0"/>
+  <testcase name="testDraw" classname="dominion.PlayerTest" time="0"/>
+  <testcase name="testIsCardInHand" classname="dominion.PlayerTest" time="0"/>
   <testcase name="testBuyCard" classname="dominion.PlayerTest" time="0"/>
-  <testcase name="testPutInHand" classname="dominion.PlayerTest" time="0"/>
+  <testcase name="testPutInHand" classname="dominion.PlayerTest" time="0.008"/>
   <testcase name="testNewPlayer" classname="dominion.PlayerTest" time="0"/>
   <testcase name="testReturnCardToShared" classname="dominion.PlayerTest" time="0"/>
-  <testcase name="testActionPhase" classname="dominion.PlayerTest" time="0.052"/>
-  <testcase name="testAdders" classname="dominion.PlayerTest" time="0.001"/>
+  <testcase name="testChooseTypeOfCard" classname="dominion.PlayerTest" time="0"/>
+  <testcase name="testActionPhase" classname="dominion.PlayerTest" time="0.001"/>
+  <testcase name="testAdders" classname="dominion.PlayerTest" time="0"/>
+  <testcase name="testDiscard" classname="dominion.PlayerTest" time="0"/>
+  <testcase name="testCountVictoryPoints" classname="dominion.PlayerTest" time="0"/>
   <testcase name="testChooseHand" classname="dominion.PlayerTest" time="0"/>
-  <testcase name="testTakeFreeCard" classname="dominion.PlayerTest" time="0.001"/>
+  <testcase name="testTakeFreeCard" classname="dominion.PlayerTest" time="0"/>
 </testsuite>
