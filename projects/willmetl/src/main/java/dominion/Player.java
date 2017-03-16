@@ -9,11 +9,11 @@ import java.util.*;
 public class Player{
   // The Player class represents a single Dominion player
   // Initial cards for each player's Deck
-  public final int startingCopper = 7;
-  public final int startingEstates = 3;
+  public int startingCopper = 7;
+  public int startingEstates = 3;
   // Attributes for this class are public
-  public final String playerName;
-  public final int drawCards = 7;  // inital hand size
+  public String playerName;
+  public int drawCards = 7;  // inital hand size
   public int remActions;
   public int remBuys;
   public int remMoney;
@@ -23,7 +23,7 @@ public class Player{
   public ArrayList<Card> hand;
   public GameState gameState;
 
-  public final int randomSeed = 11;
+  public int randomSeed = 11;
 
   public Random rand = new Random(randomSeed);
 

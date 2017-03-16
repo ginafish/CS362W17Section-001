@@ -30,11 +30,38 @@ public class CardTest{
     assertEquals(Card.COPPER.getDesc(), "worth 1 money");
     assertEquals(Card.COPPER.getActionCost(), 0);
     assertEquals(Card.COPPER.getCost(), 0);
-    // assertEquals(Card.COPPER.givesActions, 0);
-    // assertEquals(Card.COPPER.givesCardDraws, 0);
-    // assertEquals(Card.COPPER.givesMoney, 1);
-    // assertEquals(Card.COPPER.givesVictoryPoints(), 0);
+    assertEquals(Card.COPPER.givesActions, 0);
+    assertEquals(Card.COPPER.givesCardDraws, 0);
+    assertEquals(Card.COPPER.givesMoney, 1);
+    assertEquals(Card.COPPER.getVictoryPoints(), 0);
     assertEquals(Card.COPPER.getType(), Card.Type.TREASURE);
+  }
+
+  @Test
+  public void testValuesBaron(){
+    assertEquals(Card.BARON.toString(), "Baron");
+    assertEquals(Card.BARON.getDesc(), "+1 Buy.  Discard an Estate for +4 "+
+      "money.  Otherwise, gain an Estate.");
+    assertEquals(Card.BARON.getActionCost(), 1);
+    assertEquals(Card.BARON.getCost(), 4);
+    assertEquals(Card.BARON.givesActions, 0);
+    assertEquals(Card.BARON.givesCardDraws, 0);
+    assertEquals(Card.BARON.givesMoney, 0);
+    assertEquals(Card.BARON.getVictoryPoints(), 0);
+    assertEquals(Card.BARON.getType(), Card.Type.ACTION);
+  }
+
+  @Test
+  public void testValuesEstate(){
+    assertEquals(Card.ESTATE.toString(), "Estate");
+    assertEquals(Card.ESTATE.getDesc(), "worth 1 victory point");
+    assertEquals(Card.ESTATE.getActionCost(), 0);
+    assertEquals(Card.ESTATE.getCost(), 2);
+    assertEquals(Card.ESTATE.givesActions, 0);
+    assertEquals(Card.ESTATE.givesCardDraws, 0);
+    assertEquals(Card.ESTATE.givesMoney, 0);
+    assertEquals(Card.ESTATE.getVictoryPoints(), 1);
+    assertEquals(Card.ESTATE.getType(), Card.Type.VICTORY);
   }
 
   @Test
@@ -119,6 +146,10 @@ public class CardTest{
     assertEquals(a.getBuys(), 2);
     assertEquals(a.getHandSize(), 9);
     assertEquals(b.getHandSize(), 6);
+    b.putInHand(Card.COUNCILROOM);
+    while(b.isCardInHand(Card.ESTATE)) b.discardFromHand(Card.ESTATE);
+    assertFalse(b.isCardInHand(Card.ESTATE));
+    assertEquals(b.playCard(Card.COUNCILROOM), true);
   }
 
   @Test
@@ -153,12 +184,19 @@ public class CardTest{
     // assertFalse(a.playCard(Card.FEAST));
     a.putInHand(Card.FEAST);
     assertEquals(a.getHandSize(), 6);
-    a.playCard(Card.FEAST);
+    assertTrue(a.playCard(Card.FEAST));
     assertTrue(a.cardPile.contains(Card.SALVAGER));
     assertFalse(a.isCardInHand(Card.FEAST));
     assertEquals(a.getHandSize(), 5);
     assertEquals(a.countAllCards(), 11);
     assertEquals(Card.FEAST.getCost(), 4);
+    assertEquals(null, Card.FEAST.play(a));
+    assertTrue(a.cardPile.contains(Card.COUNCILROOM));
+    assertEquals(null, Card.FEAST.play(a));
+    assertTrue(a.cardPile.contains(Card.GARDENS));
+    assertEquals(null, Card.FEAST.play(a));
+    assertTrue(a.cardPile.contains(Card.EMBARGO));
+    assertEquals(null, Card.FEAST.play(a));
   }
 
   @Test
@@ -192,19 +230,23 @@ public class CardTest{
   @Test
   public void testPlayMine(){
     while(a.isCardInHand(Card.COPPER)) a.discardFromHand(Card.COPPER);
+    assertEquals(Card.MINE.play(a), Card.MINE);
+    assertFalse(a.isCardInHand(Card.COPPER));
+    assertFalse(a.isCardInHand(Card.SILVER));
+    assertFalse(a.isCardInHand(Card.GOLD));
     a.putInHand(Card.COPPER);
     assertTrue(a.isCardInHand(Card.COPPER));
     assertFalse(a.isCardInHand(Card.SILVER));
     assertFalse(a.isCardInHand(Card.GOLD));
-    Card.MINE.play(a);
+    assertEquals(Card.MINE.play(a), Card.MINE);
     assertFalse(a.isCardInHand(Card.COPPER));
     assertTrue(a.isCardInHand(Card.SILVER));
     assertFalse(a.isCardInHand(Card.GOLD));
-    Card.MINE.play(a);
+    assertEquals(Card.MINE.play(a), Card.MINE);
     assertFalse(a.isCardInHand(Card.COPPER));
     assertFalse(a.isCardInHand(Card.SILVER));
     assertTrue(a.isCardInHand(Card.GOLD));
-    Card.MINE.play(a);
+    assertEquals(Card.MINE.play(a), Card.MINE);
     assertFalse(a.isCardInHand(Card.COPPER));
     assertFalse(a.isCardInHand(Card.SILVER));
     assertTrue(a.isCardInHand(Card.GOLD));
@@ -219,16 +261,16 @@ public class CardTest{
     assertEquals(a.getBuys(), 1);
     assertEquals(a.getMoney(), 0);
     a.discard(Card.SALVAGER.play(a));
-    a.seeDeck();
     assertEquals(a.getBuys(), 2);
     assertEquals(a.getMoney(), 2);
     assertFalse(a.isCardInHand(Card.ESTATE));
+    assertEquals(Card.SALVAGER.play(a), Card.SALVAGER);
   }
 
   @Test
   public void testPlaySmithy(){
     assertEquals(a.getHandSize(), 5);
-    Card.SMITHY.play(a);
+    assertEquals(Card.SMITHY.play(a), Card.SMITHY);
     assertEquals(a.getHandSize(), 8);
   }
 
@@ -236,7 +278,7 @@ public class CardTest{
   public void testPlayVillage(){
     assertEquals(a.getActions(), 1);
     assertEquals(a.getHandSize(), 5);
-    Card.VILLAGE.play(a);
+    assertEquals(Card.VILLAGE.play(a), Card.VILLAGE);
     assertEquals(a.getActions(), 3);
     assertEquals(a.getHandSize(), 6);
   }

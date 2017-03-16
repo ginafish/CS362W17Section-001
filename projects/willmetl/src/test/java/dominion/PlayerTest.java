@@ -83,6 +83,38 @@ public class PlayerTest{
     assertEquals(a.buyCard(Card.COPPER), true);
     assertEquals(11, a.countAllCards());
     assertEquals(0, a.getBuys());
+    assertFalse(a.buyCard(Card.DUCHY));
+    assertEquals(20, a.addBuys(20));
+    assertEquals(30, a.addMoney(30));
+    for(int i=0; i<6; i++)
+      assertTrue(a.buyCard(Card.DUCHY));
+    assertFalse(a.buyCard(Card.DUCHY));
+    assertEquals(30, a.addMoney(30));
+    for(int i=0; i<6; i++)
+      assertTrue(a.buyCard(Card.DUCHY));
+    assertFalse(a.buyCard(Card.DUCHY));
+  }
+
+  @Test
+  public void testBuyPhase(){
+    Player a = new Player("Amy", g);
+    assertEquals(0, a.getMoney());
+    assertEquals(1, a.getBuys());
+    assertEquals(10, a.countAllCards());
+    a.buyPhase();
+    assertEquals(0, a.getMoney());
+    assertEquals(0, a.getBuys());
+    assertEquals(11, a.countAllCards());
+    a.buyPhase();
+    assertEquals(0, a.getBuys());
+    assertEquals(11, a.countAllCards());
+    assertEquals(10, a.addMoney(10));
+    assertEquals(2, a.addBuys(2));
+    a.buyPhase();
+    a.buyPhase();
+    assertEquals(3, a.getMoney());
+    assertEquals(0, a.getBuys());
+    assertEquals(13, a.countAllCards());
   }
 
   @Test
