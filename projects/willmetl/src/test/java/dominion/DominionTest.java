@@ -16,7 +16,7 @@ public class DominionTest{
   @Test
   public void initPlayer(){
     Dominion game = new Dominion();
-    game.setupGame(true, true);
+    game.setupGame();
   }
 
 }

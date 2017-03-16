@@ -8,36 +8,31 @@ import java.util.*;
 
 public class Player{
   // The Player class represents a single Dominion player
-  private final boolean DEBUGGING = true;
-  public final boolean ISBOT;
   // Initial cards for each player's Deck
-  private final int startingCopper = 7;
-  private final int startingEstates = 3;
-  // Attributes for this class are private
-  private final String playerName;
-  private final int drawCards = 7;  // inital hand size
-  private int remActions;
-  private int remBuys;
-  private int remMoney;
+  public final int startingCopper = 7;
+  public final int startingEstates = 3;
+  // Attributes for this class are public
+  public final String playerName;
+  public final int drawCards = 7;  // inital hand size
+  public int remActions;
+  public int remBuys;
+  public int remMoney;
 
-  private Stack<Card> cardPile;
-  private int drawsRemaining;
-  private ArrayList<Card> hand;
+  public Stack<Card> cardPile;
+  public int drawsRemaining;
+  public ArrayList<Card> hand;
   public GameState gameState;
 
-  public Random rand = new Random();
+  public final int randomSeed = 11;
+
+  public Random rand = new Random(randomSeed);
 
   public Player(String pName, GameState game){
-    this(pName, game, false);
-  }
-  public Player(String pName, GameState game, boolean isBot){
     // Constructor for the Player class - sets their name
     this.playerName = pName;
-    this.ISBOT = isBot;
     this.gameState = game;
     this.cardPile = new Stack<Card>();
-    this.drawsRemaining = 0;
-    this.hand = new ArrayList<Card>(20);
+    this.hand = new ArrayList<Card>();
     for(int i=0; i<startingCopper; i++)
       takeFreeCard(gameState.takeCard(Card.COPPER));
     for(int i=0; i<startingEstates; i++)
@@ -81,7 +76,7 @@ public class Player{
     return this.playerName;
   }
 
-  private void actionPhase(){
+  public void actionPhase(){
     // Action phase of a player's turn
     while(remActions >= 1){
       // Only prompt the player to choose a card if they have Action cards
@@ -122,13 +117,12 @@ public class Player{
     if(discard(gameState.takeCard(c))){
         remMoney -= c.getCost();
         remBuys--;
-        if(DEBUGGING) System.out.format("%s bought a %s.\n", playerName, c);
         return true;
     }
     return false;
   }
 
-  private void buyPhase(){
+  public void buyPhase(){
     // Auto convert all Treasure cards and allow player to buy
     // Iterating over an ArrayList while removing elements gets messy
     ArrayList<Card> tcards = new ArrayList<Card>();
@@ -156,7 +150,7 @@ public class Player{
     }
   }
 
-  private void cleanupPhase(){
+  public void cleanupPhase(){
     // Discard hand and draw 5 new cards
     cardPile.addAll(drawsRemaining, hand);
     hand.clear();
@@ -236,12 +230,9 @@ public class Player{
   public void newTurn(){
     // Start every turn with a new, full hand and 1 action, 1 buy
     System.out.println("It's "+playerName+"'s turn:");
-    // if(DEBUGGING) seeDeck();
     actionPhase();
     buyPhase();
     cleanupPhase();
-    // if(DEBUGGING) seeDeck();
-    if(DEBUGGING) System.out.println(playerName+"'s turn is OVER.\n\n");
   }
 
   public boolean playCard(Card card){
@@ -271,19 +262,11 @@ public class Player{
   }
 
   public void seeDeck(){
-    if(DEBUGGING){
-      System.out.println("Player "+playerName+"'s hand:");
-      seeHand();
-      System.out.println("Player "+playerName+"'s drawPile:");
-      for(int i=0; i<drawsRemaining; i++){
-        System.out.println(cardPile.elementAt(i));
-      }
-      System.out.println("Player "+playerName+"'s discardPile:");
-      for(int i=drawsRemaining; i<cardPile.size(); i++){
-        System.out.println(cardPile.elementAt(i));
-      }
-      System.out.println("drawsRemaining = "+drawsRemaining);
+    System.out.println("Player "+playerName+"'s discardPile:");
+    for(int i=drawsRemaining; i<cardPile.size(); i++){
+      System.out.println(cardPile.elementAt(i));
     }
+    System.out.println("drawsRemaining = "+drawsRemaining);
   }
 
   public void seeHand(){

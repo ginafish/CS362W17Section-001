@@ -7,13 +7,10 @@ package dominion;
 
 public class Dominion{
 
-  public void setupGame(boolean p1Bot, boolean p2Bot){
+  public void setupGame(){
     GameState game = new GameState();
-
-    game.addPlayer("Amy", p1Bot);
-    game.addPlayer("Billy", p2Bot);
-
-    while(game.checkEndConditions())
-      game.nextTurn();
+    game.addPlayer("Amy");
+    game.addPlayer("Billy");
   }
+
 }
