@@ -49,6 +49,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	
 	<build>
 		<plugins>
 			<plugin>
@@ -94,20 +95,6 @@
           			</execution>
         		</executions>
     		</plugin>
-<!-- 			<plugin> -->
-<!-- 				<groupId>org.apache.maven.plugins</groupId> -->
-<!-- 				<artifactId>maven-jar-plugin</artifactId> -->
-<!-- 				<version>3.0.2</version> -->
-<!-- 				<configuration> -->
-<!-- 					<archive> -->
-<!-- 						<manifest> -->
-<!-- 							<addClasspath>true</addClasspath> -->
-<!-- 							<classpathPrefix>lib/</classpathPrefix> -->
-<!-- 							<mainClass>dominion.PlayDominion</mainClass> -->
-<!-- 						</manifest> -->
-<!-- 					</archive> -->
-<!-- 				</configuration> -->
-<!-- 			</plugin> -->
 			<plugin>
 				<groupId>org.evosuite.plugins</groupId>
 				<artifactId>evosuite-maven-plugin</artifactId>
@@ -133,6 +120,19 @@
       					</property>
      				</properties>
   				</configuration>
+			</plugin>
+			<plugin>
+    			<groupId>org.pitest</groupId>
+    			<artifactId>pitest-maven</artifactId>
+    			<version>1.1.11</version>
+    			<configuration>
+        			<targetClasses>
+            			<param>org.cs362.dominion*</param>
+        			</targetClasses>
+        			<targetTests>
+            			<param>org.cs362.dominion*</param>
+        			</targetTests>
+    			</configuration>
 			</plugin>
 		</plugins>
 	</build>
