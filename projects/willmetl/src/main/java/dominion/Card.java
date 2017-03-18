@@ -37,13 +37,11 @@ public enum Card{
     // See http://wiki.dominionstrategy.com/index.php/File:Ambassador.jpg
     public Card play(Player p){
       Card c = p.chooseHand();
-      if(c != null){  // maybe they cancelled
-        GameState g = p.gameState;
-        g.addCard(c);
-        for(int i=0; i<g.numPlayers; i++){
-          if(g.players[i] != p){
-            g.players[i].takeFreeCard( g.takeCard(c) );
-          }
+      GameState g = p.gameState;
+      g.addCard(c);
+      for(int i=0; i<g.numPlayers; i++){
+        if(g.players[i] != p){
+          g.players[i].takeFreeCard( g.takeCard(c) );
         }
       }
       return this;
@@ -65,18 +63,15 @@ public enum Card{
     // See http://wiki.dominionstrategy.com/index.php/File:Council_Room.jpg
     public Card play(Player p){
       // +4 cards, +1 buy, each other player draws a card
-      for(int i=0; i<4; i++){
+      for(int i=0; i<3; i++){
         Card c = p.draw();
         System.out.println("You drew a "+c);
         p.putInHand(c);
       }
       p.addBuys(1);
-      for(Player other: p.gameState.players){
-        if(other != p){
-          other.putInHand(other.draw());
-          System.out.println(other+" drew a card.");
-          return this;
-        }
+      for(int i=0; i<p.gameState.numPlayers; i++){
+        p.gameState.players[i].putInHand(p.gameState.players[i].draw());
+        System.out.println(p.gameState.players[i]+" drew a card.");
       }
       return this;
     }
@@ -86,11 +81,10 @@ public enum Card{
     public Card play(Player p){
       // +2 money, other players forced to discard a copper or reveal hand
       p.addMoney(2);
-      for(Player other: p.gameState.players){
-        if(other != p){
-          if(!other.discardFromHand(Card.COPPER)) other.seeHand();
-          return this;
-        }
+      for(int i=0; i<p.gameState.numPlayers; i++){
+        if(p.gameState.players[i] != p)
+          if(!p.gameState.players[i].discardFromHand(Card.COPPER))
+            p.gameState.players[i].seeHand();
       }
       return this;
     }
@@ -112,22 +106,19 @@ public enum Card{
     public Card play(Player p){
       // Trash this card, gain a card costing up to 5 money
       System.out.println(p+" may choose a card up to 5 money from the supply.");
-      int choice;
-      do{
-        int availCards = p.gameState.listCards();
-        System.out.format("Please enter the card number (1-%d) you want, "+
-          "or 0 to cancel: ", availCards);
-        choice = p.rand.nextInt(20);
-        if( choice>0 && choice<=availCards){
-          Card c = Card.values()[choice-1];
-          if(c.costsMoney <= 5){
-            if(p.takeFreeCard(p.gameState.takeCard(c))) break;
-          }else{
-            System.out.format("The %s card costs %d, please choose a "+
-            "card that costs no more than 5 money.\n", c, c.costsMoney);
-          }
+      int availCards = p.gameState.listCards();
+      System.out.format("Please enter the card number (1-%d) you want, "+
+        "or 0 to cancel: ", availCards);
+      int choice = p.rand.nextInt(20);
+      if( choice>0 && choice<=availCards){
+        Card c = Card.values()[choice-1];
+        if(c.costsMoney <= 5){
+          p.takeFreeCard(p.gameState.takeCard(c));
+        }else{
+          System.out.format("The %s card costs %d, please choose a "+
+          "card that costs no more than 5 money.\n", c, c.costsMoney);
         }
-      }while(choice != 0);
+      }
       return null;
     }
   },GARDENS("Gardens", 4, 0, 0, 1, Card.Type.ACTION, "Worth 1 Victory Point per 10 cards, rounded down."){

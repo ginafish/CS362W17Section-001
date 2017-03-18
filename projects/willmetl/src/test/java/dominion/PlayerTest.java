@@ -57,21 +57,37 @@ public class PlayerTest{
   @Test
   public void testActionPhase(){
     Player a = new Player("Amy", g);
+    assertEquals(0, a.getMoney());
     assertEquals(1, a.getActions());
     assertEquals(10, a.countAllCards());
     assertEquals(5, a.getHandSize());
     a.actionPhase();
+    assertEquals(0, a.getMoney());
     assertEquals(1, a.getActions());
     assertEquals(5, a.getHandSize());
     a.putInHand(Card.EMBARGO);
     assertEquals(6, a.getHandSize());
     a.actionPhase();
+    assertEquals(2, a.getMoney());
     assertEquals(0, a.getActions());
     assertEquals(5, a.getHandSize());
     a.putInHand(Card.MINE);
     a.actionPhase();
+    assertEquals(2, a.getMoney());
     assertEquals(6, a.getHandSize());
     assertFalse(a.isCardInHand(Card.SILVER));
+    assertEquals(1, a.addActions(1));
+    for(int i=0; i<6; i++) assertTrue(a.discardFromHand());
+    assertEquals(0, a.getHandSize());
+    a.actionPhase();
+    assertEquals(1, a.getActions());
+    a.putInHand(Card.SMITHY);
+    assertEquals(2, a.getMoney());
+    assertEquals(1, a.getHandSize());
+    a.actionPhase();
+    assertEquals(2, a.getMoney());
+    assertEquals(3, a.getHandSize());
+    assertEquals(12, a.countAllCards());
   }
 
   @Test
@@ -98,23 +114,32 @@ public class PlayerTest{
   @Test
   public void testBuyPhase(){
     Player a = new Player("Amy", g);
+    for(int i=0; i<5; i++) assertTrue(a.discardFromHand());
+    a.putInHand(Card.EMBARGO);
     assertEquals(0, a.getMoney());
     assertEquals(1, a.getBuys());
-    assertEquals(10, a.countAllCards());
+    assertEquals(11, a.countAllCards());
     a.buyPhase();
     assertEquals(0, a.getMoney());
     assertEquals(0, a.getBuys());
-    assertEquals(11, a.countAllCards());
+    assertEquals(12, a.countAllCards());
     a.buyPhase();
     assertEquals(0, a.getBuys());
-    assertEquals(11, a.countAllCards());
+    assertEquals(12, a.countAllCards());
     assertEquals(10, a.addMoney(10));
     assertEquals(2, a.addBuys(2));
     a.buyPhase();
     a.buyPhase();
-    assertEquals(3, a.getMoney());
+    assertEquals(a.getMoney(), 0);
     assertEquals(0, a.getBuys());
-    assertEquals(13, a.countAllCards());
+    assertEquals(14, a.countAllCards());
+    for(int i=a.getHandSize(); i>0; i--) assertTrue(a.discardFromHand());
+    assertEquals(200, a.addBuys(200));
+    assertEquals(1000, a.addMoney(1000));
+    for(int i=0; i<200; i++) a.buyPhase();
+    assertEquals(a.getHandSize(), 0);
+    assertFalse(a.buyCard(Card.DUCHY));
+    assertTrue(a.buyCard(Card.ESTATE));
   }
 
   @Test
@@ -166,6 +191,11 @@ public class PlayerTest{
     assertEquals(a.draw(), Card.SILVER);
     assertTrue(a.discard(Card.GOLD));
     assertEquals(a.draw(), Card.GOLD);
+    assertTrue(a.discard(Card.ESTATE));
+    assertTrue(a.discard(Card.CURSE));
+    assertEquals(Card.CURSE, a.draw());
+    assertEquals(Card.ESTATE, a.draw());
+
   }
 
   @Test
