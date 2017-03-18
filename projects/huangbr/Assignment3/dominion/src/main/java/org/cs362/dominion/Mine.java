@@ -1,3 +1,4 @@
+package dominion;
 
 public class Mine extends Card
 {

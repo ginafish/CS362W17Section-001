@@ -1,3 +1,4 @@
+package dominion;
 
 public class Feast extends Card
 {

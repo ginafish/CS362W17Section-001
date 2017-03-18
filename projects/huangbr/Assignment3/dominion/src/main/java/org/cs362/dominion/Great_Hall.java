@@ -1,3 +1,4 @@
+package dominion;
 
 public class Great_Hall extends Card
 {
