@@ -1,3 +1,4 @@
+package dominion;
 import static org.junit.Assert.assertEquals;
 import java.util.Random;
 import org.junit.Test;

@@ -1,3 +1,4 @@
+package dominion;
 import java.util.*;
 
 public abstract class Card
