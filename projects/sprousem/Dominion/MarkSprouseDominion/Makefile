@@ -22,6 +22,8 @@ evo: mvn_comp
 
 tests: all #run tests
 	mvn test
+pitest: 
+	mvn org.pitest:pitest-maven:mutationCoverage
 
 coverage: all #run tests with coverage
 	mvn cobertura:cobertura site
@@ -30,5 +32,5 @@ clean: #clean dir
 	rm -f -rf dominion/
 	rm -f sprousem_dom.jar
 	mvn clean
-	mvn evosuite:clean
+#	mvn evosuite:clean
 
