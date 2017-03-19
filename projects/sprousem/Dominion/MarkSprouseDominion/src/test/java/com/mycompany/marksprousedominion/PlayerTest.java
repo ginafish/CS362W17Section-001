@@ -7,6 +7,9 @@ package com.mycompany.marksprousedominion;
 
 import com.mycompany.marksprousedominion.*;
 import org.junit.Test;
+
+import java.util.Random;
+
 import static org.junit.Assert.*;
 
 /**
@@ -14,10 +17,12 @@ import static org.junit.Assert.*;
  */
 public class PlayerTest {
 
+    Random rand = new Random(10);
+
     @Test
     public void testConclusion()
     {
-        Player player = new Player();
+        Player player = new Player(rand);
         for (int i = 0; i < 5; i++)
         {
             Card temp = new Card();
@@ -39,7 +44,7 @@ public class PlayerTest {
     public void testAdds()
     {
         //Test all cases of the addCard
-        Player player = new Player();
+        Player player = new Player(rand);
         Card card = new Card();
         card.setName("Test");
         String name = "Test";
@@ -58,7 +63,7 @@ public class PlayerTest {
     public void testDraw()
     {
         System.out.println("Testing the draw");
-        Player player = new Player();
+        Player player = new Player(rand);
 
         player.addCard(0, new treasureCard(0, 1, "Copper"));//Add a card to the deck
 

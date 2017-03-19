@@ -20,3 +20,6 @@ mvn test
 
 Code coverage:
 mvn cobertura: cobertura
+
+Code coverage Mutations(PITEST:
+mvn org.pitest:pitest-maven:mutationCoverage 
