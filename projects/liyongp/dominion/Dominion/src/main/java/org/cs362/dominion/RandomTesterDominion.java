@@ -11,12 +11,12 @@ public class RandomTesterDominion {
 		    List<Card> cards;
 		    GameState state;
 			Randomness.reset(10);
-			Random rand = new Random();
-			int nPlayer = rand.nextInt(3); // 0 = 2 players, 1 = 3 players and 2 = 4 players
 			
 			cards = new ArrayList<Card>(Card.createCards());
 			state = new GameState(cards);
 			
+			Random rand = new Random();
+			int nPlayer = rand.nextInt(3); // 0 = 2 players, 1 = 3 players and 2 = 4 players
 		      Player player = new Player(state, "player-1");
 		      state.addPlayer(player);
 		      player = new Player(state, "player-2");

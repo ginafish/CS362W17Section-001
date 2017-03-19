@@ -25,6 +25,20 @@ public class CardTest{
   }
 
   @Test
+  public void testPlayCard(){
+    assertEquals(a.getMoney(), 0);
+    assertTrue(a.playCard(Card.SILVER));
+    assertEquals(a.getMoney(), 2);
+    assertEquals(a.addActions(-1), 0);
+    assertFalse(a.playCard(Card.EMBARGO));
+    assertEquals(a.getActions(), 0);
+    assertEquals(a.getMoney(), 2);
+    assertTrue(a.playCard(Card.SILVER));
+    assertEquals(a.getActions(), 0);
+    assertEquals(a.getMoney(), 4);
+  }
+
+  @Test
   public void testValuesCopper(){
     assertEquals(Card.COPPER.toString(), "Copper");
     assertEquals(Card.COPPER.getDesc(), "worth 1 money");
@@ -67,8 +81,9 @@ public class CardTest{
   @Test
   public void testPlayCopper(){
     assertEquals(a.getMoney(), 0);
-    Card.COPPER.play(a);
+    assertEquals(Card.COPPER.play(a), Card.COPPER);
     assertEquals(a.getMoney(), 1);
+    assertEquals(Card.ESTATE.play(a), Card.ESTATE);
   }
 
   @Test
@@ -185,18 +200,30 @@ public class CardTest{
     a.putInHand(Card.FEAST);
     assertEquals(a.getHandSize(), 6);
     assertTrue(a.playCard(Card.FEAST));
-    assertTrue(a.cardPile.contains(Card.SALVAGER));
+    // throw away draw pile
+    for(int i=0; i<5; i++) a.draw();
+    assertEquals(a.draw(), Card.CURSE);
     assertFalse(a.isCardInHand(Card.FEAST));
     assertEquals(a.getHandSize(), 5);
-    assertEquals(a.countAllCards(), 11);
+    assertEquals(a.countAllCards(), 5);
     assertEquals(Card.FEAST.getCost(), 4);
     assertEquals(null, Card.FEAST.play(a));
-    assertTrue(a.cardPile.contains(Card.COUNCILROOM));
+    assertEquals(a.draw(), Card.FEAST);
     assertEquals(null, Card.FEAST.play(a));
-    assertTrue(a.cardPile.contains(Card.GARDENS));
+    assertEquals(a.draw(), Card.FEAST);
     assertEquals(null, Card.FEAST.play(a));
-    assertTrue(a.cardPile.contains(Card.EMBARGO));
+    assertEquals(a.draw(), Card.CURSE);
     assertEquals(null, Card.FEAST.play(a));
+    assertEquals(a.draw(), Card.AMBASSADOR);
+    assertEquals(null, Card.FEAST.play(a));
+    assertEquals(a.draw(), Card.SILVER);
+    int deckSize = a.countAllCards();
+    for(int i=1; i<200; i++){
+      Card.FEAST.play(a);
+      // assertEquals(a.countAllCards(), i+deckSize);
+      assertFalse(a.isCardInDeck(Card.PROVINCE));
+      assertFalse(a.isCardInDeck(Card.ADVENTURER));
+    }
   }
 
   @Test

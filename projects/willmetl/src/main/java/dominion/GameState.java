@@ -7,26 +7,26 @@ package dominion;
 import java.util.*;
 
 public class GameState{
-  public final int defaultDeckSize = 100;
-  public final int pileSize = 8;     // How many cards per pile
+  public int defaultDeckSize = 100;
+  public int pileSize = 8;     // How many cards per pile
   // Initial currency cards in the bank
-  public final int bankCopper = 60;
-  public final int bankSilver = 40;
-  public final int bankGold = 30;
+  public int bankCopper = 60;
+  public int bankSilver = 40;
+  public int bankGold = 30;
   // Initial victory point cards in the bank
-  public final int bankEstates = 24;
-  public final int bankDuchies = 12;
-  public final int bankProvinces = 12;
+  public int bankEstates = 24;
+  public int bankDuchies = 12;
+  public int bankProvinces = 12;
   // Initial kingdom cards in the bank
-  public final int bankKingdomCards = 10;
-  public final int bankCurses = 10;  // scales with players, 10, 20, 30, etc
+  public int bankKingdomCards = 10;
+  public int bankCurses = 10;  // scales with players, 10, 20, 30, etc
 
   public ArrayList<Card> embargoTokens;
   public ArrayList<Card> supply;
   public Player[] players;
   public int numPlayers = 0;
   public int playerTurn = 0;
-  public final int maxPlayers = 4;
+  public int maxPlayers = 4;
 
   public GameState(){
     // shared cards that players can buy

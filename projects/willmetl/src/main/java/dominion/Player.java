@@ -114,12 +114,9 @@ public class Player{
       );
       return false;
     }
-    if(discard(gameState.takeCard(c))){
-        remMoney -= c.getCost();
-        remBuys--;
-        return true;
-    }
-    return false;
+    remMoney -= c.getCost();
+    remBuys--;
+    return discard(gameState.takeCard(c));
   }
 
   public void buyPhase(){
@@ -132,7 +129,6 @@ public class Player{
       hand.remove(c);
       playCard(c);
     }
-    // seeHand();
     while(remBuys >= 1){
       System.out.format("%s has %d buys and %d money to spend.\n",
         playerName, remBuys, remMoney);
@@ -140,13 +136,9 @@ public class Player{
       int availCards = gameState.listCards();
       System.out.format("Please enter the card number (1-%d) you want to buy,"+
         " or 0 to cancel: ", availCards);
-      int choice = 0;
-      // Bots play the first card of the correct type
-      choice = rand.nextInt(20)+1;
-      if( choice>0 && choice<=availCards )
-        buyCard(Card.values()[choice-1]);
-      else if( choice==0 )
-        remBuys = 0;
+        // Bots play the first card of the correct type
+      int choice = rand.nextInt(20)+1;
+      buyCard(Card.values()[choice-1]);
     }
   }
 
@@ -166,7 +158,7 @@ public class Player{
 
   public Card chooseHand(){
     // Bots select a random card
-    Collections.shuffle(hand);
+    Collections.shuffle(hand, rand);
     if(hand.size() > 0)
       return hand.remove(rand.nextInt(hand.size()));
     else return null;
@@ -227,6 +219,10 @@ public class Player{
     return hand.contains(c);
   }
 
+  public boolean isCardInDeck(Card c){
+    return cardPile.contains(c);
+  }
+
   public void newTurn(){
     // Start every turn with a new, full hand and 1 action, 1 buy
     System.out.println("It's "+playerName+"'s turn:");
@@ -270,6 +266,7 @@ public class Player{
   }
 
   public void seeHand(){
+    System.out.println("Player "+playerName+"'s hand:");
     // Display all cards in a player's hand
     for(Card c: hand){
       System.out.println(c);
@@ -277,7 +274,7 @@ public class Player{
   }
 
   public int shuffle(){
-    Collections.shuffle(cardPile);
+    Collections.shuffle(cardPile, rand);
     drawsRemaining = cardPile.size();
     return drawsRemaining;
   }
