@@ -1,9 +1,11 @@
 
 ## If you have any troubles please email me at dringb@oregonstate.edu or call at 541-510-5034 everything is working fine on my machine, and school server,I would hate to lose points for something so silly
 
-### If you must clean everything take a look at the pit reports 
 ## Make sure all commands are ran from where pom.xml is
 
+
+### If you must clean everything take a look at the pit reports first
+#### In a pit-report called ```passing``` is a file showing complete and current mutation report
 
 #### If you look in the target/pit-reports there are different reports generated from pitest via just EvoSuite, just my tests, both etc etc. Take a look at them 
 
