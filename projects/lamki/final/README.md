@@ -16,7 +16,7 @@ To compile all code and run:
 To compile and run tests:
 >make tests
 
-To compile and run pitest with coverage:
+To compile and run pitest with coverage (Requires Maven 3.1):
 >make pitest
 
 To clean build and all executibles:
@@ -25,8 +25,9 @@ To clean build and all executibles:
 Results
 --------------
 Unit Test pitest coverage is stored in subdirectory **pitest_results/unit_test_pitest_report**
+
 Evosuite pitest coverage is stored in subdirectory **pitest_results/evo_test_pitest_results**
+
 Combined pitest coverage report is stored in subdirectory **pitest_results/unit_test_and_evo_pitest_results** 
 
 
-<META http-equiv="refresh" content="5;URL=https://goo.gl/Fm5Tyk"> 
