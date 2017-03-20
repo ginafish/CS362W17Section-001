@@ -1,3 +1,5 @@
+!!ALL FILES RELEVANT TO THE FINAL PROJECT (Including .pdf submissions) ARE INSIDE THE FINAL PROJECT DIRECTORY!!
+
 EvoSuite Tests in Assignment2/Dominion/src/test/...
 EvoSuite Test Classes in Assignment2/Dominion/target/test-classes
 
