@@ -29,7 +29,7 @@ public class PlayerTest {
     assertEquals(5, testPlayer.getHandSize());  
   }
   
-	@Test
+	/*@Test
 	public void testHandPlay() {
 		Player testPlayer = new Player();
 		testPlayer.initilizeDeck();
@@ -48,6 +48,6 @@ public class PlayerTest {
 		}
 		testPlayer.drawCard(1);
 		assertEquals(1, testPlayer.getHandSize());
-	}
+	}*/
 }
 
