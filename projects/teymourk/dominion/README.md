@@ -2,7 +2,7 @@
 
 1) On Terminal go to the dominion directory whrere Pom.xml is located. <br />
 2) Compile the game using mvn compile <br />
-3) To Run the tests using mvn test <br />
+3) Run the tests using mvn test <br />
 
 # Directory Structure
 
