@@ -1,0 +1,5 @@
+[MASTER] 10:38:55.875 [main] ERROR ClientProcess - Error when generating tests for: org.cs362.dominion.Player with seed 1490031535865. Configuration id : default
+java.lang.NoSuchFieldError: mockGUI
+	at org.evosuite.ClientProcess.setupRuntimeProperties(ClientProcess.java:136) ~[evosuite-master-1.0.4.jar:1.0.4]
+	at org.evosuite.ClientProcess.run(ClientProcess.java:67) ~[evosuite-master-1.0.4.jar:1.0.4]
+	at org.evosuite.ClientProcess.main(ClientProcess.java:203) ~[evosuite-master-1.0.4.jar:1.0.4]
