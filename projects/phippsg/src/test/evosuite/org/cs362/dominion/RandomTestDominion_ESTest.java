@@ -14,10 +14,10 @@ import org.evosuite.runtime.EvoRunnerParameters;
 import org.evosuite.runtime.Random;
 import org.junit.runner.RunWith;
 
-@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
-public class RandomTestDominion_ESTest extends RandomTestDominion_ESTest_scaffolding {
+@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = false, useVFS = false, useVNET = false, resetStaticState = false, separateClassLoader = false, useJEE = false)
+public class RandomTestDominion_ESTest {
 
-  @Test(timeout = 4000)
+  /*@Test(timeout = 4000)
   public void test0()  throws Throwable  {
       Random.setNextRandom(283);
       String[] stringArray0 = new String[3];
@@ -32,14 +32,14 @@ public class RandomTestDominion_ESTest extends RandomTestDominion_ESTest_scaffol
          //
          verifyException("org.cs362.dominion.Card", e);
       }
-  }
+  }*/
 
-  @Test(timeout = 4000)
+  /*@Test(timeout = 4000)
   public void test1()  throws Throwable  {
       String[] stringArray0 = new String[4];
       // Undeclared exception!
       RandomTestDominion.main(stringArray0);
-  }
+  }*/
 
   @Test(timeout = 4000)
   public void test2()  throws Throwable  {
