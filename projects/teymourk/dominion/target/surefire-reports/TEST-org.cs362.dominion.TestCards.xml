@@ -61,7 +61,7 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="copper" classname="org.cs362.dominion.TestCards" time="0.008"/>
-  <testcase name="silver" classname="org.cs362.dominion.TestCards" time="0.002"/>
-  <testcase name="gold" classname="org.cs362.dominion.TestCards" time="0"/>
+  <testcase name="copper" classname="org.cs362.dominion.TestCards" time="0.004"/>
+  <testcase name="silver" classname="org.cs362.dominion.TestCards" time="0.003"/>
+  <testcase name="gold" classname="org.cs362.dominion.TestCards" time="0.003"/>
 </testsuite>

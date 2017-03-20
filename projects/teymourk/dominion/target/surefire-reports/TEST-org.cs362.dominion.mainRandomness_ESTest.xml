@@ -61,6 +61,6 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="test1" classname="org.cs362.dominion.mainRandomness_ESTest" time="0.002"/>
-  <testcase name="test0" classname="org.cs362.dominion.mainRandomness_ESTest" time="0.002"/>
+  <testcase name="test1" classname="org.cs362.dominion.mainRandomness_ESTest" time="0.001"/>
+  <testcase name="test0" classname="org.cs362.dominion.mainRandomness_ESTest" time="0.003"/>
 </testsuite>

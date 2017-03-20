@@ -15,7 +15,7 @@ import java.util.*;
 import static org.evosuite.runtime.EvoAssertions.verifyException;
 import static org.junit.Assert.*;
 
-@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
+@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true)
 public class Player_ESTest extends Player_ESTest_scaffolding {
 
   @Test(timeout = 4000)

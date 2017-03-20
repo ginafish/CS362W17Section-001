@@ -1,234 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8f3e1243-9aa3-45e2-bb83-2c47a644c4a1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/evosuite-seeds/org.cs362.dominion.Card.seed" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/evosuite-seeds/org.cs362.dominion.GameState.seed" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/evosuite-seeds/org.cs362.dominion.PlayDominion.seed" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/evosuite-seeds/org.cs362.dominion.Player.seed" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/evosuite-seeds/org.cs362.dominion.RandomTestDominion.seed" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/evosuite-seeds/org.cs362.dominion.Randomness.seed" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/evosuite-seeds/org.cs362.dominion.mainCard.seed" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/evosuite-seeds/org.cs362.dominion.mainPlayer.seed" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/evosuite-seeds/org.cs362.dominion.mainRandomness.seed" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/pools/org.cs362.dominion.Card.pool" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/pools/org.cs362.dominion.GameState.pool" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/pools/org.cs362.dominion.PlayDominion.pool" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/pools/org.cs362.dominion.Player.pool" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/pools/org.cs362.dominion.RandomTestDominion.pool" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/pools/org.cs362.dominion.Randomness.pool" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/pools/org.cs362.dominion.mainCard.pool" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/pools/org.cs362.dominion.mainPlayer.pool" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/pools/org.cs362.dominion.mainRandomness.pool" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/seeds/org.cs362.dominion.Card.seed" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/seeds/org.cs362.dominion.GameState.seed" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/seeds/org.cs362.dominion.PlayDominion.seed" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/seeds/org.cs362.dominion.Player.seed" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/seeds/org.cs362.dominion.RandomTestDominion.seed" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/seeds/org.cs362.dominion.Randomness.seed" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/seeds/org.cs362.dominion.mainCard.seed" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/seeds/org.cs362.dominion.mainPlayer.seed" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/seeds/org.cs362.dominion.mainRandomness.seed" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/.img/arrowDown.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/.img/arrowUp.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/best-tests/org/cs362/dominion/Card_ESTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/best-tests/org/cs362/dominion/Card_ESTest_scaffolding.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/best-tests/org/cs362/dominion/GameState_ESTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/best-tests/org/cs362/dominion/GameState_ESTest_scaffolding.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/best-tests/org/cs362/dominion/PlayDominion_ESTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/best-tests/org/cs362/dominion/PlayDominion_ESTest_scaffolding.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/best-tests/org/cs362/dominion/Player_ESTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/best-tests/org/cs362/dominion/Player_ESTest_scaffolding.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/best-tests/org/cs362/dominion/RandomTestDominion_ESTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/best-tests/org/cs362/dominion/RandomTestDominion_ESTest_scaffolding.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/best-tests/org/cs362/dominion/Randomness_ESTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/best-tests/org/cs362/dominion/Randomness_ESTest_scaffolding.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/best-tests/org/cs362/dominion/mainCard_ESTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/best-tests/org/cs362/dominion/mainCard_ESTest_scaffolding.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/best-tests/org/cs362/dominion/mainPlayer_ESTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/best-tests/org/cs362/dominion/mainPlayer_ESTest_scaffolding.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/best-tests/org/cs362/dominion/mainRandomness_ESTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/best-tests/org/cs362/dominion/mainRandomness_ESTest_scaffolding.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/project_info.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.Card/std_err_CLIENT.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.Card/std_err_MASTER.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.Card/std_out_CLIENT.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.Card/std_out_MASTER.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.GameState/std_err_CLIENT.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.GameState/std_err_MASTER.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.GameState/std_out_CLIENT.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.GameState/std_out_MASTER.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.PlayDominion/std_err_CLIENT.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.PlayDominion/std_err_MASTER.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.PlayDominion/std_out_CLIENT.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.PlayDominion/std_out_MASTER.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.Player/std_err_CLIENT.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.Player/std_err_MASTER.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.Player/std_out_CLIENT.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.Player/std_out_MASTER.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.RandomTestDominion/std_err_CLIENT.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.RandomTestDominion/std_err_MASTER.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.RandomTestDominion/std_out_CLIENT.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.RandomTestDominion/std_out_MASTER.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.Randomness/std_err_CLIENT.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.Randomness/std_err_MASTER.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.Randomness/std_out_CLIENT.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.Randomness/std_out_MASTER.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.mainCard/std_err_CLIENT.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.mainCard/std_err_MASTER.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.mainCard/std_out_CLIENT.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.mainCard/std_out_MASTER.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.mainPlayer/std_err_CLIENT.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.mainPlayer/std_err_MASTER.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.mainPlayer/std_out_CLIENT.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.mainPlayer/std_out_MASTER.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.mainRandomness/std_err_CLIENT.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.mainRandomness/std_err_MASTER.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.mainRandomness/std_out_CLIENT.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/logs/org.cs362.dominion.mainRandomness/std_out_MASTER.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/reports/org.cs362.dominion.Card/statistics.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/reports/org.cs362.dominion.GameState/statistics.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/reports/org.cs362.dominion.PlayDominion/statistics.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/reports/org.cs362.dominion.Player/statistics.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/reports/org.cs362.dominion.RandomTestDominion/statistics.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/reports/org.cs362.dominion.Randomness/statistics.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/reports/org.cs362.dominion.mainCard/statistics.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/reports/org.cs362.dominion.mainPlayer/statistics.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/reports/org.cs362.dominion.mainRandomness/statistics.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/tests/org/cs362/dominion/Card_ESTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/tests/org/cs362/dominion/Card_ESTest_scaffolding.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/tests/org/cs362/dominion/GameState_ESTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/tests/org/cs362/dominion/GameState_ESTest_scaffolding.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/tests/org/cs362/dominion/PlayDominion_ESTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/tests/org/cs362/dominion/PlayDominion_ESTest_scaffolding.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/tests/org/cs362/dominion/Player_ESTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/tests/org/cs362/dominion/Player_ESTest_scaffolding.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/tests/org/cs362/dominion/RandomTestDominion_ESTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/tests/org/cs362/dominion/RandomTestDominion_ESTest_scaffolding.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/tests/org/cs362/dominion/Randomness_ESTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/tests/org/cs362/dominion/Randomness_ESTest_scaffolding.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/tests/org/cs362/dominion/mainCard_ESTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/tests/org/cs362/dominion/mainCard_ESTest_scaffolding.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/tests/org/cs362/dominion/mainPlayer_ESTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/tests/org/cs362/dominion/mainPlayer_ESTest_scaffolding.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/tests/org/cs362/dominion/mainRandomness_ESTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.evosuite/tmp_2017_02_27_22_48_41/tests/org/cs362/dominion/mainRandomness_ESTest_scaffolding.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_0_13.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_0_13.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__classworlds_classworlds_1_1_alpha_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_apple_AppleJavaExtensions_1_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_bcel_findbugs_6_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_findbugs_3_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jFormatString_2_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_2_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_7_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_chain_commons_chain_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_digester_commons_digester_1_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_1_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_validator_commons_validator_1_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jaxen_jaxen_1_1_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_jcip_jcip_annotations_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_cobertura_cobertura_2_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_8_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_antlr_1_9_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_junit_1_8_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_8_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_3_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_doxia_doxia_core_1_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_doxia_doxia_decoration_model_1_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_doxia_doxia_logging_api_1_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_doxia_doxia_module_fml_1_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_doxia_doxia_module_xhtml_1_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_doxia_doxia_sink_api_1_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_doxia_doxia_site_renderer_1_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_artifact_2_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_artifact_manager_2_0_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_model_2_0_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_plugin_api_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_plugin_descriptor_2_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_plugin_registry_2_0_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_profile_2_0_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_project_2_0_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_repository_metadata_2_0_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_settings_2_0_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_reporting_maven_reporting_api_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_reporting_maven_reporting_impl_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_shared_maven_doxia_tools_1_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_wagon_wagon_provider_api_1_0_beta_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_struts_struts_core_1_3_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_struts_struts_taglib_1_3_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_struts_struts_tiles_1_3_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_velocity_velocity_1_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_velocity_velocity_tools_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_groovy_groovy_2_4_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_groovy_groovy_ant_2_4_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_groovy_groovy_groovydoc_2_4_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_groovy_groovy_templates_2_4_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_groovy_groovy_xml_2_4_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_findbugs_maven_plugin_3_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_component_annotations_1_5_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_container_default_1_0_alpha_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_i18n_1_0_beta_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_interpolation_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_resources_1_0_alpha_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_utils_1_5_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_velocity_1_1_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_evosuite_evosuite_standalone_runtime_1_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_6_1_14.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_util_6_1_14.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_servlet_api_2_5_6_1_14.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_analysis_5_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_commons_5_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_debug_all_5_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_tree_5_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_util_5_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_sonatype_plexus_plexus_build_api_0_0_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__oro_oro_2_0_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__sslext_sslext_1_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xerces_xercesImpl_2_9_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.scaffolding_list.tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/.css/coverage.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/index_SORT_BY_BLOCK.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/index_SORT_BY_BLOCK_DESC.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/index_SORT_BY_CLASS.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/index_SORT_BY_CLASS_DESC.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/index_SORT_BY_LINE.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/index_SORT_BY_LINE_DESC.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/index_SORT_BY_METHOD.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/index_SORT_BY_METHOD_DESC.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/index_SORT_BY_NAME_DESC.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/org.cs362.dominion/.classes/Card.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/org.cs362.dominion/.classes/GameState.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/org.cs362.dominion/.classes/PlayDominion.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/org.cs362.dominion/.classes/Player.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/org.cs362.dominion/.classes/RandomTestDominion.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/org.cs362.dominion/.classes/Randomness.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/org.cs362.dominion/.classes/mainCard.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/org.cs362.dominion/.classes/mainPlayer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/org.cs362.dominion/.classes/mainRandomness.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/org.cs362.dominion/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/org.cs362.dominion/index_SORT_BY_BLOCK.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/org.cs362.dominion/index_SORT_BY_BLOCK_DESC.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/org.cs362.dominion/index_SORT_BY_CLASS.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/org.cs362.dominion/index_SORT_BY_CLASS_DESC.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/org.cs362.dominion/index_SORT_BY_LINE.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/org.cs362.dominion/index_SORT_BY_LINE_DESC.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/org.cs362.dominion/index_SORT_BY_METHOD.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/org.cs362.dominion/index_SORT_BY_METHOD_DESC.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_coverage/org.cs362.dominion/index_SORT_BY_NAME_DESC.html" />
-    </list>
+    <list default="true" id="8f3e1243-9aa3-45e2-bb83-2c47a644c4a1" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -253,108 +26,7 @@
     <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/test_coverage" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CouncilRoomTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/CouncilRoomTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CutpurseTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/CutpurseTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="27" column="47" lean-forward="false" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FeastTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/FeastTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="30" column="47" lean-forward="false" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GreatHallTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/GreatHallTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="30" column="47" lean-forward="false" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MineTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/MineTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="35" column="47" lean-forward="false" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/PlayerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SmithyTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/SmithyTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StewardTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/StewardTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VillageTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/VillageTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="536">
-              <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Card_ESTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/Card_ESTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4365">
-              <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -395,7 +67,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -417,7 +89,6 @@
         <option value="$PROJECT_DIR$/src/test/java/org/cs362/dominion/Ambassador.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/cs362/dominion/RemodelTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/org/cs362/dominion/Card_ESTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/cs362/dominion/TestCards.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/cs362/dominion/GameState.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/cs362/dominion/Card.java" />
@@ -436,6 +107,15 @@
         <option value="$PROJECT_DIR$/src/test/java/org/cs362/dominion/SmithyTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/cs362/dominion/StewardTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/org/cs362/dominion/VillageTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/cs362/dominion/Card_ESTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/cs362/dominion/GameState_ESTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/cs362/dominion/mainCard_ESTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/cs362/dominion/mainPlayer_ESTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/cs362/dominion/mainRandomness_ESTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/cs362/dominion/Randomness_ESTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/cs362/dominion/RandomTestDominion_ESTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/cs362/dominion/Player_ESTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/cs362/dominion/PlayDominion_ESTest.java" />
       </list>
     </option>
   </component>
@@ -499,6 +179,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -593,9 +276,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1083,7 +763,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1091,15 +771,15 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18313253" sideWeight="0.5200286" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18313253" sideWeight="0.5200286" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36594427" sideWeight="0.49036145" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.018072288" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19753087" sideWeight="0.47997138" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33373493" sideWeight="0.49427754" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33373493" sideWeight="0.49427754" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26609442" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2732475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="EvoSuite" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2495356" sideWeight="0.49036145" order="1" side_tool="false" content_ui="tabs" />
@@ -1168,78 +848,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/CutpurseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="27" column="47" lean-forward="false" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/FeastTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="30" column="47" lean-forward="false" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/GreatHallTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="30" column="47" lean-forward="false" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/MineTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="35" column="47" lean-forward="false" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/PlayerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/SmithyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/StewardTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/VillageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/AdventureTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="33" column="19" lean-forward="false" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/CouncilRoomTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1502,18 +1110,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/CutpurseTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/MineTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="27" column="47" lean-forward="false" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/FeastTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="30" column="47" lean-forward="false" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+        <state relative-caret-position="405">
+          <caret line="35" column="47" lean-forward="false" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -1526,10 +1126,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/MineTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/FeastTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="35" column="47" lean-forward="false" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
+        <state relative-caret-position="345">
+          <caret line="30" column="47" lean-forward="false" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/CutpurseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="27" column="47" lean-forward="false" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -1560,16 +1168,92 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/VillageTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
+        <state relative-caret-position="748">
           <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/Randomness_ESTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="29" column="26" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/RandomTestDominion_ESTest_scaffolding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/Player_ESTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="17" column="159" lean-forward="false" selection-start-line="17" selection-start-column="159" selection-end-line="17" selection-end-column="159" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/RandomTestDominion_ESTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/Card_ESTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4365">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="300">
+          <caret line="34" column="35" lean-forward="false" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+          <folding>
+            <element signature="e#4388#4396#0" expanded="true" />
+            <element signature="e#6161#6167#0" expanded="true" />
+            <element signature="e#6721#6735#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/GameState_ESTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="18" column="160" lean-forward="false" selection-start-line="18" selection-start-column="160" selection-end-line="18" selection-end-column="160" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/mainCard_ESTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="15" column="160" lean-forward="false" selection-start-line="15" selection-start-column="160" selection-end-line="15" selection-end-column="160" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/mainPlayer_ESTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="17" column="160" lean-forward="false" selection-start-line="17" selection-start-column="160" selection-end-line="17" selection-end-column="160" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/mainRandomness_ESTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="36" column="51" lean-forward="false" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/org/cs362/dominion/PlayDominion_ESTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
           <folding />
         </state>
       </provider>

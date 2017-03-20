@@ -5,17 +5,17 @@
 
 package org.cs362.dominion;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
-import static org.evosuite.runtime.EvoAssertions.*;
-import org.cs362.dominion.mainPlayer;
 import org.evosuite.runtime.EvoRunner;
 import org.evosuite.runtime.EvoRunnerParameters;
 import org.evosuite.runtime.Random;
 import org.evosuite.runtime.System;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 
-@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = true, useJEE = true) 
+import static org.evosuite.runtime.EvoAssertions.verifyException;
+import static org.junit.Assert.fail;
+
+@RunWith(EvoRunner.class) @EvoRunnerParameters(mockJVMNonDeterminism = true, useVFS = true, useVNET = true, resetStaticState = true, separateClassLoader = false, useJEE = true)
 public class mainPlayer_ESTest extends mainPlayer_ESTest_scaffolding {
 
   @Test(timeout = 4000)
