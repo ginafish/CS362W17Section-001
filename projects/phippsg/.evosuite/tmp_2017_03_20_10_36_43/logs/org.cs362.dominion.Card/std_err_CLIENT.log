@@ -1,5 +1,0 @@
-[MASTER] 10:37:53.280 [main] ERROR ClientProcess - Error when generating tests for: org.cs362.dominion.Card with seed 1490031473270. Configuration id : default
-java.lang.NoSuchFieldError: mockGUI
-	at org.evosuite.ClientProcess.setupRuntimeProperties(ClientProcess.java:136) ~[evosuite-master-1.0.4.jar:1.0.4]
-	at org.evosuite.ClientProcess.run(ClientProcess.java:67) ~[evosuite-master-1.0.4.jar:1.0.4]
-	at org.evosuite.ClientProcess.main(ClientProcess.java:203) ~[evosuite-master-1.0.4.jar:1.0.4]
