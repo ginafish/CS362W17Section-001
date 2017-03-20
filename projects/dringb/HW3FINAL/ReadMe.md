@@ -5,7 +5,7 @@
 
 
 ### If you must clean everything take a look at the pit reports first
-#### In a pit-report called ```passing``` is a file showing complete and current mutation report
+#### In a pit-report called ```passing``` is a file showing complete and current mutation report (Without Println statements, mutation coverage is 92%)
 
 #### If you look in the target/pit-reports there are different reports generated from pitest via just EvoSuite, just my tests, both etc etc. Take a look at them 
 
