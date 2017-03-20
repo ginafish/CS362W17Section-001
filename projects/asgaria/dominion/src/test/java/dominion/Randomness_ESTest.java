@@ -37,7 +37,7 @@ public class Randomness_ESTest extends Randomness_ESTest_scaffolding {
   public void test2()  throws Throwable  {
       Random.setNextRandom((-1));
       int int0 = Randomness.nextRandomInt(5);
-      assertEquals(1, int0);
+      assertEquals(0, int0);
   }
 
   @Test

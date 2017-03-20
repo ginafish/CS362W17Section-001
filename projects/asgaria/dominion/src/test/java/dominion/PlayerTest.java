@@ -19,9 +19,11 @@ public class PlayerTest {
 
 	private static ArrayList<Card> cards;
 	private static ArrayList<Card> cards1;
+	private static ArrayList<Card> cards2;
 	
 	private static GameState gs;
 	private static GameState gs1;
+	private static GameState gs2;
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		
@@ -29,6 +31,7 @@ public class PlayerTest {
 		gs = new GameState(cards);
 		Randomness.reset(10);
 		Player player = new Player(gs, "player-1");
+		player.hand.add(Card.getCard(gs.cards, Card.CardName.Gardens));
 		gs.addPlayer(player);
 		player = new Player(gs, "player-2");
 		gs.addPlayer(player);		      
@@ -43,7 +46,15 @@ public class PlayerTest {
 
 	@Before
 	public void setUp() throws Exception {
-		
+		cards1 = new ArrayList<Card>(Card.createCards());
+		gs1 = new GameState(cards1);
+		Randomness.reset(10);
+		Player player = new Player(gs1, "player-1");
+		gs1.addPlayer(player);
+		player = new Player(gs1, "player-2");
+		gs1.addPlayer(player);		      
+		//Initialize the game!
+		gs1.initializeGame();
 	}
 
 	@After
@@ -64,29 +75,6 @@ public class PlayerTest {
 		 if(gs.empty_piles == 1)
 			 assertTrue(gs.gameBoard.get(Card.getCard(gs.cards, Card.CardName.Province)) == 0);
 		
-		/* Player p = gs.players.get(0);
-		
-		p.numActions = 12;
-		
-		p.hand.add(Card.getCard(gs.cards, Card.CardName.Council_Room));
-		p.hand.add(Card.getCard(gs.cards, Card.CardName.Mine));
-		p.hand.add(Card.getCard(gs.cards, Card.CardName.Cutpurse));
-		p.hand.add(Card.getCard(gs.cards, Card.CardName.Steward));
-		p.hand.add(Card.getCard(gs.cards, Card.CardName.Great_Hall));
-		p.hand.add(Card.getCard(gs.cards, Card.CardName.Gardens));
-		p.hand.add(Card.getCard(gs.cards, Card.CardName.Ambassador));
-		p.hand.add(Card.getCard(gs.cards, Card.CardName.Adventurer));
-		p.hand.add(Card.getCard(gs.cards, Card.CardName.Baron));
-		p.hand.add(Card.getCard(gs.cards, Card.CardName.Embargo));
-		p.hand.add(Card.getCard(gs.cards, Card.CardName.Village));
-		p.hand.add(Card.getCard(gs.cards, Card.CardName.Smithy));
-		p.hand.add(Card.getCard(gs.cards, Card.CardName.Feast));
-		
-	
-		int discard_before = p.discard.size();
-		p.playKingdomCard();
-		assertEquals("Card pulled and put into ", p.discard.size(), discard_before + 1);
-	*/
 	}
 	
 	@Test
@@ -103,21 +91,99 @@ public class PlayerTest {
 		
 		 Player p = gs1.players.get(0);
 
+		 //Tests Mine
+		 p.all_coppers();
 		 p.hand.add(Card.getCard(gs1.cards, Card.CardName.Mine));
 		 p.playKingdomCard();
 		 p.playTtreasureCard();
-		 
-		 assertTrue(p.coins >= 2);
-		 assertTrue(p.hand.size() == 5);
+		 assertTrue(p.hand.contains(Card.getCard(gs1.cards, Card.CardName.Silver)));
+		 assertTrue(p.hand.size() >= 5);
 		 p.endTurn();
 		 
+		 p.all_coppers();
+		 p.hand.add(0, Card.getCard(gs1.cards, Card.CardName.Silver));
+		 p.hand.add(Card.getCard(gs1.cards, Card.CardName.Mine));
+		 p.playKingdomCard();
+		 p.playTtreasureCard();
+		 assertTrue(p.hand.contains(Card.getCard(gs1.cards, Card.CardName.Gold)));
+		 assertTrue(p.hand.size() >= 5);
+		 p.endTurn();
+		 
+		 //Test Baron coppers
+		 p.all_coppers();
+		 p.hand.add(Card.getCard(gs1.cards, Card.CardName.Estate));
 		 p.hand.add(Card.getCard(gs1.cards, Card.CardName.Baron));
+		 p.playTtreasureCard();
 		 p.playKingdomCard();
 		 assertTrue(p.coins >= 4);
 		 p.endTurn();
-		 int size = p.hand.size();
-		 assertEquals(size, 5);
 		 
+		 //Test Embargo
+		 
+		 p.all_coppers();
+		 p.playTtreasureCard();
+		 int before_coins = p.coins;
+		 p.hand.add(Card.getCard(gs1.cards, Card.CardName.Embargo));
+		 p.playKingdomCard();
+		 assertEquals(p.coins, before_coins + 2);
+		 assertEquals(p.numActions, 0);
+		 assertTrue(!(p.discard.contains(Card.getCard(gs1.cards, Card.CardName.Embargo))));
+		 p.endTurn();
+		 
+		 //Test Great_Hall
+		 
+		 p.all_coppers();
+		 p.playTtreasureCard();
+		 p.hand.add(Card.getCard(gs1.cards, Card.CardName.Great_Hall));
+		 p.hand.get(p.hand.size() - 1).play(p, gs1);
+		 assertEquals(p.numActions, 2);
+		 p.endTurn();
+		 
+		 //Test Village
+		 p.all_coppers();
+		 p.hand.add(Card.getCard(gs1.cards, Card.CardName.Village));
+		 p.hand.get(p.hand.size() - 1).play(p, gs1);
+		 assertEquals(p.numActions, 3);
+		 p.endTurn();
+		 
+		 //Test Adventurer
+		 p.all_coppers();
+		 int hand_size = p.hand.size();
+		 p.hand.add(Card.getCard(gs1.cards, Card.CardName.Adventurer));
+		 p.hand.get(p.hand.size() - 1).play(p, gs1);
+		 assertEquals(p.hand.size(),hand_size + 3);
+		 p.endTurn();
+		 
+		//Test Council Room
+		 p.all_coppers();
+		 p.hand.add(Card.getCard(gs1.cards, Card.CardName.Council_Room));
+		 p.hand.get(p.hand.size() - 1).play(p, gs1);
+		 assertEquals(p.numBuys, 2);
+		 p.endTurn();
+		 
+		//Test Feast
+		 p.all_coppers();
+		 p.hand.add(Card.getCard(gs1.cards, Card.CardName.Feast));
+		 p.hand.get(p.hand.size() - 1).play(p, gs1);
+		 assertEquals(p.numBuys, 1);
+		 p.endTurn();
+		 
+		 //Test Steward
+		 p.all_coppers();
+		 p.playTtreasureCard();
+		 before_coins = p.coins;
+		 p.hand.add(Card.getCard(gs1.cards, Card.CardName.Steward));
+		 p.hand.get(p.hand.size() - 1).play(p, gs1);
+		 assertEquals(p.coins, before_coins + 2);
+		 p.endTurn();
+		 
+		 //Test Cutpurse
+		 p.all_coppers();
+		 before_coins = p.coins;
+		 p.hand.add(Card.getCard(gs1.cards, Card.CardName.Cutpurse));
+		 p.hand.get(p.hand.size() - 1).play(p, gs1);
+		 assertEquals(p.coins, before_coins + 2);
+		 p.endTurn();
 	}
 	
 	@Test
@@ -141,15 +207,50 @@ public class PlayerTest {
 	
 	@Test
 	public void testBuyCardsBranchesTest(){
-		Player p = gs.players.get(1);
+		Player p = gs1.players.get(1);
 		p.endTurn();
 		p.hand.clear();
-		Card c = Card.getCard(gs.cards, Card.CardName.Smithy);
+		Card c = Card.getCard(gs1.cards, Card.CardName.Smithy);
 		p.hand.add(c);
 		p.playKingdomCard();
 		assertTrue(!p.playedCards.isEmpty());
+		p.endTurn();
+		
+		p.all_coppers();
+		p.hand.add(Card.getCard(gs1.cards, Card.CardName.Gold));
+		p.playTtreasureCard();
+		p.buyCard();
+		assertTrue(p.discard.contains(Card.getCard(gs1.cards, Card.CardName.Province)));
+		p.endTurn();
+		
+		p.all_coppers();
+		p.playTtreasureCard();
+		p.coins = p.coins - 2;
+		p.buyCard();
+		assertEquals(p.discard.get(p.discard.size()-1), Card.getCard(gs1.cards, Card.CardName.Silver));
+		
+		p.all_coppers();
+		int prev_supply_value = gs1.gameBoard.get(Card.getCard(gs1.cards, Card.CardName.Silver));
+		p.buy_to_hand(Card.getCard(gs1.cards, Card.CardName.Silver));
+		int new_supply_value = gs1.gameBoard.get(Card.getCard(gs1.cards, Card.CardName.Silver));
+		assertTrue(new_supply_value  < prev_supply_value);
+		
 		
 	}
 	
-	
+	@Test
+	public void testGamePlayerSizeTest(){
+		cards2 = new ArrayList<Card>(Card.createCards());
+		gs2 = new GameState(cards2);
+		Randomness.reset(10);
+		Player player = new Player(gs2, "player-1");
+		gs2.addPlayer(player);
+		player = new Player(gs2, "player-2");
+		gs2.addPlayer(player);	
+		//Initialize the game!
+		gs2.initializeGame();
+		
+		
+		
+	}
 }

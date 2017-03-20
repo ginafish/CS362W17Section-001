@@ -47,7 +47,7 @@ public class Player_ESTest extends Player_ESTest_scaffolding {
       player0.discard = list0;
       Card card0 = player0.drawCard();
       assertEquals(0, list0.size());
-      assertEquals(Card.Type.TREASURE, card0.getType());
+      
   }
 
   @Test

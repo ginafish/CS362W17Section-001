@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: dominion.PlayDominion_ESTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.046 sec <<< FAILURE! - in dominion.PlayDominion_ESTest
-test1(dominion.PlayDominion_ESTest)  Time elapsed: 0.037 sec  <<< ERROR!
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.036 sec <<< FAILURE! - in dominion.PlayDominion_ESTest
+test1(dominion.PlayDominion_ESTest)  Time elapsed: 0.023 sec  <<< ERROR!
 java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "exitVM.0")
 java.lang.Thread.getStackTrace(Thread.java:1556)
 org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:439)

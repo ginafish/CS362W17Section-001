@@ -1,15 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: dominion.Randomness_ESTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 1, Errors: 3, Skipped: 0, Time elapsed: 0.024 sec <<< FAILURE! - in dominion.Randomness_ESTest
-test2(dominion.Randomness_ESTest)  Time elapsed: 0.003 sec  <<< FAILURE!
-java.lang.AssertionError: expected:<1> but was:<0>
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:645)
-	at org.junit.Assert.assertEquals(Assert.java:631)
-	at dominion.Randomness_ESTest.test2(Randomness_ESTest.java:40)
-
+Tests run: 10, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.024 sec <<< FAILURE! - in dominion.Randomness_ESTest
 test3(dominion.Randomness_ESTest)  Time elapsed: 0.002 sec  <<< ERROR!
 java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "exitVM.0")
 java.lang.Thread.getStackTrace(Thread.java:1556)
@@ -46,7 +38,7 @@ java.lang.NullPointerException: null
 	at dominion.Randomness.nextRandomInt(Randomness.java:34)
 	at dominion.Randomness_ESTest.test6(Randomness_ESTest.java:96)
 
-test8(dominion.Randomness_ESTest)  Time elapsed: 0.002 sec  <<< ERROR!
+test8(dominion.Randomness_ESTest)  Time elapsed: 0.003 sec  <<< ERROR!
 java.lang.NullPointerException: null
 	at dominion.Randomness.nextRandomInt(Randomness.java:34)
 	at dominion.Randomness.randomMember(Randomness.java:39)

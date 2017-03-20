@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="dominion.PlayDominion_ESTest" time="0.039" tests="2" errors="1" skipped="0" failures="0">
+<testsuite name="dominion.PlayDominion_ESTest" time="0.029" tests="2" errors="1" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="10.12.1"/>
+    <property name="os.version" value="10.12.3"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="user.home" value="/Users/aryaasgari"/>
     <property name="user.timezone" value="America/Los_Angeles"/>
@@ -64,8 +64,8 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="test0" classname="dominion.PlayDominion_ESTest" time="0.002"/>
-  <testcase name="test1" classname="dominion.PlayDominion_ESTest" time="0.037">
+  <testcase name="test0" classname="dominion.PlayDominion_ESTest" time="0.006"/>
+  <testcase name="test1" classname="dominion.PlayDominion_ESTest" time="0.023">
     <error message="Security manager blocks (&quot;java.lang.RuntimePermission&quot; &quot;exitVM.0&quot;)&#10;java.lang.Thread.getStackTrace(Thread.java:1556)&#10;org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:439)&#10;java.lang.SecurityManager.checkExit(SecurityManager.java:761)&#10;java.lang.Runtime.exit(Runtime.java:107)&#10;java.lang.System.exit(System.java:971)&#10;dominion.PlayDominion.main(PlayDominion.java:45)&#10;dominion.PlayDominion_ESTest.test1(PlayDominion_ESTest.java:30)&#10;sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#10;sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#10;sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#10;java.lang.reflect.Method.invoke(Method.java:498)&#10;org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)&#10;org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)&#10;org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)&#10;org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)&#10;org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)&#10;org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)&#10;org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298)&#10;org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292)&#10;java.util.concurrent.FutureTask.run(FutureTask.java:266)&#10;java.lang.Thread.run(Thread.java:745)&#10;" type="java.lang.SecurityException">java.lang.SecurityException: Security manager blocks ("java.lang.RuntimePermission" "exitVM.0")
 java.lang.Thread.getStackTrace(Thread.java:1556)
 org.evosuite.runtime.sandbox.MSecurityManager.checkPermission(MSecurityManager.java:439)
@@ -109,7 +109,7 @@ Player: player-1 gains  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 
 reshuffle the deck of the player player-1 to draw FIVE cards
 draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player: player-2 gains  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
@@ -124,14 +124,14 @@ Player: player-2 gains  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 
 Player: player-2 gains  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 reshuffle the deck of the player player-2 to draw FIVE cards
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 Initialization DominionBoard:
-  ---  --- player-1 ---  --- --------------------------- --- Hand: [ 	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0]Discard: []Deck: [ 	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1]Played Cards: []numActions: 1coinss: 0numBuys: 1
+  ---  --- player-1 ---  --- --------------------------- --- Hand: [ 	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0]Discard: []Deck: [ 	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1]Played Cards: []numActions: 1coinss: 0numBuys: 1
 
- ---  --- player-2 ---  --- --------------------------- --- Hand: [ 	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0]Discard: []Deck: [ 	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1]Played Cards: []numActions: 1coinss: 0numBuys: 1
+ ---  --- player-2 ---  --- --------------------------- --- Hand: [ 	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0]Discard: []Deck: [ 	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1]Played Cards: []numActions: 1coinss: 0numBuys: 1
 
  --- gameBoard --- 
 Cards on the table: 
@@ -148,19 +148,44 @@ Card Name 		 NumberCards:
 	 Mine		 10
 	 Cutpurse		 10
 	 Steward		 10
-	 Ambassador		 10
 	 Feast		 10
 	 Great_Hall		 10
+	 Gardens		 10
 	 Smithy		 10
 	 Village		 10
 
 Player: player-1 is playing
+Player: player-1 gains  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player: player-2 is playing
+Player: player-2 gains  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
+Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player: player-1 is playing
 Player: player-1 gains  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+reshuffle the deck of the player player-1 to draw FIVE cards
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
@@ -173,10 +198,11 @@ Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Va
 Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+reshuffle the deck of the player player-2 to draw FIVE cards
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player: player-1 is playing
 Player: player-1 gains  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
@@ -185,30 +211,37 @@ Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Va
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-reshuffle the deck of the player player-1 to draw FIVE cards
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player: player-2 is playing
-Player: player-2 gains  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
+Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-2 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+Player: player-2 gains  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player:  player-2 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
+Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-reshuffle the deck of the player player-2 to draw FIVE cards
 draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+reshuffle the deck of the player player-2 to draw FIVE cards
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 Player: player-1 is playing
 Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+reshuffle the deck of the player player-1 to draw FIVE cards
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
 Player: player-1 gains  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
 Player:  player-1 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
@@ -222,169 +255,161 @@ draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-reshuffle the deck of the player player-1 to draw FIVE cards
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
 Player: player-2 is playing
-Player: player-2 gains  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player: player-2 gains  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
 Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+Player: player-1 is playing
+Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+reshuffle the deck of the player player-1 to draw FIVE cards
 draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player: player-1 is playing
-Player: player-1 gains  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+Player: player-1 gains  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player:  player-1 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+Player: player-2 is playing
+Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
 draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player: player-2 is playing
-Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-reshuffle the deck of the player player-2 to draw FIVE cards
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 Player:  player-2 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player: player-2 gains  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
+Player: player-2 gains  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
+Player:  player-2 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
 Player:  player-2 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
 Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+reshuffle the deck of the player player-2 to draw FIVE cards
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player: player-1 is playing
-Player: player-1 gains  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player:  player-1 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
 draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 reshuffle the deck of the player player-1 to draw FIVE cards
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player: player-2 is playing
-Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-reshuffle the deck of the player player-2 to draw FIVE cards
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player: player-2 gains  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player: player-1 is playing
-Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
 Player: player-1 gains  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
 Player:  player-1 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-1 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player: player-2 is playing
+Player: player-2 gains  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player:  player-2 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
+Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player: player-1 is playing
 Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
 draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-reshuffle the deck of the player player-2 to draw FIVE cards
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+reshuffle the deck of the player player-1 to draw FIVE cards
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+Player: player-1 gains  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player:  player-1 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
+Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+Player: player-2 is playing
 Player: player-2 gains  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
 Player:  player-2 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
 Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
+draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 Player: player-1 is playing
-Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-reshuffle the deck of the player player-1 to draw FIVE cards
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player: player-1 gains  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-Player:  player-1 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
+Player: player-1 gains  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+Player:  player-1 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player:  player-1 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-1 discards  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
 Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+reshuffle the deck of the player player-1 to draw FIVE cards
 draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player: player-2 is playing
 Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 reshuffle the deck of the player player-2 to draw FIVE cards
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player: player-2 gains  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-Player:  player-2 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
 draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-2 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+Player: player-2 gains  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player:  player-2 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player:  player-2 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
+Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-2 discards  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
+Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player: player-1 is playing
 Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
+draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
 Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
 Player: player-1 gains  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 Player:  player-1 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
@@ -394,70 +419,200 @@ Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Va
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-1 discards  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
 Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-reshuffle the deck of the player player-1 to draw FIVE cards
 draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player: player-2 is playing
-Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player: player-2 gains  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player:  player-2 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
+Player: player-2 gains  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player:  player-2 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-2 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-reshuffle the deck of the player player-2 to draw FIVE cards
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+reshuffle the deck of the player player-2 to draw FIVE cards
 draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 Player: player-1 is playing
 Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
 Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player: player-1 gains  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
+Player: player-1 gains  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player:  player-1 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
+draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+reshuffle the deck of the player player-1 to draw FIVE cards
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+Player: player-2 is playing
+Player: player-2 gains  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
+Player:  player-2 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
+Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
+draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player: player-1 is playing
+Player: player-1 gains  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player:  player-1 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
 Player:  player-1 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player: player-2 is playing
+Player: player-2 gains  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
+Player:  player-2 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player:  player-2 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
+Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player: player-1 is playing
+Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+Player: player-1 gains  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
+Player:  player-1 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player:  player-1 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
+Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player: player-2 is playing
+Player: player-2 gains  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-2 discards  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
+Player:  player-2 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
+Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+reshuffle the deck of the player player-2 to draw FIVE cards
+draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
+Player: player-1 is playing
+Player: player-1 gains  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player:  player-1 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
+reshuffle the deck of the player player-1 to draw FIVE cards
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player: player-2 is playing
 Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-2 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player: player-2 gains  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player: player-2 gains  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
+Player:  player-2 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player:  player-2 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
 Player:  player-2 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
 Player:  player-2 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
 Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-2 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-2 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
+draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player: player-1 is playing
+Player: player-1 gains  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player:  player-1 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-1 discards  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
+draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player: player-2 is playing
+Player: player-2 gains  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
+Player:  player-2 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-2 discards  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
+Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
+Player: player-1 is playing
+Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+Player: player-1 gains  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
+Player:  player-1 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player:  player-1 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player:  player-1 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
+Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player: player-2 is playing
+Player: player-2 gains  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
+Player:  player-2 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
+Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-2 discards  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
+Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+reshuffle the deck of the player player-2 to draw FIVE cards
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 Player: player-1 is playing
 Player: player-1 gains  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
@@ -465,520 +620,132 @@ Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Va
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player: player-2 is playing
-Player: player-2 gains  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-Player:  player-2 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
+draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
 draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+Player: player-2 is playing
+Player: player-2 gains  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+Player:  player-2 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
+Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player: player-1 is playing
-Player: player-1 gains  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+reshuffle the deck of the player player-1 to draw FIVE cards
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+Player: player-1 gains  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
+Player:  player-1 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+Player:  player-1 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
 Player:  player-1 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-1 discards  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-reshuffle the deck of the player player-1 to draw FIVE cards
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player: player-2 is playing
-Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-reshuffle the deck of the player player-2 to draw FIVE cards
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-Player:  player-2 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player: player-2 gains  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-Player:  player-2 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-Player:  player-2 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player:  player-2 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player: player-1 is playing
-Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player: player-1 gains  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player:  player-1 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player: player-2 is playing
-Player: player-2 gains  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-Player:  player-2 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player:  player-2 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player:  player-2 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-Player: player-1 is playing
-Player: player-1 gains  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player:  player-1 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player: player-2 is playing
-Player: player-2 gains  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-Player:  player-2 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-reshuffle the deck of the player player-2 to draw FIVE cards
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player: player-1 is playing
-Player: player-1 gains  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-1 discards  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
 Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-reshuffle the deck of the player player-1 to draw FIVE cards
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player: player-2 is playing
-Player: player-2 gains  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player:  player-2 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player: player-1 is playing
-Player: player-1 gains  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player:  player-1 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 Player: player-2 is playing
-Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-Player:  player-2 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
 Player: player-2 gains  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 Player:  player-2 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
 Player:  player-2 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
 Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-Player:  player-2 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
+draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
 draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
 draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player: player-1 is playing
-Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player: player-1 gains  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
+Player: player-1 gains  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
 Player:  player-1 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
 Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
 draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 Player: player-2 is playing
 Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player:  player-2 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player: player-2 gains  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-Player:  player-2 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-2 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
 draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-reshuffle the deck of the player player-2 to draw FIVE cards
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player: player-1 is playing
-Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
 draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player: player-1 gains  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player:  player-1 discards  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-reshuffle the deck of the player player-1 to draw FIVE cards
 draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player: player-2 is playing
+Player:  player-2 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
 Player: player-2 gains  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
 Player:  player-2 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-Player: player-1 is playing
-Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player: player-1 gains  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player:  player-1 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player:  player-1 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-Player:  player-1 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-Player: player-2 is playing
-Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-2 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player: player-2 gains  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player:  player-2 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-Player:  player-2 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-2 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-Player: player-1 is playing
-Player: player-1 gains  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-Player:  player-1 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player: player-2 is playing
-Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-Player:  player-2 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player: player-2 gains  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
 Player:  player-2 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-Player:  player-2 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-2 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player: player-1 is playing
-Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player: player-1 gains  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player:  player-1 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player:  player-1 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player: player-2 is playing
-Player: player-2 gains  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player:  player-2 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player:  player-2 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-2 discards  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
+Player:  player-2 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
+Player:  player-2 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
 Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-reshuffle the deck of the player player-2 to draw FIVE cards
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
+Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
 draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
+draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
 draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
+draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
 Player: player-1 is playing
 Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-reshuffle the deck of the player player-1 to draw FIVE cards
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
 Player: player-1 gains  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
 Player:  player-1 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
 Player:  player-1 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-Player: player-2 is playing
-Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player:  player-2 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player: player-2 gains  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-Player:  player-2 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player:  player-2 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player:  player-2 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player: player-1 is playing
-Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player: player-1 gains  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player:  player-1 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player:  player-1 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player:  player-1 discards  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player: player-2 is playing
-Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-2 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player: player-2 gains  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player:  player-2 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player:  player-2 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-Player:  player-2 discards  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-Player:  player-2 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player: player-1 is playing
-Player: player-1 gains  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-Player:  player-1 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player: player-2 is playing
-Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player:  player-2 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player: player-2 gains  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player:  player-2 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-Player:  player-2 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-Player:  player-2 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player:  player-2 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player: player-1 is playing
-Player.actionPhase Card: 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0
-Player: player-1 gains  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-Player:  player-1 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player:  player-1 discards  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
 Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-reshuffle the deck of the player player-1 to draw FIVE cards
-draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-Player: player-2 is playing
-Player: player-2 gains  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
-Player:  player-2 discards  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-2 discards  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
-Player:  player-2 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-reshuffle the deck of the player player-2 to draw FIVE cards
-draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-Player: player-1 is playing
-Player: player-1 gains  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-Player:  player-1 discards  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-Player:  player-1 discards  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-Player:  player-1 discards  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
-draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
 draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-draw  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3
-draw  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0
+draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
+draw  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1
+draw  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2
+draw  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0
 Finished game.
 
-Player name: player-1 , Score: 37
-Player name: player-2 , Score: 37
- ---  --- player-1 ---  --- --------------------------- --- Hand: [ 	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3,  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0]Discard: [ 	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0,  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0]Deck: [ 	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3,  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2,  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0]Played Cards: [ 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0]numActions: 1coinss: 0numBuys: 1
+Player name: player-2 , Score: 33
+Player name: player-1 , Score: 35
+ ---  --- player-1 ---  --- --------------------------- --- Hand: [ 	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3,  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2,  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0]Discard: [ 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0,  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3,  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3,  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0,  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0,  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3,  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0]Deck: []Played Cards: [ 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0]numActions: 1coinss: 0numBuys: 1
 
- ---  --- player-2 ---  --- --------------------------- --- Hand: [ 	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0,  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0,  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0]Discard: []Deck: [ 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3,  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0,  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0,  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3,  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3,  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0,  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0,  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2]Played Cards: [ 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0]numActions: 1coinss: 0numBuys: 1
+ ---  --- player-2 ---  --- --------------------------- --- Hand: [ 	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3,  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0,  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0]Discard: [ 	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2,  	Silver-TREASURE 		 Cost: 3 		 Score: 0 	Treasure Value: 2,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3,  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3,  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3,  	Province-VICTORY 		 Cost: 8 		 Score: 6 	Treasure Value: 0,  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0,  	Duchy-VICTORY 		 Cost: 5 		 Score: 3 	Treasure Value: 0,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0,  	Estate-VICTORY 		 Cost: 2 		 Score: 1 	Treasure Value: 0]Deck: [ 	Copper-TREASURE 		 Cost: 0 		 Score: 0 	Treasure Value: 1,  	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3]Played Cards: [ 	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0,  	Smithy-ACTION 		 Cost: 4 		 Score: 0 	Treasure Value: 0]numActions: 1coinss: 0numBuys: 1
 
  --- gameBoard --- 
 Cards on the table: 
 Card Name 		 NumberCards: 
-	 Gold		 22
-	 Silver		 31
+	 Gold		 18
+	 Silver		 35
 	 Copper		 46
-	 Province		 2
-	 Duchy		 0
-	 Estate		 0
+	 Province		 0
+	 Duchy		 5
+	 Estate		 3
 	 Curse		 10
 	 Adventurer		 10
 	 Council_Room		 10
 	 Mine		 10
 	 Cutpurse		 10
 	 Steward		 10
-	 Ambassador		 10
 	 Feast		 10
 	 Great_Hall		 10
-	 Smithy		 0
+	 Gardens		 10
+	 Smithy		 6
 	 Village		 10
 
 ]]></system-out>

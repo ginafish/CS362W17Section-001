@@ -130,6 +130,18 @@ public class Player {
 		}
 
 	}
+	
+	public void all_coppers(){
+		Card new_copper = new Card(CardName.Copper, Type.TREASURE, 0, 0, 1);
+		while(hand.size() > 0){
+			discard(hand.get(0));
+		}
+		while(hand.size() < 5)
+		{
+			hand.add(new_copper);
+		}
+	}
+	
 	public void buy_to_hand(Card c){
 		int supply_value;
 		hand.add(c);
