@@ -1,4 +1,3 @@
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 <modelVersion>4.0.0</modelVersion>
 <groupId>org.cs362.dominion</groupId>
@@ -14,7 +13,6 @@
 	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	<targetFolder>src/test/evosuite</targetFolder>
 </properties>
-
 
 
 <pluginRepositories>
@@ -105,6 +103,48 @@
 				<threadCount>1</threadCount>
 			</configuration>
 	</plugin>
+
+
+<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.0.2</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>cs362.dominion.RandomTestDominion</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <configuration>
+                    <mainClass>cs362.dominion.RandomTestDominion</mainClass>
+                </configuration>
+            </plugin>
+<plugin>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>build-helper-maven-plugin</artifactId>
+              <version>1.8</version>
+              <executions>
+                <execution>
+                  <id>add-test-source</id>
+                  <phase>generate-test-sources</phase>
+                  <goals>
+                    <goal>add-test-source</goal>
+                  </goals>
+                  <configuration>
+                      <sources>
+                        <source>${targetFolder}</source>
+                      </sources>
+                  </configuration>
+                </execution>
+              </executions>
+            </plugin>
+
 
 	<plugin>
 		<groupId>org.evosuite.plugins</groupId>
