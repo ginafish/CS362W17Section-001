@@ -18,9 +18,9 @@ import static org.junit.Assert.*;
  *
  * @author San Dim
  */
-public class PlayDominionTest {
+public class RandomTestDominion {
     
-    public PlayDominionTest() {
+    public RandomTestDominion() {
     }
     
     @BeforeClass

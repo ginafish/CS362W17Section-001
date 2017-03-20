@@ -13,7 +13,7 @@ public class RegressionTest0 {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest0.test001"); }
 
-    com.mycompany.dimc_dominion.PlayDominion.main((int)(short)-1, (int)(short)0);
+    com.mycompany.dimc_dominion.PlayDominion.main(0, (int)(short)-1);
 
   }
 
@@ -71,7 +71,7 @@ public class RegressionTest0 {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest0.test007"); }
 
-    com.mycompany.dimc_dominion.PlayDominion.main(0, (int)(short)-1);
+    com.mycompany.dimc_dominion.PlayDominion.main((int)(short)100, (int)(byte)0);
 
   }
 
@@ -332,7 +332,7 @@ public class RegressionTest0 {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest0.test023"); }
 
-    com.mycompany.dimc_dominion.PlayDominion.main(1, 1);
+    com.mycompany.dimc_dominion.PlayDominion.main((int)(byte)10, (int)' ');
 
   }
 
@@ -681,40 +681,7 @@ public class RegressionTest0 {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest0.test038"); }
 
-    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
-    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
-    com.mycompany.dimc_dominion.Card[] card_array4 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card5 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b6 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card5, card_array4);
-    com.mycompany.dimc_dominion.GameState gameState7 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card5);
-    gameState7.initializeGame((int)(byte)100);
-    java.util.List<com.mycompany.dimc_dominion.Card> list_card10 = gameState7.cards;
-    com.mycompany.dimc_dominion.Player player12 = new com.mycompany.dimc_dominion.Player(gameState7, "");
-    player12.printStateGame();
-    com.mycompany.dimc_dominion.Card card14 = player12.playTreasureCard();
-    gameState3.addPlayer(player12);
-    player12.playKingdomCard();
-    player12.shuffle();
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b2 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array4);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b6 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_card10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNull(card14);
+    com.mycompany.dimc_dominion.Randomness.reset(1L);
 
   }
 
@@ -723,7 +690,7 @@ public class RegressionTest0 {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest0.test039"); }
 
-    com.mycompany.dimc_dominion.Randomness.reset(1L);
+    com.mycompany.dimc_dominion.Randomness.totalCallsToRandom = '#';
 
   }
 
@@ -732,7 +699,7 @@ public class RegressionTest0 {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest0.test040"); }
 
-    com.mycompany.dimc_dominion.Randomness.totalCallsToRandom = '#';
+    com.mycompany.dimc_dominion.Randomness.totalCallsToRandom = 100;
 
   }
 
@@ -740,15 +707,6 @@ public class RegressionTest0 {
   public void test041() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest0.test041"); }
-
-    com.mycompany.dimc_dominion.Randomness.totalCallsToRandom = 100;
-
-  }
-
-  @Test
-  public void test042() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test042"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -790,18 +748,18 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test043() throws Throwable {
+  public void test042() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test043"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test042"); }
 
     com.mycompany.dimc_dominion.Randomness.reset((long)(-1));
 
   }
 
   @Test
-  public void test044() throws Throwable {
+  public void test043() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test044"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test043"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -892,11 +850,20 @@ public class RegressionTest0 {
   }
 
   @Test
+  public void test044() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test044"); }
+
+    com.mycompany.dimc_dominion.Randomness.reset((long)(byte)100);
+
+  }
+
+  @Test
   public void test045() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest0.test045"); }
 
-    com.mycompany.dimc_dominion.Randomness.reset((long)(byte)100);
+    com.mycompany.dimc_dominion.PlayDominion.main((int)(byte)10, (int)(short)10);
 
   }
 
@@ -904,15 +871,6 @@ public class RegressionTest0 {
   public void test046() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest0.test046"); }
-
-    com.mycompany.dimc_dominion.PlayDominion.main(12, 1);
-
-  }
-
-  @Test
-  public void test047() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test047"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -931,9 +889,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test048() throws Throwable {
+  public void test047() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test048"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test047"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -972,69 +930,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test049() throws Throwable {
+  public void test048() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test049"); }
-
-    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
-    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
-    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i4 = gameState3.getWinners();
-    com.mycompany.dimc_dominion.Card[] card_array5 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card6 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b7 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card6, card_array5);
-    com.mycompany.dimc_dominion.GameState gameState8 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card6);
-    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i9 = gameState8.getWinners();
-    java.util.List<com.mycompany.dimc_dominion.Player> list_player10 = gameState8.players;
-    com.mycompany.dimc_dominion.Player player11 = null;
-    gameState8.addPlayer(player11);
-    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i13 = gameState8.gameBoard;
-    gameState3.gameBoard = hashmap_card_i13;
-    java.util.List<com.mycompany.dimc_dominion.Card> list_card15 = gameState3.cards;
-    java.lang.String str16 = gameState3.toString();
-    java.util.List<com.mycompany.dimc_dominion.Card> list_card17 = gameState3.cards;
-    com.mycompany.dimc_dominion.GameState gameState18 = new com.mycompany.dimc_dominion.GameState(list_card17);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b2 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_player_i4);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array5);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b7 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_player_i9);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_player10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_card_i13);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_card15);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str16 + "' != '" + "The board game is embty you need to intialize the game!!!!"+ "'", str16.equals("The board game is embty you need to intialize the game!!!!"));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_card17);
-
-  }
-
-  @Test
-  public void test050() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test050"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test048"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -1125,9 +1023,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test051() throws Throwable {
+  public void test049() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test051"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test049"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -1159,9 +1057,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test052() throws Throwable {
+  public void test050() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test052"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test050"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -1218,9 +1116,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test053() throws Throwable {
+  public void test051() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test053"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test051"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -1268,9 +1166,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test054() throws Throwable {
+  public void test052() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test054"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test052"); }
 
     int i1 = com.mycompany.dimc_dominion.Randomness.nextRandomInt((int)'#');
     
@@ -1280,9 +1178,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test055() throws Throwable {
+  public void test053() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test055"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test053"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -1302,9 +1200,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test056() throws Throwable {
+  public void test054() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test056"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test054"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -1369,9 +1267,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test057() throws Throwable {
+  public void test055() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test057"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test055"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -1405,27 +1303,27 @@ public class RegressionTest0 {
   }
 
   @Test
+  public void test056() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test056"); }
+
+    com.mycompany.dimc_dominion.PlayDominion.main((int)(short)-1, (int)(short)0);
+
+  }
+
+  @Test
+  public void test057() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test057"); }
+
+    com.mycompany.dimc_dominion.PlayDominion.main((int)(short)-1, (int)(byte)1);
+
+  }
+
+  @Test
   public void test058() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest0.test058"); }
-
-    com.mycompany.dimc_dominion.PlayDominion.main(5, (-1));
-
-  }
-
-  @Test
-  public void test059() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test059"); }
-
-    com.mycompany.dimc_dominion.PlayDominion.main(23, (int)(short)0);
-
-  }
-
-  @Test
-  public void test060() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test060"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -1466,9 +1364,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test061() throws Throwable {
+  public void test059() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test061"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test059"); }
 
     java.util.Random random0 = com.mycompany.dimc_dominion.Randomness.random;
     com.mycompany.dimc_dominion.Randomness.random = random0;
@@ -1481,9 +1379,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test062() throws Throwable {
+  public void test060() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test062"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test060"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -1510,11 +1408,29 @@ public class RegressionTest0 {
   }
 
   @Test
+  public void test061() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test061"); }
+
+    com.mycompany.dimc_dominion.PlayDominion.main((int)' ', (int)(short)0);
+
+  }
+
+  @Test
+  public void test062() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test062"); }
+
+    com.mycompany.dimc_dominion.PlayDominion.main((int)' ', (int)(byte)0);
+
+  }
+
+  @Test
   public void test063() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest0.test063"); }
 
-    com.mycompany.dimc_dominion.PlayDominion.main(1, 0);
+    com.mycompany.dimc_dominion.PlayDominion.main(0, 0);
 
   }
 
@@ -1523,7 +1439,7 @@ public class RegressionTest0 {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest0.test064"); }
 
-    com.mycompany.dimc_dominion.PlayDominion.main(10, 1);
+    com.mycompany.dimc_dominion.Randomness.reset((long)(short)100);
 
   }
 
@@ -1531,24 +1447,6 @@ public class RegressionTest0 {
   public void test065() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest0.test065"); }
-
-    com.mycompany.dimc_dominion.PlayDominion.main(0, 11);
-
-  }
-
-  @Test
-  public void test066() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test066"); }
-
-    com.mycompany.dimc_dominion.Randomness.reset((long)(short)100);
-
-  }
-
-  @Test
-  public void test067() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test067"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -1618,18 +1516,18 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test068() throws Throwable {
+  public void test066() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test068"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test066"); }
 
-    com.mycompany.dimc_dominion.PlayDominion.main(10, (int)(byte)0);
+    com.mycompany.dimc_dominion.PlayDominion.main((int)(byte)1, (int)(byte)0);
 
   }
 
   @Test
-  public void test069() throws Throwable {
+  public void test067() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test069"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test067"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -1677,9 +1575,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test070() throws Throwable {
+  public void test068() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test070"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test068"); }
 
     int i1 = com.mycompany.dimc_dominion.Randomness.nextRandomInt(100);
     
@@ -1689,9 +1587,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test071() throws Throwable {
+  public void test069() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test071"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test069"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -1716,9 +1614,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test072() throws Throwable {
+  public void test070() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test072"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test070"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -1736,9 +1634,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test073() throws Throwable {
+  public void test071() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test073"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test071"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -1858,9 +1756,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test074() throws Throwable {
+  public void test072() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test074"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test072"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -1903,9 +1801,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test075() throws Throwable {
+  public void test073() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test075"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test073"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -1933,9 +1831,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test076() throws Throwable {
+  public void test074() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test076"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test074"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -2024,18 +1922,18 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test077() throws Throwable {
+  public void test075() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test077"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test075"); }
 
-    com.mycompany.dimc_dominion.PlayDominion.main((int)' ', 5);
+    com.mycompany.dimc_dominion.PlayDominion.main((int)(short)0, 100);
 
   }
 
   @Test
-  public void test078() throws Throwable {
+  public void test076() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test078"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test076"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -2051,7 +1949,7 @@ public class RegressionTest0 {
     player12.printStateGame();
     com.mycompany.dimc_dominion.Card card14 = player12.playTreasureCard();
     gameState3.addPlayer(player12);
-    gameState3.initializeGame((int)(byte)1);
+    gameState3.initializeGame((int)(byte)100);
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertNotNull(card_array0);
@@ -2074,9 +1972,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test079() throws Throwable {
+  public void test077() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test079"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test077"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -2110,13 +2008,13 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test080() throws Throwable {
+  public void test078() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test080"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test078"); }
 
     // The following exception was thrown during execution in test generation
     try {
-    int i1 = com.mycompany.dimc_dominion.Randomness.nextRandomInt((int)(byte)0);
+    int i1 = com.mycompany.dimc_dominion.Randomness.nextRandomInt(0);
       org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
     } catch (java.lang.IllegalArgumentException e) {
       // Expected exception.
@@ -2125,9 +2023,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test081() throws Throwable {
+  public void test079() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test081"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test079"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -2216,96 +2114,21 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test082() throws Throwable {
+  public void test080() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test082"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test080"); }
 
-    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
-    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
-    java.util.List<com.mycompany.dimc_dominion.Player> list_player4 = gameState3.players;
-    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i5 = null;
-    gameState3.gameBoard = hashmap_card_i5;
-    gameState3.initializeGame(100);
-    gameState3.initializeGame((int)'4');
-    com.mycompany.dimc_dominion.Card[] card_array11 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card12 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b13 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card12, card_array11);
-    com.mycompany.dimc_dominion.GameState gameState14 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card12);
-    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i15 = gameState14.getWinners();
-    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i16 = null;
-    gameState14.gameBoard = hashmap_card_i16;
-    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i18 = gameState14.gameBoard;
-    com.mycompany.dimc_dominion.Card[] card_array19 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card20 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b21 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card20, card_array19);
-    com.mycompany.dimc_dominion.GameState gameState22 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card20);
-    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i23 = gameState22.getWinners();
-    com.mycompany.dimc_dominion.Card[] card_array24 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card25 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b26 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card25, card_array24);
-    com.mycompany.dimc_dominion.GameState gameState27 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card25);
-    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i28 = gameState27.getWinners();
-    java.util.List<com.mycompany.dimc_dominion.Player> list_player29 = gameState27.players;
-    com.mycompany.dimc_dominion.Player player30 = null;
-    gameState27.addPlayer(player30);
-    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i32 = gameState27.gameBoard;
-    gameState22.gameBoard = hashmap_card_i32;
-    gameState14.gameBoard = hashmap_card_i32;
-    gameState3.gameBoard = hashmap_card_i32;
+    int i1 = com.mycompany.dimc_dominion.Randomness.nextRandomInt(1);
     
     // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b2 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_player4);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array11);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b13 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_player_i15);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNull(hashmap_card_i18);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array19);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b21 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_player_i23);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array24);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b26 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_player_i28);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_player29);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_card_i32);
+    org.junit.Assert.assertTrue(i1 == 0);
 
   }
 
   @Test
-  public void test083() throws Throwable {
+  public void test081() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test083"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test081"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -2351,9 +2174,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test084() throws Throwable {
+  public void test082() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test084"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test082"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -2378,9 +2201,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test085() throws Throwable {
+  public void test083() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test085"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test083"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -2405,9 +2228,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test086() throws Throwable {
+  public void test084() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test086"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test084"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -2433,9 +2256,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test087() throws Throwable {
+  public void test085() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test087"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test085"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -2470,18 +2293,18 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test088() throws Throwable {
+  public void test086() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test088"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test086"); }
 
-    com.mycompany.dimc_dominion.Randomness.reset((long)(short)1);
+    com.mycompany.dimc_dominion.Randomness.reset((long)1);
 
   }
 
   @Test
-  public void test089() throws Throwable {
+  public void test087() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test089"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test087"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -2527,9 +2350,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test090() throws Throwable {
+  public void test088() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test090"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test088"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -2565,11 +2388,32 @@ public class RegressionTest0 {
   }
 
   @Test
+  public void test089() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test089"); }
+
+    com.mycompany.dimc_dominion.PlayDominion.main(23, (int)(short)1);
+
+  }
+
+  @Test
+  public void test090() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test090"); }
+
+    int i1 = com.mycompany.dimc_dominion.Randomness.nextRandomInt((int)(short)1);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i1 == 0);
+
+  }
+
+  @Test
   public void test091() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest0.test091"); }
 
-    com.mycompany.dimc_dominion.PlayDominion.main((int)' ', 10);
+    com.mycompany.dimc_dominion.PlayDominion.main((int)' ', (int)(short)1);
 
   }
 
@@ -2577,160 +2421,6 @@ public class RegressionTest0 {
   public void test092() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest0.test092"); }
-
-    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
-    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
-    gameState3.initializeGame((int)(byte)100);
-    java.util.List<com.mycompany.dimc_dominion.Card> list_card6 = gameState3.cards;
-    com.mycompany.dimc_dominion.Card[] card_array7 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card8 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b9 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card8, card_array7);
-    com.mycompany.dimc_dominion.GameState gameState10 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card8);
-    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i11 = gameState10.getWinners();
-    com.mycompany.dimc_dominion.Card[] card_array12 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card13 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b14 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card13, card_array12);
-    com.mycompany.dimc_dominion.GameState gameState15 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card13);
-    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i16 = gameState15.getWinners();
-    java.util.List<com.mycompany.dimc_dominion.Player> list_player17 = gameState15.players;
-    com.mycompany.dimc_dominion.Player player18 = null;
-    gameState15.addPlayer(player18);
-    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i20 = gameState15.gameBoard;
-    gameState10.gameBoard = hashmap_card_i20;
-    gameState3.gameBoard = hashmap_card_i20;
-    com.mycompany.dimc_dominion.Card[] card_array23 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card24 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b25 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card24, card_array23);
-    com.mycompany.dimc_dominion.GameState gameState26 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card24);
-    java.util.List<com.mycompany.dimc_dominion.Player> list_player27 = gameState26.players;
-    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i28 = null;
-    gameState26.gameBoard = hashmap_card_i28;
-    com.mycompany.dimc_dominion.Card[] card_array30 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card31 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b32 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card31, card_array30);
-    com.mycompany.dimc_dominion.GameState gameState33 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card31);
-    com.mycompany.dimc_dominion.Player player35 = new com.mycompany.dimc_dominion.Player(gameState33, " ---  ---  --- --------------------------- --- Hand: []Discard: []Deck: []Played Cards: []numActions: 0coinss: 0numBuys: 0\n");
-    player35.printStateGame();
-    com.mycompany.dimc_dominion.Card[] card_array37 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card38 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b39 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card38, card_array37);
-    com.mycompany.dimc_dominion.GameState gameState40 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card38);
-    gameState40.initializeGame((int)(byte)100);
-    java.util.List<com.mycompany.dimc_dominion.Card> list_card43 = gameState40.cards;
-    com.mycompany.dimc_dominion.Player player45 = new com.mycompany.dimc_dominion.Player(gameState40, "");
-    player45.printStateGame();
-    com.mycompany.dimc_dominion.Card card47 = player45.playTreasureCard();
-    com.mycompany.dimc_dominion.Card[] card_array48 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card49 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b50 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card49, card_array48);
-    com.mycompany.dimc_dominion.GameState gameState51 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card49);
-    gameState51.initializeGame((int)(byte)100);
-    java.util.List<com.mycompany.dimc_dominion.Card> list_card54 = gameState51.cards;
-    com.mycompany.dimc_dominion.Player player56 = new com.mycompany.dimc_dominion.Player(gameState51, "");
-    player56.shuffle();
-    com.mycompany.dimc_dominion.Player[] player_array58 = new com.mycompany.dimc_dominion.Player[] { player35, player45, player56 };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Player> arraylist_player59 = new java.util.ArrayList<com.mycompany.dimc_dominion.Player>();
-    boolean b60 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Player>)arraylist_player59, player_array58);
-    com.mycompany.dimc_dominion.Player player61 = com.mycompany.dimc_dominion.Randomness.randomMember((java.util.List<com.mycompany.dimc_dominion.Player>)arraylist_player59);
-    player61.shuffle();
-    gameState26.addPlayer(player61);
-    gameState3.addPlayer(player61);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b2 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_card6);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array7);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b9 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_player_i11);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array12);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b14 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_player_i16);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_player17);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_card_i20);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array23);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b25 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_player27);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array30);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b32 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array37);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b39 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_card43);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNull(card47);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array48);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b50 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_card54);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(player_array58);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b60 == true);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(player61);
-
-  }
-
-  @Test
-  public void test093() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test093"); }
-
-    com.mycompany.dimc_dominion.PlayDominion.main(9, (int)(short)0);
-
-  }
-
-  @Test
-  public void test094() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test094"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -2791,11 +2481,29 @@ public class RegressionTest0 {
   }
 
   @Test
+  public void test093() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test093"); }
+
+    com.mycompany.dimc_dominion.Randomness.reset((long)'4');
+
+  }
+
+  @Test
+  public void test094() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test094"); }
+
+    com.mycompany.dimc_dominion.PlayDominion.main(13, (int)(short)0);
+
+  }
+
+  @Test
   public void test095() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest0.test095"); }
 
-    com.mycompany.dimc_dominion.Randomness.reset((long)(short)-1);
+    com.mycompany.dimc_dominion.Randomness.reset((long)'a');
 
   }
 
@@ -2804,7 +2512,7 @@ public class RegressionTest0 {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest0.test096"); }
 
-    com.mycompany.dimc_dominion.Randomness.totalCallsToRandom = 1;
+    com.mycompany.dimc_dominion.Randomness.totalCallsToRandom = (byte)1;
 
   }
 
@@ -3046,10 +2754,13 @@ public class RegressionTest0 {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest0.test100"); }
 
-    int i1 = com.mycompany.dimc_dominion.Randomness.nextRandomInt((int)(byte)10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(i1 == 9);
+    // The following exception was thrown during execution in test generation
+    try {
+    int i1 = com.mycompany.dimc_dominion.Randomness.nextRandomInt((int)(byte)0);
+      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
+    } catch (java.lang.IllegalArgumentException e) {
+      // Expected exception.
+    }
 
   }
 
@@ -3214,13 +2925,10 @@ public class RegressionTest0 {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest0.test106"); }
 
-    // The following exception was thrown during execution in test generation
-    try {
-    int i1 = com.mycompany.dimc_dominion.Randomness.nextRandomInt((int)(short)-1);
-      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
-    } catch (java.lang.IllegalArgumentException e) {
-      // Expected exception.
-    }
+    int i1 = com.mycompany.dimc_dominion.Randomness.nextRandomInt(10);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i1 == 7);
 
   }
 
@@ -3436,7 +3144,7 @@ public class RegressionTest0 {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest0.test111"); }
 
-    com.mycompany.dimc_dominion.Randomness.reset((long)0);
+    com.mycompany.dimc_dominion.Randomness.reset(100L);
 
   }
 
@@ -3444,46 +3152,6 @@ public class RegressionTest0 {
   public void test112() throws Throwable {
 
     if (debug) { System.out.format("%n%s%n","RegressionTest0.test112"); }
-
-    com.mycompany.dimc_dominion.Randomness.reset((long)(byte)0);
-
-  }
-
-  @Test
-  public void test113() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test113"); }
-
-    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
-    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
-    gameState3.initializeGame((int)(byte)100);
-    java.util.List<com.mycompany.dimc_dominion.Card> list_card6 = gameState3.cards;
-    com.mycompany.dimc_dominion.Player player8 = new com.mycompany.dimc_dominion.Player(gameState3, "");
-    player8.printStateGame();
-    com.mycompany.dimc_dominion.Card card10 = player8.playTreasureCard();
-    player8.printStateGame();
-    player8.buyCard();
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b2 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_card6);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNull(card10);
-
-  }
-
-  @Test
-  public void test114() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test114"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -3517,9 +3185,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test115() throws Throwable {
+  public void test113() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test115"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test113"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -3640,93 +3308,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test116() throws Throwable {
+  public void test114() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test116"); }
-
-    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
-    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
-    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i4 = gameState3.getWinners();
-    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i5 = null;
-    gameState3.gameBoard = hashmap_card_i5;
-    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i7 = gameState3.gameBoard;
-    com.mycompany.dimc_dominion.Card[] card_array8 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card9 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b10 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card9, card_array8);
-    com.mycompany.dimc_dominion.GameState gameState11 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card9);
-    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i12 = gameState11.getWinners();
-    com.mycompany.dimc_dominion.Card[] card_array13 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card14 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b15 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card14, card_array13);
-    com.mycompany.dimc_dominion.GameState gameState16 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card14);
-    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i17 = gameState16.getWinners();
-    java.util.List<com.mycompany.dimc_dominion.Player> list_player18 = gameState16.players;
-    com.mycompany.dimc_dominion.Player player19 = null;
-    gameState16.addPlayer(player19);
-    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i21 = gameState16.gameBoard;
-    gameState11.gameBoard = hashmap_card_i21;
-    gameState3.gameBoard = hashmap_card_i21;
-    java.util.List<com.mycompany.dimc_dominion.Card> list_card24 = gameState3.cards;
-    java.util.List<com.mycompany.dimc_dominion.Player> list_player25 = gameState3.players;
-    java.lang.String str26 = gameState3.toString();
-    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i27 = gameState3.play();
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b2 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_player_i4);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNull(hashmap_card_i7);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array8);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b10 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_player_i12);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array13);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b15 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_player_i17);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_player18);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_card_i21);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_card24);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_player25);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str26 + "' != '" + "The board game is embty you need to intialize the game!!!!"+ "'", str26.equals("The board game is embty you need to intialize the game!!!!"));
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_player_i27);
-
-  }
-
-  @Test
-  public void test117() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test117"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test114"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -3771,9 +3355,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test118() throws Throwable {
+  public void test115() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test118"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test115"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -3797,18 +3381,18 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test119() throws Throwable {
+  public void test116() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test119"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test116"); }
 
-    com.mycompany.dimc_dominion.PlayDominion.main((int)(short)100, 1);
+    com.mycompany.dimc_dominion.PlayDominion.main((int)(byte)10, (int)(byte)10);
 
   }
 
   @Test
-  public void test120() throws Throwable {
+  public void test117() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test120"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test117"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -3828,7 +3412,7 @@ public class RegressionTest0 {
     java.util.List<com.mycompany.dimc_dominion.Card> list_card15 = gameState3.cards;
     java.lang.String str16 = gameState3.toString();
     java.util.List<com.mycompany.dimc_dominion.Card> list_card17 = gameState3.cards;
-    gameState3.initializeGame((int)(short)10);
+    gameState3.initializeGame((int)'4');
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertNotNull(card_array0);
@@ -3866,18 +3450,18 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test121() throws Throwable {
+  public void test118() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test121"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test118"); }
 
-    com.mycompany.dimc_dominion.Randomness.totalCallsToRandom = (short)0;
+    com.mycompany.dimc_dominion.Randomness.totalCallsToRandom = 1;
 
   }
 
   @Test
-  public void test122() throws Throwable {
+  public void test119() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test122"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test119"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -3980,9 +3564,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test123() throws Throwable {
+  public void test120() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test123"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test120"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -4018,9 +3602,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test124() throws Throwable {
+  public void test121() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test124"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test121"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -4046,9 +3630,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test125() throws Throwable {
+  public void test122() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test125"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test122"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -4074,95 +3658,27 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test126() throws Throwable {
+  public void test123() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test126"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test123"); }
 
-    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
-    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
-    gameState3.initializeGame((int)(byte)100);
-    java.util.List<com.mycompany.dimc_dominion.Card> list_card6 = gameState3.cards;
-    com.mycompany.dimc_dominion.Card[] card_array7 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card8 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b9 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card8, card_array7);
-    com.mycompany.dimc_dominion.GameState gameState10 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card8);
-    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i11 = gameState10.getWinners();
-    com.mycompany.dimc_dominion.Card[] card_array12 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card13 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b14 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card13, card_array12);
-    com.mycompany.dimc_dominion.GameState gameState15 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card13);
-    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i16 = gameState15.getWinners();
-    java.util.List<com.mycompany.dimc_dominion.Player> list_player17 = gameState15.players;
-    com.mycompany.dimc_dominion.Player player18 = null;
-    gameState15.addPlayer(player18);
-    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i20 = gameState15.gameBoard;
-    gameState10.gameBoard = hashmap_card_i20;
-    gameState3.gameBoard = hashmap_card_i20;
-    com.mycompany.dimc_dominion.Player player24 = new com.mycompany.dimc_dominion.Player(gameState3, " ---  ---  ---  --- --------------------------- --- Hand: []Discard: []Deck: []Played Cards: []numActions: 0coinss: 0numBuys: 0\n ---  --- --------------------------- --- Hand: []Discard: []Deck: []Played Cards: []numActions: 0coinss: 0numBuys: 0\n");
-    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i25 = gameState3.gameBoard;
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b2 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_card6);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array7);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b9 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_player_i11);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array12);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b14 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_player_i16);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_player17);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_card_i20);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_card_i25);
+    com.mycompany.dimc_dominion.PlayDominion.main((int)(short)-1, (-1));
 
   }
 
   @Test
-  public void test127() throws Throwable {
+  public void test124() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test127"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test124"); }
 
-    com.mycompany.dimc_dominion.PlayDominion.main((int)(short)100, (int)(short)0);
-
-  }
-
-  @Test
-  public void test128() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test128"); }
-
-    com.mycompany.dimc_dominion.PlayDominion.main((-1), 9);
+    com.mycompany.dimc_dominion.PlayDominion.main(13, 0);
 
   }
 
   @Test
-  public void test129() throws Throwable {
+  public void test125() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test129"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test125"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -4187,9 +3703,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test130() throws Throwable {
+  public void test126() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test130"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test126"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -4226,136 +3742,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test131() throws Throwable {
+  public void test127() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test131"); }
-
-    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
-    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
-    com.mycompany.dimc_dominion.Card[] card_array4 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card5 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b6 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card5, card_array4);
-    com.mycompany.dimc_dominion.GameState gameState7 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card5);
-    gameState7.initializeGame((int)(byte)100);
-    java.util.List<com.mycompany.dimc_dominion.Card> list_card10 = gameState7.cards;
-    com.mycompany.dimc_dominion.Player player12 = new com.mycompany.dimc_dominion.Player(gameState7, "");
-    player12.printStateGame();
-    com.mycompany.dimc_dominion.Card card14 = player12.playTreasureCard();
-    gameState3.addPlayer(player12);
-    com.mycompany.dimc_dominion.Card[] card_array16 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card17 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b18 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card17, card_array16);
-    com.mycompany.dimc_dominion.GameState gameState19 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card17);
-    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i20 = gameState19.getWinners();
-    com.mycompany.dimc_dominion.Card[] card_array21 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card22 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b23 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card22, card_array21);
-    com.mycompany.dimc_dominion.GameState gameState24 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card22);
-    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i25 = gameState24.getWinners();
-    java.util.List<com.mycompany.dimc_dominion.Player> list_player26 = gameState24.players;
-    com.mycompany.dimc_dominion.Player player27 = null;
-    gameState24.addPlayer(player27);
-    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i29 = gameState24.gameBoard;
-    gameState19.gameBoard = hashmap_card_i29;
-    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i31 = gameState19.gameBoard;
-    gameState3.gameBoard = hashmap_card_i31;
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b2 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array4);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b6 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_card10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNull(card14);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array16);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b18 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_player_i20);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array21);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b23 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_player_i25);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_player26);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_card_i29);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_card_i31);
-
-  }
-
-  @Test
-  public void test132() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test132"); }
-
-    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
-    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
-    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i4 = gameState3.getWinners();
-    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i5 = null;
-    gameState3.gameBoard = hashmap_card_i5;
-    com.mycompany.dimc_dominion.Card[] card_array7 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card8 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b9 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card8, card_array7);
-    com.mycompany.dimc_dominion.GameState gameState10 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card8);
-    gameState10.initializeGame((int)(byte)100);
-    java.util.List<com.mycompany.dimc_dominion.Card> list_card13 = gameState10.cards;
-    com.mycompany.dimc_dominion.Player player15 = new com.mycompany.dimc_dominion.Player(gameState10, "");
-    player15.printStateGame();
-    gameState3.addPlayer(player15);
-    com.mycompany.dimc_dominion.Player player19 = new com.mycompany.dimc_dominion.Player(gameState3, "");
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b2 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_player_i4);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array7);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b9 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_card13);
-
-  }
-
-  @Test
-  public void test133() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test133"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test127"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -4551,163 +3940,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test134() throws Throwable {
+  public void test128() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test134"); }
-
-    com.mycompany.dimc_dominion.Randomness.reset((long)(byte)-1);
-
-  }
-
-  @Test
-  public void test135() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test135"); }
-
-    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
-    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
-    java.util.List<com.mycompany.dimc_dominion.Player> list_player4 = gameState3.players;
-    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i5 = null;
-    gameState3.gameBoard = hashmap_card_i5;
-    com.mycompany.dimc_dominion.Card[] card_array7 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card8 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b9 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card8, card_array7);
-    com.mycompany.dimc_dominion.GameState gameState10 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card8);
-    com.mycompany.dimc_dominion.Player player12 = new com.mycompany.dimc_dominion.Player(gameState10, " ---  ---  --- --------------------------- --- Hand: []Discard: []Deck: []Played Cards: []numActions: 0coinss: 0numBuys: 0\n");
-    player12.printStateGame();
-    com.mycompany.dimc_dominion.Card[] card_array14 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card15 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b16 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card15, card_array14);
-    com.mycompany.dimc_dominion.GameState gameState17 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card15);
-    gameState17.initializeGame((int)(byte)100);
-    java.util.List<com.mycompany.dimc_dominion.Card> list_card20 = gameState17.cards;
-    com.mycompany.dimc_dominion.Player player22 = new com.mycompany.dimc_dominion.Player(gameState17, "");
-    player22.printStateGame();
-    com.mycompany.dimc_dominion.Card card24 = player22.playTreasureCard();
-    com.mycompany.dimc_dominion.Card[] card_array25 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card26 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b27 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card26, card_array25);
-    com.mycompany.dimc_dominion.GameState gameState28 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card26);
-    gameState28.initializeGame((int)(byte)100);
-    java.util.List<com.mycompany.dimc_dominion.Card> list_card31 = gameState28.cards;
-    com.mycompany.dimc_dominion.Player player33 = new com.mycompany.dimc_dominion.Player(gameState28, "");
-    player33.shuffle();
-    com.mycompany.dimc_dominion.Player[] player_array35 = new com.mycompany.dimc_dominion.Player[] { player12, player22, player33 };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Player> arraylist_player36 = new java.util.ArrayList<com.mycompany.dimc_dominion.Player>();
-    boolean b37 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Player>)arraylist_player36, player_array35);
-    com.mycompany.dimc_dominion.Player player38 = com.mycompany.dimc_dominion.Randomness.randomMember((java.util.List<com.mycompany.dimc_dominion.Player>)arraylist_player36);
-    player38.shuffle();
-    gameState3.addPlayer(player38);
-    com.mycompany.dimc_dominion.Card[] card_array41 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card42 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b43 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card42, card_array41);
-    com.mycompany.dimc_dominion.GameState gameState44 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card42);
-    gameState44.initializeGame((int)(byte)100);
-    java.util.List<com.mycompany.dimc_dominion.Card> list_card47 = gameState44.cards;
-    com.mycompany.dimc_dominion.Card[] card_array48 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card49 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b50 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card49, card_array48);
-    com.mycompany.dimc_dominion.GameState gameState51 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card49);
-    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i52 = gameState51.getWinners();
-    com.mycompany.dimc_dominion.Card[] card_array53 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card54 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b55 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card54, card_array53);
-    com.mycompany.dimc_dominion.GameState gameState56 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card54);
-    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i57 = gameState56.getWinners();
-    java.util.List<com.mycompany.dimc_dominion.Player> list_player58 = gameState56.players;
-    com.mycompany.dimc_dominion.Player player59 = null;
-    gameState56.addPlayer(player59);
-    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i61 = gameState56.gameBoard;
-    gameState51.gameBoard = hashmap_card_i61;
-    gameState44.gameBoard = hashmap_card_i61;
-    gameState3.gameBoard = hashmap_card_i61;
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b2 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_player4);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array7);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b9 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array14);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b16 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_card20);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNull(card24);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array25);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b27 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_card31);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(player_array35);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b37 == true);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(player38);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array41);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b43 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_card47);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array48);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b50 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_player_i52);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array53);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b55 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_player_i57);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_player58);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_card_i61);
-
-  }
-
-  @Test
-  public void test136() throws Throwable {
-
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test136"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test128"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -4766,9 +4001,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test137() throws Throwable {
+  public void test129() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test137"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test129"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -4839,9 +4074,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test138() throws Throwable {
+  public void test130() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test138"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test130"); }
 
     java.lang.Iterable<com.mycompany.dimc_dominion.Card> iterable_card0 = null;
     com.mycompany.dimc_dominion.Card[] card_array1 = new com.mycompany.dimc_dominion.Card[] {  };
@@ -4936,9 +4171,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test139() throws Throwable {
+  public void test131() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test139"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test131"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -5030,18 +4265,18 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test140() throws Throwable {
+  public void test132() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test140"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test132"); }
 
-    com.mycompany.dimc_dominion.Randomness.reset((long)23);
+    com.mycompany.dimc_dominion.Randomness.reset((long)(byte)1);
 
   }
 
   @Test
-  public void test141() throws Throwable {
+  public void test133() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test141"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test133"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -5067,9 +4302,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test142() throws Throwable {
+  public void test134() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test142"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test134"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -5120,9 +4355,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test143() throws Throwable {
+  public void test135() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test143"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test135"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -5157,7 +4392,7 @@ public class RegressionTest0 {
     com.mycompany.dimc_dominion.Player player32 = new com.mycompany.dimc_dominion.Player(gameState27, "");
     java.lang.String str33 = player32.toString();
     gameState3.addPlayer(player32);
-    gameState3.initializeGame(1);
+    gameState3.initializeGame((int)'#');
     java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i37 = gameState3.play();
     java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i38 = gameState3.getWinners();
     java.util.List<com.mycompany.dimc_dominion.Player> list_player39 = gameState3.players;
@@ -5222,9 +4457,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test144() throws Throwable {
+  public void test136() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test144"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test136"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -5258,46 +4493,30 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test145() throws Throwable {
+  public void test137() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test145"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test137"); }
 
-    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
-    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
-    java.util.List<com.mycompany.dimc_dominion.Player> list_player4 = gameState3.players;
-    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i5 = null;
-    gameState3.gameBoard = hashmap_card_i5;
-    gameState3.initializeGame(100);
-    gameState3.initializeGame((int)'4');
-    com.mycompany.dimc_dominion.Player player12 = new com.mycompany.dimc_dominion.Player(gameState3, "The board game is embty you need to intialize the game!!!!");
-    player12.buyCard();
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b2 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_player4);
+    com.mycompany.dimc_dominion.PlayDominion.main(0, (int)' ');
 
   }
 
   @Test
-  public void test146() throws Throwable {
+  public void test138() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test146"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test138"); }
 
-    com.mycompany.dimc_dominion.PlayDominion.main(0, (int)'a');
+    int i1 = com.mycompany.dimc_dominion.Randomness.nextRandomInt((int)'4');
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i1 == 41);
 
   }
 
   @Test
-  public void test147() throws Throwable {
+  public void test139() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test147"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test139"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -5339,41 +4558,27 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test148() throws Throwable {
+  public void test140() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test148"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test140"); }
 
-    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
-    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
-    com.mycompany.dimc_dominion.Player player5 = new com.mycompany.dimc_dominion.Player(gameState3, " ---  ---  --- --------------------------- --- Hand: []Discard: []Deck: []Played Cards: []numActions: 0coinss: 0numBuys: 0\n");
-    java.lang.String str6 = gameState3.toString();
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b2 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue("'" + str6 + "' != '" + "The board game is embty you need to intialize the game!!!!"+ "'", str6.equals("The board game is embty you need to intialize the game!!!!"));
+    com.mycompany.dimc_dominion.Randomness.reset(0L);
 
   }
 
   @Test
-  public void test149() throws Throwable {
+  public void test141() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test149"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test141"); }
 
-    com.mycompany.dimc_dominion.PlayDominion.main(100, 0);
+    com.mycompany.dimc_dominion.PlayDominion.main((int)(byte)0, 0);
 
   }
 
   @Test
-  public void test150() throws Throwable {
+  public void test142() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test150"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test142"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -5408,10 +4613,10 @@ public class RegressionTest0 {
     com.mycompany.dimc_dominion.Player player32 = new com.mycompany.dimc_dominion.Player(gameState27, "");
     java.lang.String str33 = player32.toString();
     gameState3.addPlayer(player32);
-    gameState3.initializeGame(1);
+    gameState3.initializeGame((int)'#');
     java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i37 = gameState3.play();
     java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i38 = gameState3.getWinners();
-    gameState3.initializeGame(1);
+    gameState3.initializeGame((int)'#');
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertNotNull(card_array0);
@@ -5470,9 +4675,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test151() throws Throwable {
+  public void test143() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test151"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test143"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -5546,9 +4751,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test152() throws Throwable {
+  public void test144() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test152"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test144"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -5594,9 +4799,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test153() throws Throwable {
+  public void test145() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test153"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test145"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -5632,9 +4837,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test154() throws Throwable {
+  public void test146() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test154"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test146"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -5661,9 +4866,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test155() throws Throwable {
+  public void test147() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test155"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test147"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -5717,9 +4922,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test156() throws Throwable {
+  public void test148() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test156"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test148"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -5762,75 +4967,30 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test157() throws Throwable {
+  public void test149() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test157"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test149"); }
 
-    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
-    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
-    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i4 = gameState3.getWinners();
-    com.mycompany.dimc_dominion.Card[] card_array5 = new com.mycompany.dimc_dominion.Card[] {  };
-    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card6 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
-    boolean b7 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card6, card_array5);
-    com.mycompany.dimc_dominion.GameState gameState8 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card6);
-    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i9 = gameState8.getWinners();
-    java.util.List<com.mycompany.dimc_dominion.Player> list_player10 = gameState8.players;
-    com.mycompany.dimc_dominion.Player player11 = null;
-    gameState8.addPlayer(player11);
-    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i13 = gameState8.gameBoard;
-    gameState3.gameBoard = hashmap_card_i13;
-    gameState3.initializeGame(0);
-    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i17 = gameState3.gameBoard;
-    java.util.List<com.mycompany.dimc_dominion.Card> list_card18 = gameState3.cards;
-    com.mycompany.dimc_dominion.GameState gameState19 = new com.mycompany.dimc_dominion.GameState(list_card18);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array0);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b2 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_player_i4);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(card_array5);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertTrue(b7 == false);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_player_i9);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_player10);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_card_i13);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(hashmap_card_i17);
-    
-    // Regression assertion (captures the current behavior of the code)
-    org.junit.Assert.assertNotNull(list_card18);
+    com.mycompany.dimc_dominion.PlayDominion.main((int)(byte)0, (int)'#');
 
   }
 
   @Test
-  public void test158() throws Throwable {
+  public void test150() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test158"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test150"); }
 
-    com.mycompany.dimc_dominion.PlayDominion.main(10, (int)(short)100);
+    int i1 = com.mycompany.dimc_dominion.Randomness.nextRandomInt((int)(short)10);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i1 == 3);
 
   }
 
   @Test
-  public void test159() throws Throwable {
+  public void test151() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test159"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test151"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -5944,9 +5104,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test160() throws Throwable {
+  public void test152() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test160"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test152"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -5990,9 +5150,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test161() throws Throwable {
+  public void test153() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test161"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test153"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -6040,9 +5200,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test162() throws Throwable {
+  public void test154() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test162"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test154"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -6070,9 +5230,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test163() throws Throwable {
+  public void test155() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test163"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test155"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -6164,9 +5324,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test164() throws Throwable {
+  public void test156() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test164"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test156"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -6263,9 +5423,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test165() throws Throwable {
+  public void test157() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test165"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test157"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -6314,9 +5474,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test166() throws Throwable {
+  public void test158() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test166"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test158"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -6364,9 +5524,9 @@ public class RegressionTest0 {
   }
 
   @Test
-  public void test167() throws Throwable {
+  public void test159() throws Throwable {
 
-    if (debug) { System.out.format("%n%s%n","RegressionTest0.test167"); }
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test159"); }
 
     com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
     java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
@@ -6500,6 +5660,1555 @@ public class RegressionTest0 {
     
     // Regression assertion (captures the current behavior of the code)
     org.junit.Assert.assertNotNull(list_card45);
+
+  }
+
+  @Test
+  public void test160() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test160"); }
+
+    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
+    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i4 = gameState3.getWinners();
+    com.mycompany.dimc_dominion.Card[] card_array5 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card6 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b7 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card6, card_array5);
+    com.mycompany.dimc_dominion.GameState gameState8 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card6);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i9 = gameState8.getWinners();
+    java.util.List<com.mycompany.dimc_dominion.Player> list_player10 = gameState8.players;
+    com.mycompany.dimc_dominion.Player player11 = null;
+    gameState8.addPlayer(player11);
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i13 = gameState8.gameBoard;
+    gameState3.gameBoard = hashmap_card_i13;
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card15 = gameState3.cards;
+    java.lang.String str16 = gameState3.toString();
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card17 = gameState3.cards;
+    com.mycompany.dimc_dominion.GameState gameState18 = new com.mycompany.dimc_dominion.GameState(list_card17);
+    boolean b19 = gameState18.isGameOver();
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b2 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i4);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array5);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b7 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i9);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_player10);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_card_i13);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card15);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str16 + "' != '" + "The board game is embty you need to intialize the game!!!!"+ "'", str16.equals("The board game is embty you need to intialize the game!!!!"));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card17);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b19 == true);
+
+  }
+
+  @Test
+  public void test161() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test161"); }
+
+    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
+    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
+    com.mycompany.dimc_dominion.Card.Type type4 = com.mycompany.dimc_dominion.Card.Type.VICTORY;
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card5 = com.mycompany.dimc_dominion.Card.filter((java.lang.Iterable<com.mycompany.dimc_dominion.Card>)arraylist_card1, type4);
+    com.mycompany.dimc_dominion.Card.CardName cardName6 = com.mycompany.dimc_dominion.Card.CardName.Estate;
+    com.mycompany.dimc_dominion.Card card7 = com.mycompany.dimc_dominion.Card.getCard(list_card5, cardName6);
+    com.mycompany.dimc_dominion.Card[] card_array8 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card9 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b10 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card9, card_array8);
+    com.mycompany.dimc_dominion.GameState gameState11 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card9);
+    com.mycompany.dimc_dominion.Card.Type type12 = com.mycompany.dimc_dominion.Card.Type.VICTORY;
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card13 = com.mycompany.dimc_dominion.Card.filter((java.lang.Iterable<com.mycompany.dimc_dominion.Card>)arraylist_card9, type12);
+    com.mycompany.dimc_dominion.Card.Type type14 = com.mycompany.dimc_dominion.Card.Type.VICTORY;
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card15 = com.mycompany.dimc_dominion.Card.filter((java.lang.Iterable<com.mycompany.dimc_dominion.Card>)list_card13, type14);
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card16 = com.mycompany.dimc_dominion.Card.filter((java.lang.Iterable<com.mycompany.dimc_dominion.Card>)list_card5, type14);
+    com.mycompany.dimc_dominion.GameState gameState17 = new com.mycompany.dimc_dominion.GameState(list_card5);
+    com.mycompany.dimc_dominion.Player player19 = new com.mycompany.dimc_dominion.Player(gameState17, "The board game is embty you need to intialize the game!!!!");
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b2 == false);
+    org.junit.Assert.assertTrue("'" + type4 + "' != '" + com.mycompany.dimc_dominion.Card.Type.VICTORY + "'", type4.equals(com.mycompany.dimc_dominion.Card.Type.VICTORY));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card5);
+    org.junit.Assert.assertTrue("'" + cardName6 + "' != '" + com.mycompany.dimc_dominion.Card.CardName.Estate + "'", cardName6.equals(com.mycompany.dimc_dominion.Card.CardName.Estate));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNull(card7);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array8);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b10 == false);
+    org.junit.Assert.assertTrue("'" + type12 + "' != '" + com.mycompany.dimc_dominion.Card.Type.VICTORY + "'", type12.equals(com.mycompany.dimc_dominion.Card.Type.VICTORY));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card13);
+    org.junit.Assert.assertTrue("'" + type14 + "' != '" + com.mycompany.dimc_dominion.Card.Type.VICTORY + "'", type14.equals(com.mycompany.dimc_dominion.Card.Type.VICTORY));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card15);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card16);
+
+  }
+
+  @Test
+  public void test162() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test162"); }
+
+    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
+    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
+    gameState3.initializeGame((int)(byte)100);
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card6 = gameState3.cards;
+    com.mycompany.dimc_dominion.Player player8 = new com.mycompany.dimc_dominion.Player(gameState3, "");
+    player8.printStateGame();
+    com.mycompany.dimc_dominion.Card card10 = player8.playTreasureCard();
+    player8.printStateGame();
+    player8.buyCard();
+    java.lang.String str13 = player8.toString();
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b2 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card6);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNull(card10);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str13 + "' != '" + " ---  ---  --- --------------------------- --- Hand: []Discard: []Deck: []Played Cards: []numActions: 0coinss: 0numBuys: 0\n"+ "'", str13.equals(" ---  ---  --- --------------------------- --- Hand: []Discard: []Deck: []Played Cards: []numActions: 0coinss: 0numBuys: 0\n"));
+
+  }
+
+  @Test
+  public void test163() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test163"); }
+
+    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
+    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
+    java.util.List<com.mycompany.dimc_dominion.Player> list_player4 = gameState3.players;
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i5 = null;
+    gameState3.gameBoard = hashmap_card_i5;
+    gameState3.initializeGame(100);
+    java.util.List<com.mycompany.dimc_dominion.Player> list_player9 = gameState3.players;
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b2 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_player4);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_player9);
+
+  }
+
+  @Test
+  public void test164() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test164"); }
+
+    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
+    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
+    com.mycompany.dimc_dominion.Card[] card_array4 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card5 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b6 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card5, card_array4);
+    com.mycompany.dimc_dominion.GameState gameState7 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card5);
+    gameState7.initializeGame((int)(byte)100);
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card10 = gameState7.cards;
+    com.mycompany.dimc_dominion.Player player12 = new com.mycompany.dimc_dominion.Player(gameState7, "");
+    player12.printStateGame();
+    com.mycompany.dimc_dominion.Card card14 = player12.playTreasureCard();
+    gameState3.addPlayer(player12);
+    com.mycompany.dimc_dominion.Card[] card_array16 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card17 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b18 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card17, card_array16);
+    com.mycompany.dimc_dominion.GameState gameState19 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card17);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i20 = gameState19.getWinners();
+    com.mycompany.dimc_dominion.Card[] card_array21 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card22 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b23 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card22, card_array21);
+    com.mycompany.dimc_dominion.GameState gameState24 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card22);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i25 = gameState24.getWinners();
+    java.util.List<com.mycompany.dimc_dominion.Player> list_player26 = gameState24.players;
+    com.mycompany.dimc_dominion.Player player27 = null;
+    gameState24.addPlayer(player27);
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i29 = gameState24.gameBoard;
+    gameState19.gameBoard = hashmap_card_i29;
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i31 = gameState19.gameBoard;
+    gameState3.gameBoard = hashmap_card_i31;
+    com.mycompany.dimc_dominion.Card[] card_array33 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card34 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b35 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card34, card_array33);
+    com.mycompany.dimc_dominion.GameState gameState36 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card34);
+    java.util.List<com.mycompany.dimc_dominion.Player> list_player37 = gameState36.players;
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i38 = null;
+    gameState36.gameBoard = hashmap_card_i38;
+    gameState36.initializeGame(100);
+    gameState36.initializeGame((int)'4');
+    com.mycompany.dimc_dominion.Card[] card_array44 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card45 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b46 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card45, card_array44);
+    com.mycompany.dimc_dominion.GameState gameState47 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card45);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i48 = gameState47.getWinners();
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i49 = null;
+    gameState47.gameBoard = hashmap_card_i49;
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i51 = gameState47.gameBoard;
+    com.mycompany.dimc_dominion.Card[] card_array52 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card53 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b54 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card53, card_array52);
+    com.mycompany.dimc_dominion.GameState gameState55 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card53);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i56 = gameState55.getWinners();
+    com.mycompany.dimc_dominion.Card[] card_array57 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card58 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b59 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card58, card_array57);
+    com.mycompany.dimc_dominion.GameState gameState60 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card58);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i61 = gameState60.getWinners();
+    java.util.List<com.mycompany.dimc_dominion.Player> list_player62 = gameState60.players;
+    com.mycompany.dimc_dominion.Player player63 = null;
+    gameState60.addPlayer(player63);
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i65 = gameState60.gameBoard;
+    gameState55.gameBoard = hashmap_card_i65;
+    gameState47.gameBoard = hashmap_card_i65;
+    gameState36.gameBoard = hashmap_card_i65;
+    gameState3.gameBoard = hashmap_card_i65;
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b2 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array4);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b6 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card10);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNull(card14);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array16);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b18 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i20);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array21);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b23 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i25);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_player26);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_card_i29);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_card_i31);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array33);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b35 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_player37);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array44);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b46 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i48);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNull(hashmap_card_i51);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array52);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b54 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i56);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array57);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b59 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i61);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_player62);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_card_i65);
+
+  }
+
+  @Test
+  public void test165() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test165"); }
+
+    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
+    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
+    com.mycompany.dimc_dominion.Player player5 = new com.mycompany.dimc_dominion.Player(gameState3, " ---  ---  --- --------------------------- --- Hand: []Discard: []Deck: []Played Cards: []numActions: 0coinss: 0numBuys: 0\n");
+    java.lang.String str6 = gameState3.toString();
+    com.mycompany.dimc_dominion.Card[] card_array7 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card8 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b9 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card8, card_array7);
+    com.mycompany.dimc_dominion.GameState gameState10 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card8);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i11 = gameState10.getWinners();
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i12 = null;
+    gameState10.gameBoard = hashmap_card_i12;
+    com.mycompany.dimc_dominion.Card[] card_array14 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card15 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b16 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card15, card_array14);
+    com.mycompany.dimc_dominion.GameState gameState17 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card15);
+    gameState17.initializeGame((int)(byte)100);
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card20 = gameState17.cards;
+    com.mycompany.dimc_dominion.Player player22 = new com.mycompany.dimc_dominion.Player(gameState17, "");
+    player22.printStateGame();
+    gameState10.addPlayer(player22);
+    player22.buyCard();
+    java.lang.String str26 = player22.toString();
+    player22.shuffle();
+    player22.shuffle();
+    gameState3.addPlayer(player22);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b2 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str6 + "' != '" + "The board game is embty you need to intialize the game!!!!"+ "'", str6.equals("The board game is embty you need to intialize the game!!!!"));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array7);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b9 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i11);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array14);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b16 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card20);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str26 + "' != '" + " ---  ---  --- --------------------------- --- Hand: []Discard: []Deck: []Played Cards: []numActions: 0coinss: 0numBuys: 0\n"+ "'", str26.equals(" ---  ---  --- --------------------------- --- Hand: []Discard: []Deck: []Played Cards: []numActions: 0coinss: 0numBuys: 0\n"));
+
+  }
+
+  @Test
+  public void test166() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test166"); }
+
+    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
+    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i4 = gameState3.getWinners();
+    com.mycompany.dimc_dominion.Card[] card_array5 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card6 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b7 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card6, card_array5);
+    com.mycompany.dimc_dominion.GameState gameState8 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card6);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i9 = gameState8.getWinners();
+    java.util.List<com.mycompany.dimc_dominion.Player> list_player10 = gameState8.players;
+    com.mycompany.dimc_dominion.Player player11 = null;
+    gameState8.addPlayer(player11);
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i13 = gameState8.gameBoard;
+    gameState3.gameBoard = hashmap_card_i13;
+    gameState3.initializeGame(0);
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i17 = gameState3.gameBoard;
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card18 = gameState3.cards;
+    com.mycompany.dimc_dominion.GameState gameState19 = new com.mycompany.dimc_dominion.GameState(list_card18);
+    com.mycompany.dimc_dominion.GameState gameState20 = new com.mycompany.dimc_dominion.GameState(list_card18);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b2 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i4);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array5);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b7 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i9);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_player10);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_card_i13);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_card_i17);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card18);
+
+  }
+
+  @Test
+  public void test167() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test167"); }
+
+    com.mycompany.dimc_dominion.PlayDominion.main((int)'a', (int)'#');
+
+  }
+
+  @Test
+  public void test168() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test168"); }
+
+    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
+    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i4 = gameState3.getWinners();
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i5 = null;
+    gameState3.gameBoard = hashmap_card_i5;
+    com.mycompany.dimc_dominion.Card[] card_array7 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card8 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b9 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card8, card_array7);
+    com.mycompany.dimc_dominion.GameState gameState10 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card8);
+    gameState10.initializeGame((int)(byte)100);
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card13 = gameState10.cards;
+    com.mycompany.dimc_dominion.Player player15 = new com.mycompany.dimc_dominion.Player(gameState10, "");
+    player15.printStateGame();
+    gameState3.addPlayer(player15);
+    com.mycompany.dimc_dominion.Player player19 = new com.mycompany.dimc_dominion.Player(gameState3, "");
+    // The following exception was thrown during execution in test generation
+    try {
+    player19.printStateGame();
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+    }
+    
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b2 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i4);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array7);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b9 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card13);
+
+  }
+
+  @Test
+  public void test169() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test169"); }
+
+    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
+    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
+    java.util.List<com.mycompany.dimc_dominion.Player> list_player4 = gameState3.players;
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i5 = null;
+    gameState3.gameBoard = hashmap_card_i5;
+    gameState3.initializeGame(100);
+    gameState3.initializeGame((int)'4');
+    com.mycompany.dimc_dominion.Player player12 = new com.mycompany.dimc_dominion.Player(gameState3, "The board game is embty you need to intialize the game!!!!");
+    player12.buyCard();
+    com.mycompany.dimc_dominion.Card card14 = null;
+    player12.discard(card14);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b2 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_player4);
+
+  }
+
+  @Test
+  public void test170() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test170"); }
+
+    int i1 = com.mycompany.dimc_dominion.Randomness.nextRandomInt((int)(short)100);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(i1 == 13);
+
+  }
+
+  @Test
+  public void test171() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test171"); }
+
+    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
+    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i4 = gameState3.getWinners();
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i5 = null;
+    gameState3.gameBoard = hashmap_card_i5;
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i7 = gameState3.gameBoard;
+    com.mycompany.dimc_dominion.Card[] card_array8 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card9 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b10 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card9, card_array8);
+    com.mycompany.dimc_dominion.GameState gameState11 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card9);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i12 = gameState11.getWinners();
+    com.mycompany.dimc_dominion.Card[] card_array13 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card14 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b15 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card14, card_array13);
+    com.mycompany.dimc_dominion.GameState gameState16 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card14);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i17 = gameState16.getWinners();
+    java.util.List<com.mycompany.dimc_dominion.Player> list_player18 = gameState16.players;
+    com.mycompany.dimc_dominion.Player player19 = null;
+    gameState16.addPlayer(player19);
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i21 = gameState16.gameBoard;
+    gameState11.gameBoard = hashmap_card_i21;
+    gameState3.gameBoard = hashmap_card_i21;
+    com.mycompany.dimc_dominion.Card[] card_array24 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card25 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b26 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card25, card_array24);
+    com.mycompany.dimc_dominion.GameState gameState27 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card25);
+    gameState27.initializeGame((int)(byte)100);
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card30 = gameState27.cards;
+    com.mycompany.dimc_dominion.Player player32 = new com.mycompany.dimc_dominion.Player(gameState27, "");
+    java.lang.String str33 = player32.toString();
+    gameState3.addPlayer(player32);
+    gameState3.initializeGame((int)'#');
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i37 = gameState3.play();
+    com.mycompany.dimc_dominion.Player player39 = new com.mycompany.dimc_dominion.Player(gameState3, "");
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b2 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i4);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNull(hashmap_card_i7);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array8);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b10 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i12);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array13);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b15 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i17);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_player18);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_card_i21);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array24);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b26 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card30);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str33 + "' != '" + " ---  ---  --- --------------------------- --- Hand: []Discard: []Deck: []Played Cards: []numActions: 0coinss: 0numBuys: 0\n"+ "'", str33.equals(" ---  ---  --- --------------------------- --- Hand: []Discard: []Deck: []Played Cards: []numActions: 0coinss: 0numBuys: 0\n"));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i37);
+
+  }
+
+  @Test
+  public void test172() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test172"); }
+
+    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
+    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
+    com.mycompany.dimc_dominion.Card.Type type4 = com.mycompany.dimc_dominion.Card.Type.VICTORY;
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card5 = com.mycompany.dimc_dominion.Card.filter((java.lang.Iterable<com.mycompany.dimc_dominion.Card>)arraylist_card1, type4);
+    // The following exception was thrown during execution in test generation
+    try {
+    com.mycompany.dimc_dominion.Card card6 = com.mycompany.dimc_dominion.Randomness.randomMember((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
+      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
+    } catch (java.lang.IllegalArgumentException e) {
+      // Expected exception.
+    }
+    
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b2 == false);
+    org.junit.Assert.assertTrue("'" + type4 + "' != '" + com.mycompany.dimc_dominion.Card.Type.VICTORY + "'", type4.equals(com.mycompany.dimc_dominion.Card.Type.VICTORY));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card5);
+
+  }
+
+  @Test
+  public void test173() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test173"); }
+
+    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
+    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
+    gameState3.initializeGame((int)(byte)100);
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card6 = gameState3.cards;
+    com.mycompany.dimc_dominion.Card[] card_array7 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card8 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b9 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card8, card_array7);
+    com.mycompany.dimc_dominion.GameState gameState10 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card8);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i11 = gameState10.getWinners();
+    com.mycompany.dimc_dominion.Card[] card_array12 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card13 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b14 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card13, card_array12);
+    com.mycompany.dimc_dominion.GameState gameState15 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card13);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i16 = gameState15.getWinners();
+    java.util.List<com.mycompany.dimc_dominion.Player> list_player17 = gameState15.players;
+    com.mycompany.dimc_dominion.Player player18 = null;
+    gameState15.addPlayer(player18);
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i20 = gameState15.gameBoard;
+    gameState10.gameBoard = hashmap_card_i20;
+    gameState3.gameBoard = hashmap_card_i20;
+    com.mycompany.dimc_dominion.Player player24 = new com.mycompany.dimc_dominion.Player(gameState3, " ---  ---  ---  --- --------------------------- --- Hand: []Discard: []Deck: []Played Cards: []numActions: 0coinss: 0numBuys: 0\n ---  --- --------------------------- --- Hand: []Discard: []Deck: []Played Cards: []numActions: 0coinss: 0numBuys: 0\n");
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i25 = gameState3.gameBoard;
+    java.util.List<com.mycompany.dimc_dominion.Player> list_player26 = gameState3.players;
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b2 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card6);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array7);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b9 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i11);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array12);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b14 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i16);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_player17);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_card_i20);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_card_i25);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_player26);
+
+  }
+
+  @Test
+  public void test174() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test174"); }
+
+    com.mycompany.dimc_dominion.PlayDominion.main(1, 0);
+
+  }
+
+  @Test
+  public void test175() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test175"); }
+
+    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
+    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i4 = gameState3.getWinners();
+    com.mycompany.dimc_dominion.Card[] card_array5 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card6 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b7 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card6, card_array5);
+    com.mycompany.dimc_dominion.GameState gameState8 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card6);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i9 = gameState8.getWinners();
+    java.util.List<com.mycompany.dimc_dominion.Player> list_player10 = gameState8.players;
+    com.mycompany.dimc_dominion.Player player11 = null;
+    gameState8.addPlayer(player11);
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i13 = gameState8.gameBoard;
+    gameState3.gameBoard = hashmap_card_i13;
+    gameState3.initializeGame(0);
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i17 = gameState3.gameBoard;
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card18 = gameState3.cards;
+    com.mycompany.dimc_dominion.GameState gameState19 = new com.mycompany.dimc_dominion.GameState(list_card18);
+    java.util.List<com.mycompany.dimc_dominion.Player> list_player20 = gameState19.players;
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b2 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i4);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array5);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b7 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i9);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_player10);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_card_i13);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_card_i17);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card18);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_player20);
+
+  }
+
+  @Test
+  public void test176() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test176"); }
+
+    // The following exception was thrown during execution in test generation
+    try {
+    int i1 = com.mycompany.dimc_dominion.Randomness.nextRandomInt((int)(short)-1);
+      org.junit.Assert.fail("Expected exception of type java.lang.IllegalArgumentException");
+    } catch (java.lang.IllegalArgumentException e) {
+      // Expected exception.
+    }
+
+  }
+
+  @Test
+  public void test177() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test177"); }
+
+    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
+    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
+    com.mycompany.dimc_dominion.Card.Type type4 = com.mycompany.dimc_dominion.Card.Type.VICTORY;
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card5 = com.mycompany.dimc_dominion.Card.filter((java.lang.Iterable<com.mycompany.dimc_dominion.Card>)arraylist_card1, type4);
+    com.mycompany.dimc_dominion.Card.CardName cardName6 = com.mycompany.dimc_dominion.Card.CardName.Estate;
+    com.mycompany.dimc_dominion.Card card7 = com.mycompany.dimc_dominion.Card.getCard(list_card5, cardName6);
+    com.mycompany.dimc_dominion.Card[] card_array8 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card9 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b10 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card9, card_array8);
+    com.mycompany.dimc_dominion.GameState gameState11 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card9);
+    com.mycompany.dimc_dominion.Card.Type type12 = com.mycompany.dimc_dominion.Card.Type.VICTORY;
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card13 = com.mycompany.dimc_dominion.Card.filter((java.lang.Iterable<com.mycompany.dimc_dominion.Card>)arraylist_card9, type12);
+    com.mycompany.dimc_dominion.Card.Type type14 = com.mycompany.dimc_dominion.Card.Type.VICTORY;
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card15 = com.mycompany.dimc_dominion.Card.filter((java.lang.Iterable<com.mycompany.dimc_dominion.Card>)list_card13, type14);
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card16 = com.mycompany.dimc_dominion.Card.filter((java.lang.Iterable<com.mycompany.dimc_dominion.Card>)list_card5, type14);
+    com.mycompany.dimc_dominion.Card[] card_array17 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card18 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b19 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card18, card_array17);
+    com.mycompany.dimc_dominion.GameState gameState20 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card18);
+    com.mycompany.dimc_dominion.Card.Type type21 = com.mycompany.dimc_dominion.Card.Type.VICTORY;
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card22 = com.mycompany.dimc_dominion.Card.filter((java.lang.Iterable<com.mycompany.dimc_dominion.Card>)arraylist_card18, type21);
+    com.mycompany.dimc_dominion.Card.Type type23 = com.mycompany.dimc_dominion.Card.Type.VICTORY;
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card24 = com.mycompany.dimc_dominion.Card.filter((java.lang.Iterable<com.mycompany.dimc_dominion.Card>)list_card22, type23);
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card25 = com.mycompany.dimc_dominion.Card.filter((java.lang.Iterable<com.mycompany.dimc_dominion.Card>)list_card16, type23);
+    com.mycompany.dimc_dominion.Card.CardName cardName26 = com.mycompany.dimc_dominion.Card.CardName.Smithy;
+    com.mycompany.dimc_dominion.Card card27 = com.mycompany.dimc_dominion.Card.getCard(list_card16, cardName26);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b2 == false);
+    org.junit.Assert.assertTrue("'" + type4 + "' != '" + com.mycompany.dimc_dominion.Card.Type.VICTORY + "'", type4.equals(com.mycompany.dimc_dominion.Card.Type.VICTORY));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card5);
+    org.junit.Assert.assertTrue("'" + cardName6 + "' != '" + com.mycompany.dimc_dominion.Card.CardName.Estate + "'", cardName6.equals(com.mycompany.dimc_dominion.Card.CardName.Estate));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNull(card7);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array8);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b10 == false);
+    org.junit.Assert.assertTrue("'" + type12 + "' != '" + com.mycompany.dimc_dominion.Card.Type.VICTORY + "'", type12.equals(com.mycompany.dimc_dominion.Card.Type.VICTORY));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card13);
+    org.junit.Assert.assertTrue("'" + type14 + "' != '" + com.mycompany.dimc_dominion.Card.Type.VICTORY + "'", type14.equals(com.mycompany.dimc_dominion.Card.Type.VICTORY));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card15);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card16);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array17);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b19 == false);
+    org.junit.Assert.assertTrue("'" + type21 + "' != '" + com.mycompany.dimc_dominion.Card.Type.VICTORY + "'", type21.equals(com.mycompany.dimc_dominion.Card.Type.VICTORY));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card22);
+    org.junit.Assert.assertTrue("'" + type23 + "' != '" + com.mycompany.dimc_dominion.Card.Type.VICTORY + "'", type23.equals(com.mycompany.dimc_dominion.Card.Type.VICTORY));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card24);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card25);
+    org.junit.Assert.assertTrue("'" + cardName26 + "' != '" + com.mycompany.dimc_dominion.Card.CardName.Smithy + "'", cardName26.equals(com.mycompany.dimc_dominion.Card.CardName.Smithy));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNull(card27);
+
+  }
+
+  @Test
+  public void test178() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test178"); }
+
+    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
+    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
+    com.mycompany.dimc_dominion.Player player5 = new com.mycompany.dimc_dominion.Player(gameState3, " ---  ---  --- --------------------------- --- Hand: []Discard: []Deck: []Played Cards: []numActions: 0coinss: 0numBuys: 0\n");
+    player5.printStateGame();
+    player5.buyCard();
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b2 == false);
+
+  }
+
+  @Test
+  public void test179() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test179"); }
+
+    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
+    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i4 = gameState3.getWinners();
+    java.util.List<com.mycompany.dimc_dominion.Player> list_player5 = gameState3.players;
+    com.mycompany.dimc_dominion.Player player6 = null;
+    gameState3.addPlayer(player6);
+    com.mycompany.dimc_dominion.Card[] card_array8 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card9 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b10 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card9, card_array8);
+    com.mycompany.dimc_dominion.GameState gameState11 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card9);
+    com.mycompany.dimc_dominion.Player player13 = new com.mycompany.dimc_dominion.Player(gameState11, " ---  ---  --- --------------------------- --- Hand: []Discard: []Deck: []Played Cards: []numActions: 0coinss: 0numBuys: 0\n");
+    com.mycompany.dimc_dominion.Card card14 = player13.playTreasureCard();
+    gameState3.addPlayer(player13);
+    // The following exception was thrown during execution in test generation
+    try {
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i16 = gameState3.getWinners();
+      org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException");
+    } catch (java.lang.NullPointerException e) {
+      // Expected exception.
+    }
+    
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b2 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i4);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_player5);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array8);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b10 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNull(card14);
+
+  }
+
+  @Test
+  public void test180() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test180"); }
+
+    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
+    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
+    gameState3.initializeGame((int)(byte)100);
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card6 = gameState3.cards;
+    com.mycompany.dimc_dominion.Card[] card_array7 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card8 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b9 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card8, card_array7);
+    com.mycompany.dimc_dominion.GameState gameState10 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card8);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i11 = gameState10.getWinners();
+    com.mycompany.dimc_dominion.Card[] card_array12 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card13 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b14 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card13, card_array12);
+    com.mycompany.dimc_dominion.GameState gameState15 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card13);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i16 = gameState15.getWinners();
+    java.util.List<com.mycompany.dimc_dominion.Player> list_player17 = gameState15.players;
+    com.mycompany.dimc_dominion.Player player18 = null;
+    gameState15.addPlayer(player18);
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i20 = gameState15.gameBoard;
+    gameState10.gameBoard = hashmap_card_i20;
+    gameState3.gameBoard = hashmap_card_i20;
+    com.mycompany.dimc_dominion.Card[] card_array23 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card24 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b25 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card24, card_array23);
+    com.mycompany.dimc_dominion.GameState gameState26 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card24);
+    java.util.List<com.mycompany.dimc_dominion.Player> list_player27 = gameState26.players;
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i28 = null;
+    gameState26.gameBoard = hashmap_card_i28;
+    com.mycompany.dimc_dominion.Card[] card_array30 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card31 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b32 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card31, card_array30);
+    com.mycompany.dimc_dominion.GameState gameState33 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card31);
+    com.mycompany.dimc_dominion.Player player35 = new com.mycompany.dimc_dominion.Player(gameState33, " ---  ---  --- --------------------------- --- Hand: []Discard: []Deck: []Played Cards: []numActions: 0coinss: 0numBuys: 0\n");
+    player35.printStateGame();
+    com.mycompany.dimc_dominion.Card[] card_array37 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card38 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b39 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card38, card_array37);
+    com.mycompany.dimc_dominion.GameState gameState40 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card38);
+    gameState40.initializeGame((int)(byte)100);
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card43 = gameState40.cards;
+    com.mycompany.dimc_dominion.Player player45 = new com.mycompany.dimc_dominion.Player(gameState40, "");
+    player45.printStateGame();
+    com.mycompany.dimc_dominion.Card card47 = player45.playTreasureCard();
+    com.mycompany.dimc_dominion.Card[] card_array48 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card49 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b50 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card49, card_array48);
+    com.mycompany.dimc_dominion.GameState gameState51 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card49);
+    gameState51.initializeGame((int)(byte)100);
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card54 = gameState51.cards;
+    com.mycompany.dimc_dominion.Player player56 = new com.mycompany.dimc_dominion.Player(gameState51, "");
+    player56.shuffle();
+    com.mycompany.dimc_dominion.Player[] player_array58 = new com.mycompany.dimc_dominion.Player[] { player35, player45, player56 };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Player> arraylist_player59 = new java.util.ArrayList<com.mycompany.dimc_dominion.Player>();
+    boolean b60 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Player>)arraylist_player59, player_array58);
+    com.mycompany.dimc_dominion.Player player61 = com.mycompany.dimc_dominion.Randomness.randomMember((java.util.List<com.mycompany.dimc_dominion.Player>)arraylist_player59);
+    player61.shuffle();
+    gameState26.addPlayer(player61);
+    gameState3.addPlayer(player61);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i65 = gameState3.getWinners();
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b2 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card6);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array7);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b9 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i11);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array12);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b14 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i16);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_player17);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_card_i20);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array23);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b25 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_player27);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array30);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b32 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array37);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b39 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card43);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNull(card47);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array48);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b50 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card54);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(player_array58);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b60 == true);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(player61);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i65);
+
+  }
+
+  @Test
+  public void test181() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test181"); }
+
+    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
+    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
+    com.mycompany.dimc_dominion.Card[] card_array4 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card5 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b6 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card5, card_array4);
+    com.mycompany.dimc_dominion.GameState gameState7 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card5);
+    gameState7.initializeGame((int)(byte)100);
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card10 = gameState7.cards;
+    com.mycompany.dimc_dominion.Player player12 = new com.mycompany.dimc_dominion.Player(gameState7, "");
+    player12.printStateGame();
+    com.mycompany.dimc_dominion.Card card14 = player12.playTreasureCard();
+    gameState3.addPlayer(player12);
+    player12.playKingdomCard();
+    player12.shuffle();
+    player12.shuffle();
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b2 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array4);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b6 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card10);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNull(card14);
+
+  }
+
+  @Test
+  public void test182() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test182"); }
+
+    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
+    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
+    gameState3.initializeGame((int)(byte)100);
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card6 = gameState3.cards;
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i7 = gameState3.getWinners();
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b2 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card6);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i7);
+
+  }
+
+  @Test
+  public void test183() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test183"); }
+
+    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
+    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i4 = gameState3.getWinners();
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i5 = null;
+    gameState3.gameBoard = hashmap_card_i5;
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i7 = gameState3.gameBoard;
+    com.mycompany.dimc_dominion.Card[] card_array8 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card9 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b10 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card9, card_array8);
+    com.mycompany.dimc_dominion.GameState gameState11 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card9);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i12 = gameState11.getWinners();
+    com.mycompany.dimc_dominion.Card[] card_array13 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card14 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b15 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card14, card_array13);
+    com.mycompany.dimc_dominion.GameState gameState16 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card14);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i17 = gameState16.getWinners();
+    java.util.List<com.mycompany.dimc_dominion.Player> list_player18 = gameState16.players;
+    com.mycompany.dimc_dominion.Player player19 = null;
+    gameState16.addPlayer(player19);
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i21 = gameState16.gameBoard;
+    gameState11.gameBoard = hashmap_card_i21;
+    gameState3.gameBoard = hashmap_card_i21;
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card24 = gameState3.cards;
+    java.util.List<com.mycompany.dimc_dominion.Player> list_player25 = gameState3.players;
+    java.lang.String str26 = gameState3.toString();
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i27 = gameState3.play();
+    com.mycompany.dimc_dominion.Card[] card_array28 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card29 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b30 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card29, card_array28);
+    com.mycompany.dimc_dominion.GameState gameState31 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card29);
+    java.util.List<com.mycompany.dimc_dominion.Player> list_player32 = gameState31.players;
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i33 = null;
+    gameState31.gameBoard = hashmap_card_i33;
+    com.mycompany.dimc_dominion.Card[] card_array35 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card36 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b37 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card36, card_array35);
+    com.mycompany.dimc_dominion.GameState gameState38 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card36);
+    com.mycompany.dimc_dominion.Player player40 = new com.mycompany.dimc_dominion.Player(gameState38, " ---  ---  --- --------------------------- --- Hand: []Discard: []Deck: []Played Cards: []numActions: 0coinss: 0numBuys: 0\n");
+    player40.printStateGame();
+    com.mycompany.dimc_dominion.Card[] card_array42 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card43 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b44 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card43, card_array42);
+    com.mycompany.dimc_dominion.GameState gameState45 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card43);
+    gameState45.initializeGame((int)(byte)100);
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card48 = gameState45.cards;
+    com.mycompany.dimc_dominion.Player player50 = new com.mycompany.dimc_dominion.Player(gameState45, "");
+    player50.printStateGame();
+    com.mycompany.dimc_dominion.Card card52 = player50.playTreasureCard();
+    com.mycompany.dimc_dominion.Card[] card_array53 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card54 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b55 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card54, card_array53);
+    com.mycompany.dimc_dominion.GameState gameState56 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card54);
+    gameState56.initializeGame((int)(byte)100);
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card59 = gameState56.cards;
+    com.mycompany.dimc_dominion.Player player61 = new com.mycompany.dimc_dominion.Player(gameState56, "");
+    player61.shuffle();
+    com.mycompany.dimc_dominion.Player[] player_array63 = new com.mycompany.dimc_dominion.Player[] { player40, player50, player61 };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Player> arraylist_player64 = new java.util.ArrayList<com.mycompany.dimc_dominion.Player>();
+    boolean b65 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Player>)arraylist_player64, player_array63);
+    com.mycompany.dimc_dominion.Player player66 = com.mycompany.dimc_dominion.Randomness.randomMember((java.util.List<com.mycompany.dimc_dominion.Player>)arraylist_player64);
+    player66.shuffle();
+    gameState31.addPlayer(player66);
+    com.mycompany.dimc_dominion.Card[] card_array69 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card70 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b71 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card70, card_array69);
+    com.mycompany.dimc_dominion.GameState gameState72 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card70);
+    gameState72.initializeGame((int)(byte)100);
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card75 = gameState72.cards;
+    com.mycompany.dimc_dominion.Card[] card_array76 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card77 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b78 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card77, card_array76);
+    com.mycompany.dimc_dominion.GameState gameState79 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card77);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i80 = gameState79.getWinners();
+    com.mycompany.dimc_dominion.Card[] card_array81 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card82 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b83 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card82, card_array81);
+    com.mycompany.dimc_dominion.GameState gameState84 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card82);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i85 = gameState84.getWinners();
+    java.util.List<com.mycompany.dimc_dominion.Player> list_player86 = gameState84.players;
+    com.mycompany.dimc_dominion.Player player87 = null;
+    gameState84.addPlayer(player87);
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i89 = gameState84.gameBoard;
+    gameState79.gameBoard = hashmap_card_i89;
+    gameState72.gameBoard = hashmap_card_i89;
+    gameState31.gameBoard = hashmap_card_i89;
+    gameState3.gameBoard = hashmap_card_i89;
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b2 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i4);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNull(hashmap_card_i7);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array8);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b10 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i12);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array13);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b15 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i17);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_player18);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_card_i21);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card24);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_player25);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str26 + "' != '" + "The board game is embty you need to intialize the game!!!!"+ "'", str26.equals("The board game is embty you need to intialize the game!!!!"));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i27);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array28);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b30 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_player32);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array35);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b37 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array42);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b44 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card48);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNull(card52);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array53);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b55 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card59);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(player_array63);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b65 == true);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(player66);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array69);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b71 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card75);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array76);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b78 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i80);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array81);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b83 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i85);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_player86);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_card_i89);
+
+  }
+
+  @Test
+  public void test184() throws Throwable {
+
+    if (debug) { System.out.format("%n%s%n","RegressionTest0.test184"); }
+
+    com.mycompany.dimc_dominion.Card[] card_array0 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card1 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b2 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card1, card_array0);
+    com.mycompany.dimc_dominion.GameState gameState3 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card1);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i4 = gameState3.getWinners();
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i5 = null;
+    gameState3.gameBoard = hashmap_card_i5;
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i7 = gameState3.gameBoard;
+    com.mycompany.dimc_dominion.Card[] card_array8 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card9 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b10 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card9, card_array8);
+    com.mycompany.dimc_dominion.GameState gameState11 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card9);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i12 = gameState11.getWinners();
+    com.mycompany.dimc_dominion.Card[] card_array13 = new com.mycompany.dimc_dominion.Card[] {  };
+    java.util.ArrayList<com.mycompany.dimc_dominion.Card> arraylist_card14 = new java.util.ArrayList<com.mycompany.dimc_dominion.Card>();
+    boolean b15 = java.util.Collections.addAll((java.util.Collection<com.mycompany.dimc_dominion.Card>)arraylist_card14, card_array13);
+    com.mycompany.dimc_dominion.GameState gameState16 = new com.mycompany.dimc_dominion.GameState((java.util.List<com.mycompany.dimc_dominion.Card>)arraylist_card14);
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i17 = gameState16.getWinners();
+    java.util.List<com.mycompany.dimc_dominion.Player> list_player18 = gameState16.players;
+    com.mycompany.dimc_dominion.Player player19 = null;
+    gameState16.addPlayer(player19);
+    java.util.HashMap<com.mycompany.dimc_dominion.Card,java.lang.Integer> hashmap_card_i21 = gameState16.gameBoard;
+    gameState11.gameBoard = hashmap_card_i21;
+    gameState3.gameBoard = hashmap_card_i21;
+    java.util.List<com.mycompany.dimc_dominion.Card> list_card24 = gameState3.cards;
+    java.util.List<com.mycompany.dimc_dominion.Player> list_player25 = gameState3.players;
+    java.lang.String str26 = gameState3.toString();
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i27 = gameState3.play();
+    java.util.HashMap<com.mycompany.dimc_dominion.Player,java.lang.Integer> hashmap_player_i28 = gameState3.play();
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array0);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b2 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i4);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNull(hashmap_card_i7);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array8);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b10 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i12);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(card_array13);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue(b15 == false);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i17);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_player18);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_card_i21);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_card24);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(list_player25);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertTrue("'" + str26 + "' != '" + "The board game is embty you need to intialize the game!!!!"+ "'", str26.equals("The board game is embty you need to intialize the game!!!!"));
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i27);
+    
+    // Regression assertion (captures the current behavior of the code)
+    org.junit.Assert.assertNotNull(hashmap_player_i28);
 
   }
 

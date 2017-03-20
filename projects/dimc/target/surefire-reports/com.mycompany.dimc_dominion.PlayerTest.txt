@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.mycompany.dimc_dominion.PlayerTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.38 sec <<< FAILURE!
-testDrawCard(com.mycompany.dimc_dominion.PlayerTest)  Time elapsed: 0.003 sec  <<< FAILURE!
+Tests run: 6, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.06 sec <<< FAILURE!
+testDrawCard(com.mycompany.dimc_dominion.PlayerTest)  Time elapsed: 0.002 sec  <<< FAILURE!
 java.lang.AssertionError: expected: com.mycompany.dimc_dominion.Card< 	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3> but was: com.mycompany.dimc_dominion.Card< 	Gold-TREASURE 		 Cost: 6 		 Score: 0 	Treasure Value: 3>
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
@@ -42,7 +42,7 @@ java.lang.AssertionError: expected: com.mycompany.dimc_dominion.Card< 	Gold-TREA
 	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
 	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
-testInitializePlayerTurn(com.mycompany.dimc_dominion.PlayerTest)  Time elapsed: 0.001 sec  <<< FAILURE!
+testInitializePlayerTurn(com.mycompany.dimc_dominion.PlayerTest)  Time elapsed: 0 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<0> but was:<15>
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)

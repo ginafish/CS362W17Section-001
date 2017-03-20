@@ -22,3 +22,12 @@ To see coverage:
 	mvn cobertura:cobertura site
 HTML reports:
 	found in folder "CoverageSummaries" or target/site/cobertura
+
+
+FINAL PROJECT
+
+To run pitest:
+	mvn org.pitest:pitest-maven:mutationCoverage
+
+To view mutation rates:
+	found in the folder "Final Coverage"

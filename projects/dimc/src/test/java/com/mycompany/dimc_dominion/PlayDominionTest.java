@@ -5,11 +5,13 @@
  */
 package com.mycompany.dimc_dominion;
 
+import static com.mycompany.dimc_dominion.PlayDominion.main;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import java.util.Random;
 import static org.junit.Assert.*;
 
 /**
@@ -37,15 +39,19 @@ public class PlayDominionTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of main method, of class PlayDominion.
-     */
     @Test
-    public void testMain() {
-        System.out.println("main");
-        String[] args = null;
-        PlayDominion.main(args);
-   
+  public void playGame(){
+    Random rand = new Random(10);
+    for(int j=0; j<5; j++){
+      int numPlayers = rand.nextInt(3)+2; // 2-4 players
+      assert(numPlayers<=4 && numPlayers>=2);
+
+      int numKingdomCards=rand.nextInt(14);
+      
+      main(numPlayers,numKingdomCards);
+
+      
     }
+  }
     
 }
